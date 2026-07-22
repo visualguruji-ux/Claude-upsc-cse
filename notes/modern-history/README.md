@@ -4,9 +4,12 @@ UPSC-style, revision-optimised notes digitised from Adarsh's handwritten notes.
 Each file is Prelims + Mains oriented, with tables, timelines, mnemonics, diagrams,
 and PYQ pointers.
 
-| # | Topic | Covers | File |
-|---|---|---|---|
-| 01 | Rise of Nationalism → Foundation of INC → Moderates & Extremists → Councils Acts | Pre-Congress associations · theories of INC formation · Moderate vs Extremist phases · Indian Councils Acts 1861 & 1892 | [01-foundation-of-congress-moderates-extremists.md](01-foundation-of-congress-moderates-extremists.md) |
+| # | Topic | Covers | Note | Visual revision sheet |
+|---|---|---|---|---|
+| 01 | Rise of Nationalism → Foundation of INC → Moderates & Extremists → Councils Acts | Pre-Congress associations · theories of INC formation · Moderate vs Extremist phases · Indian Councils Acts 1861 & 1892 | [markdown](01-foundation-of-congress-moderates-extremists.md) | [HTML (open in browser / print)](01-foundation-of-congress-revision-sheet.html) |
+
+> 💡 The **HTML revision sheet** is a styled, printable one-pager (light/dark, works offline).
+> Open it in any browser; use your browser's **Print → Save as PDF** for a hard copy.
 
 ---
 

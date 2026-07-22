@@ -1,0 +1,355 @@
+<title>Foundation of the INC — Revision Sheet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --ground:#f3efe4;
+    --panel:#fbf8f0;
+    --panel-2:#f0ead9;
+    --ink:#1b2452;          /* indigo pen */
+    --ink-soft:#41487a;
+    --muted:#6c6a63;
+    --line:#ded5bf;
+    --ochre:#b5651d;        /* accent */
+    --ochre-soft:#e7d3b3;
+    --red:#9e3b2e;          /* extremist / sticks */
+    --red-bg:#f3e0d9;
+    --green:#2f6b57;        /* moderate / accepted */
+    --green-bg:#dce9df;
+    --shadow:0 1px 0 rgba(27,36,82,.04), 0 8px 24px -18px rgba(27,36,82,.5);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#12141d;--panel:#1a1d29;--panel-2:#212533;
+      --ink:#e7e3f2;--ink-soft:#b9b6cf;--muted:#9a978f;--line:#33384c;
+      --ochre:#e0994f;--ochre-soft:#3a3020;--red:#e08574;--red-bg:#3a2320;
+      --green:#7dc1a6;--green-bg:#1e2f29;
+      --shadow:0 8px 30px -20px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#12141d;--panel:#1a1d29;--panel-2:#212533;
+    --ink:#e7e3f2;--ink-soft:#b9b6cf;--muted:#9a978f;--line:#33384c;
+    --ochre:#e0994f;--ochre-soft:#3a3020;--red:#e08574;--red-bg:#3a2320;
+    --green:#7dc1a6;--green-bg:#1e2f29;
+    --shadow:0 8px 30px -20px rgba(0,0,0,.8);
+  }
+  :root[data-theme="light"]{
+    --ground:#f3efe4;--panel:#fbf8f0;--panel-2:#f0ead9;
+    --ink:#1b2452;--ink-soft:#41487a;--muted:#6c6a63;--line:#ded5bf;
+    --ochre:#b5651d;--ochre-soft:#e7d3b3;--red:#9e3b2e;--red-bg:#f3e0d9;
+    --green:#2f6b57;--green-bg:#dce9df;
+    --shadow:0 1px 0 rgba(27,36,82,.04), 0 8px 24px -18px rgba(27,36,82,.5);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:clamp(20px,4vw,52px) clamp(16px,4vw,40px)}
+  /* ---------- header ---------- */
+  header.masthead{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:34px}
+  .kicker{font-family:var(--sans);text-transform:uppercase;letter-spacing:.22em;
+    font-size:.72rem;font-weight:700;color:var(--ochre);margin:0 0 10px}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,4.6vw,3rem);
+    line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.01em}
+  .sub{color:var(--ink-soft);font-size:1.02rem;margin:12px 0 0;max-width:60ch}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .tag{font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;font-weight:700;
+    color:var(--ink-soft);background:var(--panel-2);border:1px solid var(--line);
+    padding:4px 10px;border-radius:2px}
+  /* ---------- section ---------- */
+  section{margin:0 0 40px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 18px}
+  .sec-num{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--ground);
+    background:var(--ink);min-width:2em;height:2em;display:grid;place-items:center;
+    border-radius:50%;flex:0 0 auto}
+  .sec-head h2{font-family:var(--serif);font-size:clamp(1.3rem,3vw,1.7rem);margin:0;
+    font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+  .sec-head p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+  /* ---------- cards / grid ---------- */
+  .grid{display:grid;gap:16px}
+  @media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:8px;
+    padding:18px 20px;box-shadow:var(--shadow)}
+  .card h3{font-family:var(--serif);margin:0 0 6px;font-size:1.08rem;color:var(--ink)}
+  .card .yr{font-family:var(--sans);font-weight:700;color:var(--ochre);font-size:.8rem;
+    letter-spacing:.05em}
+  .card p{margin:6px 0 0;font-size:.92rem;color:var(--ink-soft)}
+  .card .who{font-weight:600;color:var(--ink)}
+  /* ---------- table ---------- */
+  .tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow)}
+  table{border-collapse:collapse;width:100%;min-width:560px;background:var(--panel);font-size:.9rem}
+  caption{caption-side:top;text-align:left;font-family:var(--serif);font-weight:700;
+    padding:14px 16px 0;color:var(--ink);font-size:1.05rem}
+  th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);
+    font-weight:700;background:var(--panel-2)}
+  tbody tr:last-child td{border-bottom:none}
+  .rowlbl{font-weight:700;color:var(--ink);white-space:nowrap}
+  td.mod{background:var(--green-bg)}
+  td.ext{background:var(--red-bg)}
+  .num{font-variant-numeric:tabular-nums}
+  /* ---------- M vs E header chips ---------- */
+  .verse{display:grid;gap:14px;grid-template-columns:1fr;margin-bottom:16px}
+  @media(min-width:640px){.verse{grid-template-columns:1fr 1fr}}
+  .pole{border-radius:8px;padding:14px 16px;border:1px solid var(--line)}
+  .pole.m{background:var(--green-bg);border-color:color-mix(in srgb,var(--green) 30%,transparent)}
+  .pole.e{background:var(--red-bg);border-color:color-mix(in srgb,var(--red) 30%,transparent)}
+  .pole h3{margin:0;font-family:var(--serif);font-size:1.15rem}
+  .pole.m h3{color:var(--green)}.pole.e h3{color:var(--red)}
+  .pole span{font-size:.82rem;color:var(--ink-soft);display:block;margin-top:2px}
+  /* ---------- theory list ---------- */
+  .theory{display:grid;gap:12px}
+  .theory .row{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;
+    background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--ochre);
+    border-radius:6px;padding:14px 16px;box-shadow:var(--shadow)}
+  .theory .row.accepted{border-left-color:var(--green)}
+  .theory .badge{font-family:var(--serif);font-weight:700;font-size:1.4rem;color:var(--ochre);
+    line-height:1;min-width:1.3em}
+  .theory .row.accepted .badge{color:var(--green)}
+  .theory b{color:var(--ink)}
+  .theory .name{font-family:var(--serif);font-size:1.02rem;color:var(--ink);margin:0 0 3px;font-weight:700}
+  .theory small{color:var(--muted)}
+  .theory p{margin:2px 0 0;font-size:.9rem;color:var(--ink-soft)}
+  /* ---------- callouts ---------- */
+  .call{border-radius:8px;padding:14px 18px;font-size:.92rem;display:grid;
+    grid-template-columns:auto 1fr;gap:12px;align-items:start}
+  .call .ic{font-size:1.1rem;line-height:1.4}
+  .call.mnem{background:var(--ochre-soft);border:1px solid color-mix(in srgb,var(--ochre) 35%,transparent);color:var(--ink)}
+  .call.quote{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--ink);
+    font-family:var(--serif);font-style:italic;font-size:1.02rem;color:var(--ink)}
+  .call b{color:var(--ink)}
+  /* ---------- acts compare ---------- */
+  .acts{display:grid;gap:16px}
+  @media(min-width:720px){.acts{grid-template-columns:1fr 1fr}}
+  .act{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:18px 20px;box-shadow:var(--shadow);border-top:5px solid var(--ochre)}
+  .act:last-child{border-top-color:var(--green)}
+  .act h3{font-family:var(--serif);margin:0 0 2px;font-size:1.25rem}
+  .act .key{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;
+    color:var(--ochre);margin-bottom:12px;display:block}
+  .act:last-child .key{color:var(--green)}
+  .act ul{margin:0;padding-left:1.1em}
+  .act li{margin:7px 0;font-size:.9rem;color:var(--ink-soft)}
+  .act li b{color:var(--ink)}
+  .yes{color:var(--green);font-weight:700}.no{color:var(--red);font-weight:700}
+  /* ---------- revision box ---------- */
+  .revbox{background:var(--ink);color:var(--panel);border-radius:12px;padding:24px 26px;
+    box-shadow:var(--shadow)}
+  :root[data-theme="dark"] .revbox,
+  .revbox{color:#f3efe4}
+  @media (prefers-color-scheme:dark){.revbox{background:#232a4d}}
+  :root[data-theme="dark"] .revbox{background:#232a4d}
+  .revbox h2{font-family:var(--serif);margin:0 0 4px;color:#fff;font-size:1.4rem}
+  .revbox .lead{color:#c9cbe6;font-size:.85rem;margin:0 0 16px;text-transform:uppercase;letter-spacing:.12em}
+  .revbox ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+  .revbox li{font-size:.92rem;color:#eceaf6;padding-left:18px;position:relative}
+  .revbox li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;
+    background:var(--ochre);border-radius:50%}
+  .revbox b{color:#fff}
+  footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);
+    color:var(--muted);font-size:.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  @media print{
+    body{background:#fff}.revbox{background:#1b2452 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .card,.act,.tbl-scroll,.theory .row{box-shadow:none}
+  }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <p class="kicker">Modern History · Revision Sheet</p>
+    <h1>Rise of Nationalism &amp; the Foundation of the Congress</h1>
+    <p class="sub">Pre-Congress associations → theories of the INC's birth → the Moderate &amp;
+      Extremist phases → the constitutional reply of 1861 &amp; 1892.</p>
+    <div class="meta">
+      <span class="tag">GS-I Mains</span>
+      <span class="tag">Prelims high-yield</span>
+      <span class="tag">1836 – 1919</span>
+      <span class="tag">Adarsh · UPSC CSE</span>
+    </div>
+  </header>
+
+  <!-- 1 -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">1</span>
+      <div><h2>Regional Integration — the thread</h2>
+      <p>Local reform bodies → regional political outfits → one national platform (INC).</p></div>
+    </div>
+    <div class="call quote"><span class="ic">“</span>
+      <div>The Congress was <b>not a sudden event</b>. From the early 19th century, reform bodies,
+      newspapers &amp; journals awakened opinion; similar demands pulled scattered
+      <b>local associations</b> into <b>regional</b> ones, which finally
+      <b>integrated into a national organisation</b>. — the accepted view (Bipan Chandra).</div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">2</span>
+      <div><h2>Pre-Congress Political Associations</h2>
+      <p>Match <b>name ↔ founder ↔ year ↔ city</b> — a favourite Prelims trap.</p></div>
+    </div>
+
+    <h3 style="font-family:var(--serif);color:var(--ochre);margin:0 0 10px">🅐 Bengal (Calcutta)</h3>
+    <div class="grid two">
+      <div class="card"><span class="yr">1836</span><h3>Bangabhasha Prakashika Sabha</h3>
+        <p><span class="who">Associates of Raja Rammohan Roy.</span> One of the earliest political associations.</p></div>
+      <div class="card"><span class="yr">1838</span><h3>Landholders' Society</h3>
+        <p><span class="who">Dwarkanath Tagore · Raja Radhakant Deb.</span> First <b>organised</b> political effort; guarded zamindar interests.</p></div>
+      <div class="card"><span class="yr">1843</span><h3>Bengal British India Society</h3>
+        <p><span class="who">On advice of George Thompson.</span> Publish info on the real condition of the people.</p></div>
+      <div class="card"><span class="yr">1851</span><h3>British Indian Association</h3>
+        <p><span class="who">Merger of the two above.</span> Zamindar-dominated; conservative.</p></div>
+    </div>
+
+    <div class="call mnem" style="margin:16px 0">
+      <span class="ic">🔎</span>
+      <div><b>Don't confuse the three "British India" bodies:</b>
+      &nbsp;<b>British India Society</b> = 1839, <b>London</b>, William Adam ·
+      <b>Bengal British India Society</b> = 1843, Calcutta ·
+      <b>British Indian Association</b> = 1851, the merger.</div>
+    </div>
+
+    <h3 style="font-family:var(--serif);color:var(--ochre);margin:8px 0 10px">🅑 Bombay · 🅒 Madras · 🅓 Poona · 🅔 England</h3>
+    <div class="grid two">
+      <div class="card"><span class="yr">1852</span><h3>Bombay Association</h3>
+        <p><span class="who">Jagannath Shankar Seth · Dadabhai Naoroji.</span> Petitioned on the Charter Act 1853.</p></div>
+      <div class="card"><span class="yr">1885</span><h3>Bombay Presidency Association</h3>
+        <p><span class="who">Pherozeshah Mehta · K.T. Telang · Badruddin Tyabji</span> — the <b>“Bombay Trio”</b>.</p></div>
+      <div class="card"><span class="yr">1852</span><h3>Madras Native Association</h3>
+        <p><span class="who">Gazulu Lakshminarasu Chetty.</span> Raised ryotwari peasant grievances; short-lived.</p></div>
+      <div class="card"><span class="yr">1884</span><h3>Madras Mahajan Sabha</h3>
+        <p><span class="who">Subramania Iyer · Anandacharlu · Viraraghavachariar.</span></p></div>
+      <div class="card"><span class="yr">1870</span><h3>Poona Sarvajanik Sabha</h3>
+        <p><span class="who">M.G. Ranade &amp; others.</span> 1875 petition to the House of Commons for direct representation — <b>signed by 23,000+</b>.</p></div>
+      <div class="card"><span class="yr">1866</span><h3>East India Association</h3>
+        <p><span class="who">Dadabhai Naoroji, in London.</span> Swayed British public opinion in India's favour.</p></div>
+      <div class="card"><span class="yr">1876</span><h3>Indian (National) Association</h3>
+        <p><span class="who">S.N. Banerjee &amp; Anand Mohan Bose.</span> First avowedly <b>nationalist</b> body; merged into INC (1886).</p></div>
+      <div class="card"><span class="yr">1878</span><h3>National Mohammedan Association</h3>
+        <p><span class="who">Syed Amir Ali.</span></p></div>
+    </div>
+
+    <div class="call mnem" style="margin-top:16px">
+      <span class="ic">🧠</span>
+      <div><b>Bombay Trio = “M-T-T”</b> → Mehta · Telang · Tyabji. &nbsp;•&nbsp;
+      <b>Common demands</b> (fed the Charter Act 1853 petitions): popular legislation ·
+      separation of executive &amp; judiciary · cut official salaries · abolish salt &amp; stamp duty.</div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">3</span>
+      <div><h2>Why was the INC born? — four theories</h2>
+      <p>The classic Mains debate: British “safety valve” or Indian awakening?</p></div>
+    </div>
+    <div class="theory">
+      <div class="row"><span class="badge">S</span><div>
+        <p class="name">Safety-Valve Theory <small>— attributed to A.O. Hume's design</small></p>
+        <p>INC set up as a <b>“safety valve”</b> to release mass discontent and <b>pre-empt a violent revolt</b>.</p></div></div>
+      <div class="row"><span class="badge">L</span><div>
+        <p class="name">Lightning-Conductor Theory <small>— G.K. Gokhale</small></p>
+        <p>Nationalists <b>deliberately</b> kept <b>Hume</b> (a white ex-civil servant) in front as a <b>shield</b>, so the British would not crush the infant Congress — Congress channelled nationalist forces safely.</p></div></div>
+      <div class="row"><span class="badge">C</span><div>
+        <p class="name">Conspiracy Theory <small>— R.P. Dutt, <i>India Today</i> (1940)</small></p>
+        <p>Extends the safety-valve idea: INC born of a <b>conspiracy</b> to abort a popular uprising; bourgeois leaders were <b>complacent</b> partners.</p></div></div>
+      <div class="row accepted"><span class="badge">✓</span><div>
+        <p class="name">Conscious-Efforts view — <b>accepted</b> <small>— Bipan Chandra</small></p>
+        <p>INC = the <b>culmination of decades of conscious Indian effort</b>; early leaders were <b>patriots of high character</b>, not government stooges.</p></div></div>
+    </div>
+    <div class="call mnem" style="margin-top:16px"><span class="ic">🧠</span>
+      <div>Recall order <b>S · L · C · C</b> — and the last <b>C</b> (Conscious efforts) is the one to write as your conclusion.</div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">4</span>
+      <div><h2>Moderates vs Extremists</h2>
+      <p>Two temperaments of one Congress.</p></div>
+    </div>
+    <div class="verse">
+      <div class="pole m"><h3>🕊️ Moderates</h3><span>1885 – 1905 · faith in British justice · “carrots”</span></div>
+      <div class="pole e"><h3>🔥 Extremists</h3><span>1905 – 1919 · Swaraj · “sticks”</span></div>
+    </div>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Basis</th><th>Moderates</th><th>Extremists</th></tr></thead>
+        <tbody>
+          <tr><td class="rowlbl">Leaders</td><td class="mod">Naoroji · S.N. Banerjee · Pherozeshah Mehta · Gokhale</td><td class="ext"><b>Lal–Bal–Pal</b> · Aurobindo Ghosh · V.O.C. Pillai</td></tr>
+          <tr><td class="rowlbl">Goal</td><td class="mod">Gradual reform; self-govt within Empire</td><td class="ext"><b>Swaraj</b> (self-rule)</td></tr>
+          <tr><td class="rowlbl">Methods</td><td class="mod"><b>3 P's</b> — Prayer, Petition, Protest; “political mendicancy”</td><td class="ext">Passive resistance · boycott · swadeshi · self-sacrifice</td></tr>
+          <tr><td class="rowlbl">Attitude to Raj</td><td class="mod">Faith in British justice; “providential mission”; apprenticeship</td><td class="ext">No faith; mission is an <b>illusion</b>; rule = a design to exploit</td></tr>
+          <tr><td class="rowlbl">Social base</td><td class="mod">Urban elite; <b>narrow</b>; “lacked faith in masses”</td><td class="ext">Urban middle class → youth &amp; wider masses</td></tr>
+          <tr><td class="rowlbl">Reform influence</td><td class="mod">Brahmo Samaj</td><td class="ext">Arya Samaj</td></tr>
+          <tr><td class="rowlbl">Inspiration</td><td class="mod">Western liberalism (French &amp; American revolutions)</td><td class="ext">India's own past, tradition &amp; institutions</td></tr>
+          <tr><td class="rowlbl">Cause of poverty</td><td class="mod">India's social &amp; economic structure</td><td class="ext">The British presence itself</td></tr>
+          <tr><td class="rowlbl">Mobilisation</td><td class="mod">Limited</td><td class="ext"><b>Ganpati (1893)</b> &amp; <b>Shivaji (1896)</b> festivals — Tilak</td></tr>
+          <tr><td class="rowlbl">British reply</td><td class="mod">Appeasement / <b>carrots</b></td><td class="ext">Repression / <b>sticks</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="call quote" style="margin-top:16px"><span class="ic">“</span>
+      <div>Political rights will have to be <b>fought for</b>. The Moderates think they can be won by
+      persuasion — we think they can be obtained <b>only by strong pressure</b>. — <b>B.G. Tilak</b></div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section>
+    <div class="sec-head">
+      <span class="sec-num">5</span>
+      <div><h2>The constitutional reply — Councils Acts</h2>
+      <p>What the Raj conceded, and how little it meant.</p></div>
+    </div>
+    <div class="acts">
+      <div class="act">
+        <h3>Indian Councils Act, 1861</h3>
+        <span class="key">Portfolio + Decentralisation</span>
+        <ul>
+          <li><b>Portfolio system</b> — begun by Canning (1858–59), recognised by this Act (Military, Revenue, Finance, Home, Law; Public Works added 1874).</li>
+          <li><b>Beginning of decentralisation</b> — legislative powers restored to Bombay &amp; Madras; later councils for NW Provinces, Punjab, Burma.</li>
+          <li>Viceroy may issue <b>ordinances</b> (valid 6 months).</li>
+          <li><b>Additional (non-official) members</b> for law-making — nominated, 2-yr term. First Indians: <b>Raja of Banaras, Maharaja of Patiala, Sir Dinkar Rao</b>.</li>
+          <li>Budget: <span class="no">✗ cannot discuss</span> · Questions: <span class="no">✗ cannot ask</span>.</li>
+        </ul>
+      </div>
+      <div class="act">
+        <h3>Indian Councils Act, 1892</h3>
+        <span class="key">Representation + Budget discussion</span>
+        <ul>
+          <li>Executive Council — <b>no change</b>.</li>
+          <li>Additional members raised to <b>10–16</b> in the central council (≈ 6 official + 10 non-official; 5 Viceroy-named + 1 each from Bengal, Bombay, Madras, NW Provinces &amp; Bengal Chamber of Commerce).</li>
+          <li>Introduced the <b>principle of representation</b> → <b>first indirect “election”</b> (word avoided; called “nomination on recommendation”).</li>
+          <li>Budget: <span class="yes">✓ can discuss</span> <span class="no">(✗ cannot vote)</span>.</li>
+          <li>Questions: <span class="yes">✓ can ask</span> <span class="no">(✗ no supplementary)</span>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- revision -->
+  <section>
+    <div class="revbox">
+      <h2>60-second last-minute recall</h2>
+      <p class="lead">Cover the page — can you say these?</p>
+      <ul>
+        <li><b>Bengal order:</b> Bangabhasha 1836 → Landholders' 1838 → Bengal British India Society 1843 → British Indian Association 1851.</li>
+        <li><b>Founders:</b> East India Assoc.→Naoroji · Indian Assoc.→S.N. Banerjee + A.M. Bose · Poona Sarvajanik Sabha→Ranade · Bombay Trio→Mehta/Telang/Tyabji.</li>
+        <li><b>INC theories:</b> Safety-valve → Lightning-conductor (Gokhale) → Conspiracy (R.P. Dutt, 1940) → Conscious efforts (Bipan Chandra, accepted).</li>
+        <li><b>M vs E:</b> Moderates = 3 P's, carrots, Brahmo, Western; Extremists = Swaraj, sticks, Arya Samaj, Indian past, Lal-Bal-Pal.</li>
+        <li><b>Acts:</b> 1861 = Portfolio + Decentralisation · 1892 = Representation + Budget discussion (no vote).</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span>Digitised from Adarsh's handwritten notes · fact-checked for exam accuracy.</span>
+    <span>UPSC CSE · Modern History · Note 01</span>
+  </footer>
+</div>
