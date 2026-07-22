@@ -109,6 +109,15 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-07-22** — **Reworked Note 01 to be faithful to the handwritten notes only** (Adarsh:
+  "don't include extra topics like the safety-valve expansion; include ALL Moderates-vs-Extremists
+  rows I wrote — social/cultural background, poverty, political reform; and format so I can
+  screenshot without dragging left-right"). Removed externally-added content (seven volumes,
+  Curzon policies, Drain of Wealth, Surat Split, achievements, etc.). Kept the FULL 11-row
+  M-vs-E comparison and reformatted both the `.md` and the **HTML** into a vertical / responsive
+  layout (no wide tables, no horizontal scroll — screenshot-friendly on mobile). **Key prefs to
+  remember:** (a) stay faithful to Adarsh's own notes unless he asks to enrich; (b) never use
+  wide side-scrolling tables — use vertical/responsive layouts.
 - **2026-07-22** — **Expanded Note 01 into a detailed one-stop document** (per Adarsh's request:
   "don't miss anything, not revision style, enrich with Spectrum/coaching, one-stop solution").
   Added Phase-wise pre-Congress associations (incl. **Deccan Association 1852, London Indian
