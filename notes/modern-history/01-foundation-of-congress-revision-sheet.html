@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Foundation of the INC - Notes</title>
+<title>Foundation of the INC - Detailed Notes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root{
@@ -49,7 +49,6 @@
   h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem,6vw,2.2rem);
     line-height:1.08;margin:0;text-wrap:balance}
   .sub{color:var(--ink-soft);font-size:.95rem;margin:10px 0 0}
-  /* section */
   .part{background:var(--panel);border:1px solid var(--line);border-radius:12px;
     padding:clamp(16px,4vw,22px);margin:0 0 18px;box-shadow:var(--shadow)}
   .part-num{display:inline-block;font-family:var(--serif);font-weight:700;font-size:.72rem;
@@ -58,51 +57,44 @@
     line-height:1.15;text-wrap:balance}
   .part p{margin:0 0 10px;font-size:.94rem;color:var(--ink-soft)}
   .part p:last-child{margin-bottom:0}
-  /* association block */
-  .assoc{border-left:3px solid var(--ochre);padding:2px 0 2px 12px;margin:14px 0}
+  .part p b,.assoc b,ul.plain li b,.kv b{color:var(--ink)}
+  .grouphead{font-family:var(--serif);color:var(--ochre);font-size:1rem;font-weight:700;
+    margin:16px 0 2px;padding-top:8px;border-top:1px dashed var(--line)}
+  .grouphead:first-of-type{border-top:none;padding-top:0}
+  .assoc{border-left:3px solid var(--ochre);padding:2px 0 2px 12px;margin:12px 0}
   .assoc h3{font-family:var(--serif);margin:0;font-size:1.02rem;color:var(--ink)}
   .assoc .yr{color:var(--ochre);font-weight:700}
-  .assoc ul{margin:6px 0 0;padding-left:1.05em}
+  .assoc ul{margin:5px 0 0;padding-left:1.05em}
   .assoc li{font-size:.9rem;color:var(--ink-soft);margin:3px 0}
-  .grouphead{font-family:var(--serif);color:var(--ochre);font-size:1rem;font-weight:700;
-    margin:18px 0 2px;padding-top:6px;border-top:1px dashed var(--line)}
-  .grouphead:first-of-type{border-top:none;padding-top:0;margin-top:6px}
-  /* generic list */
   ul.plain{margin:8px 0 0;padding-left:1.1em}
-  ul.plain li{font-size:.94rem;color:var(--ink-soft);margin:5px 0}
-  ul.plain li b{color:var(--ink)}
-  /* theory */
+  ul.plain li{font-size:.93rem;color:var(--ink-soft);margin:6px 0}
+  .callout{background:var(--ochre-soft);border:1px solid var(--ochre);border-radius:8px;
+    padding:11px 14px;font-size:.9rem;color:var(--ink);margin:12px 0}
+  .subh{font-family:var(--serif);color:var(--ink);font-weight:700;font-size:1.02rem;margin:14px 0 4px}
   .theory{border-radius:10px;border:1px solid var(--line);background:var(--panel-2);
-    padding:14px 16px;margin:12px 0}
-  .theory h3{font-family:var(--serif);margin:0 0 4px;font-size:1.05rem;color:var(--ink)}
+    padding:13px 15px;margin:10px 0}
   .theory.top{border-color:var(--green-line);background:var(--green-bg)}
-  .theory p{margin:4px 0 0;font-size:.92rem;color:var(--ink-soft)}
-  /* comparison - responsive, never scrolls sideways */
+  .theory h3{font-family:var(--serif);margin:0 0 4px;font-size:1.02rem;color:var(--ink)}
+  .theory p{margin:0;font-size:.91rem;color:var(--ink-soft)}
   .poles{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0 16px}
   .poles .ph{padding:8px 10px;border-radius:8px;font-family:var(--serif);font-weight:700;
     text-align:center;font-size:1rem}
   .poles .ph.m{background:var(--green-bg);color:var(--green);border:1px solid var(--green-line)}
   .poles .ph.e{background:var(--red-bg);color:var(--red);border:1px solid var(--red-line)}
   .cmp{margin:0 0 12px}
-  .cmp-label{font-weight:700;color:var(--ink);font-size:.9rem;margin:0 0 5px;
+  .cmp-label{font-weight:700;color:var(--ink);font-size:.88rem;margin:0 0 5px;
     text-transform:uppercase;letter-spacing:.03em}
   .cmp-cols{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  .cmp-cols>div{padding:9px 11px;border-radius:8px;font-size:.88rem}
-  .cmp-cols .m{background:var(--green-bg);border:1px solid var(--green-line);color:var(--ink-soft)}
-  .cmp-cols .e{background:var(--red-bg);border:1px solid var(--red-line);color:var(--ink-soft)}
-  .note-inline{background:var(--ochre-soft);border:1px solid var(--ochre);border-radius:8px;
-    padding:11px 14px;font-size:.9rem;color:var(--ink);margin:12px 0}
+  .cmp-cols>div{padding:9px 11px;border-radius:8px;font-size:.87rem;color:var(--ink-soft)}
+  .cmp-cols .m{background:var(--green-bg);border:1px solid var(--green-line)}
+  .cmp-cols .e{background:var(--red-bg);border:1px solid var(--red-line)}
   .quote{border-left:4px solid var(--ink);background:var(--panel-2);padding:12px 15px;
-    border-radius:0 8px 8px 0;font-family:var(--serif);font-style:italic;font-size:.98rem;
+    border-radius:0 8px 8px 0;font-family:var(--serif);font-style:italic;font-size:.97rem;
     color:var(--ink);margin:12px 0}
-  .actgrid{display:grid;grid-template-columns:1fr;gap:6px}
-  .kv{display:grid;grid-template-columns:1fr;gap:2px;border:1px solid var(--line);
-    border-radius:8px;padding:10px 12px;background:var(--panel-2)}
-  .kv b{color:var(--ink);font-size:.9rem}
-  .kv span{font-size:.9rem;color:var(--ink-soft)}
+  .kv{border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:var(--panel-2);margin:6px 0}
+  .kv b{font-size:.9rem}.kv span{font-size:.9rem;color:var(--ink-soft);display:block;margin-top:2px}
   .yes{color:var(--green);font-weight:700}.no{color:var(--red);font-weight:700}
-  footer{margin-top:8px;padding:14px 4px 0;border-top:1px solid var(--line);
-    color:var(--muted);font-size:.8rem}
+  footer{margin-top:8px;padding:14px 4px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
   @media print{body{background:#fff}.part{box-shadow:none}}
 </style>
 
@@ -110,177 +102,210 @@
   <header class="masthead">
     <p class="kicker">Modern History | Adarsh - UPSC CSE</p>
     <h1>Foundation of the INC, Moderates and Extremists, and the Councils Acts</h1>
-    <p class="sub">Digitised from the handwritten notes. Each section fits the screen width -
-      screenshot any block directly, no side-scrolling.</p>
+    <p class="sub">Detailed one-stop note. Every section fits the screen width - screenshot any
+      block directly, no side-scrolling.</p>
   </header>
 
   <div class="part">
     <span class="part-num">Part 1</span>
-    <h2>Regional Integration Theory</h2>
-    <p>From the beginning of the 19th century there were many social-reform organisations that
-      also worked for political awakening through newspapers, journals and books. They raised
-      similar issues, which led to the formation of social organisations, then evolving into
-      regional organisations (such as the Poona Sarvajanik Sabha), and ultimately culminating
-      into a national-level organisation - the INC.</p>
+    <h2>Growth of Political Consciousness (Regional Integration)</h2>
+    <p>From the early 19th century an English-educated Indian middle class emerged. Social-reform
+      and literary bodies did political awakening through newspapers, journals and books. They
+      raised similar grievances, so scattered local associations matured into regional ones, and
+      these regional streams finally integrated into one national organisation - the INC (1885).
+      The Congress was the culmination of pre-existing regional political activity, not a sudden
+      creation.</p>
   </div>
 
   <div class="part">
     <span class="part-num">Part 2</span>
     <h2>Pre-Congress Political Associations</h2>
 
-    <div class="grouphead">Early Bengal associations</div>
+    <div class="grouphead">Phase 1 (1830s-1850s): landed / aristocratic elites, provincial</div>
     <div class="assoc"><h3><span class="yr">1836</span> - Bangabhasha Prakashika Sabha</h3>
-      <ul><li>Formed by the associates of Raja Rammohan Roy.</li></ul></div>
+      <ul><li>Formed by the associates of Raja Rammohan Roy; among the earliest.</li></ul></div>
     <div class="assoc"><h3><span class="yr">1838</span> - Landholders' Society (Zamindari Association)</h3>
       <ul><li>Founders: Dwarkanath Tagore and Raja Radhakant Deb.</li>
-      <li>Worked for the interests of the landlords (zamindars).</li></ul></div>
+      <li>First organised political effort; guarded zamindar (landlord) interests.</li></ul></div>
+    <div class="assoc"><h3><span class="yr">1843</span> - Bengal British India Society</h3>
+      <ul><li>On the advice of George Thompson; publish info on the people's real condition.</li></ul></div>
     <div class="assoc"><h3><span class="yr">1851</span> - British India Association</h3>
-      <ul><li>Merger of the Landholders' Society and the Bengal British India Society.</li>
-      <li>Associated with Raja Radhakant Deb and Dwarkanath Tagore.</li></ul></div>
+      <ul><li>Merger of the Landholders' Society and the Bengal British India Society (Pres.: Raja Radhakant Deb; Secy.: Debendranath Tagore).</li>
+      <li>1852 petition to Parliament: separate legislature, separation of executive and judiciary, abolition of certain taxes.</li></ul></div>
+    <div class="assoc"><h3><span class="yr">1852</span> - Bombay Association</h3>
+      <ul><li>Founders: Jagannath Shankar Seth and Dadabhai Naoroji; ascertain the people's demands and present them to the British.</li></ul></div>
+    <div class="assoc"><h3><span class="yr">1852</span> - Madras Native Association</h3>
+      <ul><li>Gazulu Lakshminarasu Chetty; raised ryotwari peasant grievances; short-lived.</li></ul></div>
+    <div class="assoc"><h3><span class="yr">1852</span> - Deccan Association</h3>
+      <ul><li>Short-lived; tried to send a mission to England for Charter Act 1853 reforms, but failed.</li></ul></div>
 
-    <div class="grouphead">Later associations</div>
+    <div class="callout"><b>Do not confuse the three "British India" bodies:</b> British India
+      Society = 1839, London, William Adam (also published the paper "British Indian Advocate") |
+      Bengal British India Society = 1843, Calcutta | British Indian Association = 1851, the merger.</div>
+
+    <div class="grouphead">Phase 2 (1860s-1880s): more nationalist, broader-based</div>
+    <div class="assoc"><h3><span class="yr">1865</span> - London Indian Society</h3>
+      <ul><li>Dadabhai Naoroji and W.C. Bonnerjee, in London; soon merged into the East India Association.</li></ul></div>
     <div class="assoc"><h3><span class="yr">1866</span> - East India Association</h3>
-      <ul><li>Formed by Dadabhai Naoroji in England.</li>
-      <li>Aim: build public opinion in favour of India's political progress.</li></ul></div>
+      <ul><li>Dadabhai Naoroji, in London; build British public opinion in favour of India's political progress.</li></ul></div>
     <div class="assoc"><h3><span class="yr">1870</span> - Poona Sarvajanik Sabha</h3>
-      <ul><li>Founders: G.V. Joshi, S.H. Sathe, S. Chiplunkar (Ranade joined 1871; not a founder).</li>
-      <li>Later associated with Gokhale and Tilak.</li>
-      <li>1875 petition to the House of Commons for India's direct representation in the British Parliament - signed by 23,000+ people.</li></ul></div>
-    <div class="assoc"><h3>Madras Mahajan Sabha <span class="yr">(1884)</span></h3>
-      <ul><li>Founders: G. Subramania Iyer, P. Anandacharlu, M. Viraraghavachariar.</li></ul></div>
-    <div class="assoc"><h3>Bombay Presidency Association <span class="yr">(1885)</span></h3>
-      <ul><li>Founders: Pherozeshah Mehta, Badruddin Tyabji, K.T. Telang - the "Bombay Trio".</li></ul></div>
+      <ul><li>Founders: G.V. Joshi, S.H. Sathe, S. Chiplunkar (Ranade joined 1871; not a founder); later nurtured Gokhale and Tilak.</li>
+      <li>1875 petition to the House of Commons for India's direct representation - signed by 23,000+ people.</li></ul></div>
     <div class="assoc"><h3><span class="yr">1876</span> - Indian National Association</h3>
-      <ul><li>Founders: Anand Mohan Bose and Surendranath Banerjee.</li>
-      <li>Made demands to Parliament; aimed to grow into a national-level association.</li></ul></div>
+      <ul><li>Surendranath Banerjee and Anand Mohan Bose; first avowedly nationalist body; led the Ilbert Bill and Civil Service age-limit agitations; merged into INC in 1886.</li></ul></div>
     <div class="assoc"><h3><span class="yr">1878</span> - Mohammedan National Association</h3>
       <ul><li>Founded by Syed Amir Ali.</li></ul></div>
-
-    <div class="grouphead">Other pre-Congress associations</div>
-    <div class="assoc"><h3><span class="yr">1839</span> - British India Society</h3>
-      <ul><li>Founded by William Adam and George Thompson in England.</li>
-      <li>Aim: draw the attention of the British public to despotic rule in India.</li>
-      <li>Published a newspaper called "British Indian Advocate".</li></ul></div>
-    <div class="assoc"><h3><span class="yr">1843</span> - Bengal British India Society</h3>
-      <ul><li>Formed on the advice of George Thompson.</li></ul></div>
-    <div class="assoc"><h3><span class="yr">1852</span> - Bombay Association</h3>
-      <ul><li>Founders: Jagannath Shankar Seth and Dadabhai Naoroji.</li>
-      <li>Aim: ascertain the demands of the people and present them to the British.</li></ul></div>
-    <div class="assoc"><h3><span class="yr">1852</span> - Deccan Association</h3>
-      <ul><li>Short-lived; tried to send a mission to England for reforms under the Charter Act 1853, but failed.</li></ul></div>
-    <div class="assoc"><h3><span class="yr">1852</span> - Madras Native Association</h3>
-      <ul><li>Founded by Gazulu Lakshminarasu Chetty.</li>
-      <li>Raised the issue of peasants under the ryotwari settlement; criticised the reduction in public welfare.</li></ul></div>
+    <div class="assoc"><h3><span class="yr">1884</span> - Madras Mahajan Sabha</h3>
+      <ul><li>G. Subramania Iyer, P. Anandacharlu, M. Viraraghavachariar - forerunner of the Congress in the South.</li></ul></div>
+    <div class="assoc"><h3><span class="yr">1885</span> - Bombay Presidency Association</h3>
+      <ul><li>Pherozeshah Mehta, Badruddin Tyabji, K.T. Telang - the "Bombay Trio".</li></ul></div>
     <div class="assoc"><h3><span class="yr">1893</span> - Indian Parliamentary Committee</h3>
-      <ul><li>Formed by William Wedderburn and W.S. Caine.</li>
-      <li>Aim: gather support for Indian political reform among the British public.</li></ul></div>
-  </div>
+      <ul><li>William Wedderburn and W.S. Caine; gather support for Indian reform among the British public.</li></ul></div>
 
-  <div class="part">
-    <span class="part-num">Part 2 (contd.)</span>
-    <h2>Demands and Assessment</h2>
-    <p><b>Demands (petition to the British, linked to the Charter Act 1853):</b></p>
+    <div class="subh">Demands (linked to the Charter Act 1853)</div>
     <ul class="plain">
-      <li>Legislation with a popular character.</li>
-      <li>Separation of the executive and the judiciary.</li>
-      <li>Reduction in the salary of officials.</li>
-      <li>Abolition of the salt duty and the stamp duty.</li>
+      <li>A legislature with a popular / representative character.</li>
+      <li>Separation of the executive from the judiciary.</li>
+      <li>Indianisation of services and reduction in the salaries of high officials.</li>
+      <li>Abolition of oppressive taxes - the salt duty and the stamp duty.</li>
     </ul>
-    <p style="margin-top:12px"><b>Assessment:</b> these bodies spread political consciousness,
-      brought the common masses into the political fold, and critiqued British law and policy,
-      preparing a strong base for the Congress. Their limitation was a narrow social base, a
-      regional connotation and an elite bias - though they imbibed British democratic and
-      constitutional ideas.</p>
+    <div class="subh">Assessment</div>
+    <p>They spread political consciousness, brought the masses into the political fold, critiqued
+      British law and policy, and prepared a strong base for the Congress. Limitations: a narrow
+      social base, a regional outlook and an elite bias - though they imbibed British democratic
+      and constitutional ideas.</p>
   </div>
 
   <div class="part">
     <span class="part-num">Part 3</span>
-    <h2>Theories on the Formation of the INC</h2>
-    <div class="theory top"><h3>Conscious-efforts theory (most acceptable)</h3>
-      <p>The formation of the INC was not a sudden event. There were many conscious efforts by
-      Indians at various levels that culminated in the INC - the most acceptable view.
-      Bipin Chandra supports it and called the early Congress leaders patriotic men of high
-      character, in no way stooges of the Government.</p></div>
-    <div class="theory"><h3>Lightning-Conductor theory - G.K. Gokhale</h3>
-      <p>Indian leaders knew that a platform openly led by Indian nationalists would be
-      suppressed. So they kept A.O. Hume (white, an ex-civil servant) in the lead to shield the
-      Congress. They used the Congress as a lightning conductor - a catalyst to bring together
-      the nationalist forces, disguised as a safety wall.</p></div>
-    <div class="theory"><h3>Conspiracy theory - R.P. Dutt (India Today)</h3>
-      <p>It builds on the safety-valve theory. According to him, the Congress was the result of a
-      conspiracy to suppress a popular uprising in India, and the bourgeois leaders were
-      complacent in it.</p></div>
+    <h2>Foundation of the INC (1885) and Theories of its Formation</h2>
+    <p>Founded in December 1885 at Bombay; A.O. Hume was the prime mover and W.C. Bonnerjee the
+      first president (72 delegates).</p>
+    <div class="theory"><h3>Safety-valve theory</h3>
+      <p>The Congress was allegedly created as a "safety valve" to release discontent and prevent
+      a revolt bigger than 1857. Advocates cite Hume's alleged "seven volumes" of secret reports
+      at Simla and his acting with the knowledge of Viceroy Lord Dufferin.</p></div>
+    <div class="theory"><h3>Conspiracy theory - R.P. Dutt (India Today, 1940)</h3>
+      <p>Building on the safety-valve idea: the Congress was the result of a conspiracy to abort a
+      popular uprising, and the bourgeois leaders were complacent in it.</p></div>
+    <div class="theory"><h3>The extremists' use - Lala Lajpat Rai</h3>
+      <p>Radicals turned the safety-valve claim against the Moderates - the Congress had been a
+      device to protect British rule, so Indians must now fight for their rights.</p></div>
+    <div class="theory"><h3>Lightning-conductor theory - G.K. Gokhale</h3>
+      <p>The Moderates deliberately kept A.O. Hume (white, ex-civil servant) in the lead as a
+      shield, so the Government would not suppress the infant Congress; Hume was a lightning
+      conductor to channel the nationalist forces.</p></div>
+    <div class="theory top"><h3>Conscious-efforts view - accepted (Bipin Chandra)</h3>
+      <p>Bipin Chandra debunked the "seven volumes" and safety-valve thesis as a myth. The
+      Congress was the culmination of decades of conscious Indian effort; Hume was a facilitator,
+      not the creator; the early leaders were patriots of high character, not stooges.</p></div>
   </div>
 
   <div class="part">
     <span class="part-num">Part 4</span>
-    <h2>Moderates vs Extremists</h2>
-    <div class="poles"><div class="ph m">Moderates</div><div class="ph e">Extremists</div></div>
-
-    <div class="cmp"><div class="cmp-label">Time frame</div>
-      <div class="cmp-cols"><div class="m">1885 to 1905</div><div class="e">1905 to 1919</div></div></div>
-    <div class="cmp"><div class="cmp-label">Leaders</div>
-      <div class="cmp-cols"><div class="m">Surendranath Banerjee, Pherozeshah Mehta, Gokhale</div><div class="e">Lal-Bal-Pal, Aurobindo Ghosh, V.O.C. Pillai</div></div></div>
-    <div class="cmp"><div class="cmp-label">Demand</div>
-      <div class="cmp-cols"><div class="m">Gradual constitutional progress; self-rule</div><div class="e">Swaraj</div></div></div>
-    <div class="cmp"><div class="cmp-label">Method</div>
-      <div class="cmp-cols"><div class="m">Prayer, petition, protest (3 P's); constitutional agitation; philanthropy. Criticised as "political mendicancy".</div><div class="e">Passive resistance</div></div></div>
-    <div class="cmp"><div class="cmp-label">Attitude towards the British</div>
-      <div class="cmp-cols"><div class="m">Believed in the providential mission; faith in British justice; apprenticeship necessary for progress</div><div class="e">The mission is propaganda and an illusion; no faith; it is a design to further British rule</div></div></div>
-    <div class="cmp"><div class="cmp-label">Social and cultural background</div>
-      <div class="cmp-cols"><div class="m">Urban elite; Brahmo Samaj</div><div class="e">Urban middle class; Arya Samaj</div></div></div>
-    <div class="cmp"><div class="cmp-label">Mass base</div>
-      <div class="cmp-cols"><div class="m">Narrow (landlords); lacked faith in the masses</div><div class="e">Wider (youth and masses); Tilak used the Ganesha and Shivaji festivals to mobilise</div></div></div>
-    <div class="cmp"><div class="cmp-label">Inspiration</div>
-      <div class="cmp-cols"><div class="m">Western liberal thought (French and American revolutions)</div><div class="e">India's past tradition and institutions</div></div></div>
-    <div class="cmp"><div class="cmp-label">On poverty</div>
-      <div class="cmp-cols"><div class="m">Caused by the social and economic structure in the country</div><div class="e">Caused by the British presence</div></div></div>
-    <div class="cmp"><div class="cmp-label">On political reform</div>
-      <div class="cmp-cols"><div class="m">Persuasion / collaborative</div><div class="e">Demanded it as a matter of right</div></div></div>
-    <div class="cmp"><div class="cmp-label">British attitude towards them</div>
-      <div class="cmp-cols"><div class="m">Appeasement / promotion (carrots)</div><div class="e">Isolation / negation (sticks)</div></div></div>
-
-    <div class="quote">The Moderates, under Extremist pressure, raised the slogan "No taxation
-      without representation". Tilak said: "Political rights will have to be fought for. The
-      Moderates think they can be won by persuasion; we think they can be obtained only by
-      strong pressure."</div>
+    <h2>The Moderates (Early Nationalists), 1885-1905</h2>
+    <p><b>Who:</b> Naoroji, Wacha, Pherozeshah Mehta, Surendranath Banerjee, Gokhale, Badruddin
+      Tyabji, Ranade, W.C. Bonnerjee - English-educated professionals.</p>
+    <p><b>Ideology:</b> faith in the British sense of justice and the "providential mission" of
+      British rule (reformable from within); apprenticeship thought necessary; loyal to the Crown.</p>
+    <p><b>Methods:</b> constitutional agitation; the "3 P's" - Petition, Prayer, Protest (some add
+      a 4th P, Propaganda / political education); the British Committee of the INC (1889) and its
+      journal "India"; Naoroji even became a British MP (1892). Derided later as "political
+      mendicancy".</p>
+    <p><b>Demands:</b> council expansion and more powers (budget, questions); Indianisation of
+      services and simultaneous ICS exams; separation of judiciary and executive; and the economic
+      "Drain of Wealth" critique - Naoroji (Poverty and Un-British Rule in India, 1901) and
+      R.C. Dutt.</p>
+    <p><b>Achievements:</b> the Indian Councils Act 1892; the Public Service Commission (1886); a
+      House of Commons resolution (1893) for simultaneous ICS exams; the Welby Commission (1895);
+      and exposing the economic character of British rule.</p>
+    <p><b>Evaluation:</b> a narrow base and limited mass contact, and slow results - yet they laid
+      the organisation, ideology and economic critique for later mass movements.</p>
   </div>
 
   <div class="part">
     <span class="part-num">Part 5</span>
-    <h2>Indian Councils Act, 1861</h2>
+    <h2>The Extremists (Assertive Nationalists), 1905-1919</h2>
+    <p><b>Causes of the rise:</b></p>
     <ul class="plain">
-      <li><b>Portfolio system:</b> introduced by Canning in 1858; recognised by the 1861 Act. Departments (1862): Military, Revenue, Finance, Home, Law; Public Works added in 1874.</li>
-      <li><b>Ordinance:</b> the Viceroy could issue an ordinance valid for 6 months.</li>
-      <li><b>Decentralisation:</b> the earlier over-centralisation was reversed - this Act marks the beginning of decentralisation in India.</li>
-      <li><b>Additional members (6 to 10):</b> cannot ask questions to the Executive Council; cannot discuss the Budget; term of 2 years.</li>
-      <li><b>Categories:</b> Official; and Non-official - Sir Dinkar Rao, the Raja of Banaras, the Maharaja of Patiala.</li>
-      <li>Gradually legislatures were set up in the N.W. Provinces, Punjab and Burma.</li>
-      <li>The Act gave the Viceroy the liberty to increase the members; the Governor-General's Council was expanded for law-making.</li>
+      <li>Recognition of the exploitative nature of British rule - the drain, famines (1896-97, 1899-1900) and plague.</li>
+      <li>The slow, meagre results of Moderate methods.</li>
+      <li>Growth of self-respect and a militant school drawing pride from India's past.</li>
+      <li>Curzon's reactionary policies - Calcutta Corporation Act (1899), Indian Universities Act (1904), Official Secrets Act, and the Partition of Bengal (1905), the immediate trigger.</li>
+      <li>International influences - Ethiopia's defeat of Italy (1896) and Japan's defeat of Russia (1905).</li>
     </ul>
+    <p><b>Leaders and ideology:</b> Lal-Bal-Pal, plus Aurobindo Ghosh and V.O.C. Pillai. Goal:
+      Swaraj - "Swaraj is my birthright and I shall have it" (Tilak); drew on India's past and
+      claimed rights as a matter of right.</p>
+    <p><b>Methods:</b> Tilak's four-point programme - Swadeshi, Boycott, National Education,
+      Passive Resistance; and mass mobilisation through the Ganpati Utsav (1893) and Shivaji Utsav
+      (1896).</p>
+    <p><b>Surat Split (1907):</b> the Congress split at Surat; reunited at Lucknow (1916). Under
+      Extremist pressure the Moderates raised "No taxation without representation".</p>
+    <div class="quote">Tilak: "Political rights will have to be fought for. The Moderates think
+      they can be won by persuasion; we think they can be obtained only by strong pressure."</div>
   </div>
 
   <div class="part">
     <span class="part-num">Part 6</span>
-    <h2>Indian Councils Act, 1892</h2>
-    <div class="actgrid">
-      <div class="kv"><b>Executive Council</b><span>No change.</span></div>
-      <div class="kv"><b>Additional Members (10 to 16)</b><span>Official: 6. Non-official: 10 - of which 5 appointed by the Viceroy, and 1 each from Bengal, Bombay, Madras, the N.W. Provinces and the Bengal Chamber of Commerce.</span></div>
-      <div class="kv"><b>Powers of members</b><span><span class="yes">Can</span> ask questions to the Executive Council. <span class="yes">Can</span> discuss financial matters (the Budget). <span class="no">Cannot</span> vote on the Budget. <span class="no">Cannot</span> ask supplementary questions.</span></div>
-      <div class="kv"><b>Significance</b><span>Introduced the principle of representation; first step towards a representative form of government; first time indirect election - called not "election" but "nomination on the basis of recommendation by certain bodies".</span></div>
-    </div>
+    <h2>Moderates vs Extremists (full comparison)</h2>
+    <div class="poles"><div class="ph m">Moderates</div><div class="ph e">Extremists</div></div>
+    <div class="cmp"><div class="cmp-label">Time frame</div>
+      <div class="cmp-cols"><div class="m">1885 to 1905</div><div class="e">1905 to 1919</div></div></div>
+    <div class="cmp"><div class="cmp-label">Leaders</div>
+      <div class="cmp-cols"><div class="m">Naoroji, Surendranath Banerjee, Pherozeshah Mehta, Gokhale</div><div class="e">Lal-Bal-Pal, Aurobindo Ghosh, V.O.C. Pillai</div></div></div>
+    <div class="cmp"><div class="cmp-label">Demand</div>
+      <div class="cmp-cols"><div class="m">Gradual constitutional progress; self-government within the Empire</div><div class="e">Swaraj</div></div></div>
+    <div class="cmp"><div class="cmp-label">Method</div>
+      <div class="cmp-cols"><div class="m">Prayer, petition, protest (3 P's); constitutional agitation; "political mendicancy"</div><div class="e">Passive resistance; swadeshi, boycott, national education</div></div></div>
+    <div class="cmp"><div class="cmp-label">Attitude towards the British</div>
+      <div class="cmp-cols"><div class="m">Believed in the providential mission; faith in British justice; apprenticeship necessary</div><div class="e">The mission is propaganda and an illusion; no faith; a design to further British rule</div></div></div>
+    <div class="cmp"><div class="cmp-label">Social and cultural background</div>
+      <div class="cmp-cols"><div class="m">Urban elite; Brahmo Samaj</div><div class="e">Urban middle class; Arya Samaj</div></div></div>
+    <div class="cmp"><div class="cmp-label">Mass base</div>
+      <div class="cmp-cols"><div class="m">Narrow (landlords); lacked faith in the masses</div><div class="e">Wider (youth and masses); Tilak's Ganesha and Shivaji festivals</div></div></div>
+    <div class="cmp"><div class="cmp-label">Inspiration</div>
+      <div class="cmp-cols"><div class="m">Western liberal thought (French and American revolutions)</div><div class="e">India's past tradition and institutions</div></div></div>
+    <div class="cmp"><div class="cmp-label">On poverty</div>
+      <div class="cmp-cols"><div class="m">Caused by the social and economic structure of the country</div><div class="e">Caused by the British presence</div></div></div>
+    <div class="cmp"><div class="cmp-label">On political reform</div>
+      <div class="cmp-cols"><div class="m">Persuasion / collaborative</div><div class="e">Demanded it as a matter of right</div></div></div>
+    <div class="cmp"><div class="cmp-label">British attitude towards them</div>
+      <div class="cmp-cols"><div class="m">Appeasement / promotion (carrots)</div><div class="e">Isolation / negation (sticks)</div></div></div>
+    <p style="margin-top:6px"><b>Continuity:</b> both were stages of one movement - the Moderates
+      built the base; the Extremists broadened it into a mass struggle.</p>
   </div>
 
   <div class="part">
-    <span class="part-num">Note</span>
-    <h2>Small corrections (your content, made exam-accurate)</h2>
+    <span class="part-num">Part 7</span>
+    <h2>Indian Councils Act, 1861</h2>
     <ul class="plain">
-      <li>Moderate method: standard is the "3 P's" (Petition, Prayer, Protest); some materials add a 4th P - "Propaganda" (political education).</li>
-      <li>R.P. Dutt's "India Today" = 1940 (a few notes write 1939).</li>
-      <li>Bombay Presidency Association = 1885; Madras Mahajan Sabha = 1884.</li>
-      <li>M.G. Ranade joined the Poona Sarvajanik Sabha in 1871 and was not a founder.</li>
+      <li><b>Portfolio system:</b> introduced by Canning (1858-59), recognised by this Act. Departments (1862): Military, Revenue, Finance, Home, Law; Public Works added 1874.</li>
+      <li><b>Additional (non-official) members:</b> 6 to 12, nominated, 2-year term.</li>
+      <li><b>First Indians (nominated):</b> the Raja of Banaras, the Maharaja of Patiala, Sir Dinkar Rao (by Canning, 1862).</li>
+      <li><b>Decentralisation begins:</b> legislative powers restored to Bombay and Madras; later councils for Bengal (1862), N.W. Provinces (1886), Punjab (1897).</li>
+      <li><b>Ordinance:</b> the Viceroy could issue ordinances valid for 6 months.</li>
+      <li><b>Limits:</b> purely advisory - <span class="no">cannot</span> discuss the budget, <span class="no">cannot</span> ask questions, no control over the executive.</li>
+    </ul>
+    <p><b>Significance:</b> the beginning of representative institutions and of legislative decentralisation.</p>
+  </div>
+
+  <div class="part">
+    <span class="part-num">Part 8</span>
+    <h2>Indian Councils Act, 1892</h2>
+    <div class="kv"><b>Executive Council</b><span>No change.</span></div>
+    <div class="kv"><b>Additional Members (10 to 16)</b><span>Official: 6. Non-official: 10 - of which 5 appointed by the Viceroy, 1 each from Bengal, Bombay, Madras, the N.W. Provinces and the Bengal Chamber of Commerce.</span></div>
+    <div class="kv"><b>Principle of representation</b><span>First indirect "election" - some members nominated on the recommendation of provincial councils, municipalities, universities and chambers of commerce. The word "election" was avoided (called "nomination on recommendation").</span></div>
+    <div class="kv"><b>Powers</b><span><span class="yes">Can</span> discuss the budget <span class="no">(cannot vote)</span>. <span class="yes">Can</span> ask questions <span class="no">(no supplementary)</span>.</span></div>
+    <div class="kv"><b>Significance</b><span>The first step towards a representative form of government.</span></div>
+    <div class="subh">Quick contrast: 1861 vs 1892</div>
+    <ul class="plain">
+      <li><b>Budget:</b> 1861 - cannot discuss; 1892 - can discuss (cannot vote).</li>
+      <li><b>Questions:</b> 1861 - cannot ask; 1892 - can ask (no supplementary).</li>
+      <li><b>Members:</b> 1861 - nomination; 1892 - nomination on recommendation.</li>
+      <li><b>Core idea:</b> 1861 - Portfolio + Decentralisation; 1892 - Principle of Representation.</li>
     </ul>
   </div>
 
-  <footer>Digitised from Adarsh's handwritten notes. Content kept faithful to the notes.</footer>
+  <footer>Detailed note digitised from Adarsh's handwritten notes and enriched with standard material.</footer>
 </div>
