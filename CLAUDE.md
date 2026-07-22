@@ -3,7 +3,7 @@
 > This file is my persistent memory for helping Adarsh prepare for the UPSC Civil
 > Services Examination. It is auto-loaded at the start of every session. Keep it
 > current: update the "Progress Log" and "Current Focus" sections regularly.
-> Last updated: 2026-07-22
+> Last updated: 2026-07-22 (rev. profile: 1st attempt, English medium, B.Tech + data analyst)
 
 ---
 
@@ -16,11 +16,12 @@
 | **Preparation mode** | Full-time aspirant (8+ hours/day) |
 | **Target** | Full cycle — Prelims + Mains prepared together |
 | **Target attempt year** | _(to confirm — assume 2027 cycle unless told otherwise)_ |
-| **Attempt number** | _(to confirm)_ |
+| **Attempt number** | **1st attempt** (fresh candidate — 6 attempts available, general category assumed) |
 | **Home state** | Uttar Pradesh |
 | **Optional subject** | **Sociology** |
-| **Medium** | English _(confirm; Hindi terms welcome where helpful)_ |
-| **Graduation background** | _(to fill in)_ |
+| **Medium** | **English** (Hindi terms welcome where helpful) |
+| **Graduation background** | **B.Tech (Engineering)** |
+| **Work experience** | **2 years as a Data Analyst** (strong in data/statistics — leverage for CSAT, Economy, data-based Prelims Qs, Essay examples, and DAF/interview story) |
 | **Email** | adarshmishra1011@gmail.com |
 
 ### Preferences & special instructions
@@ -108,6 +109,10 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-07-22** — Updated profile: **1st attempt**, **English medium**, graduation
+  **B.Tech**, plus **2 years work experience as a Data Analyst**. This is a genuine
+  edge — strong quantitative/analytical base for CSAT, Economy, and data-driven answers,
+  and a ready-made narrative for the DAF/interview.
 - **2026-07-22** — Created this memory file. Captured profile: full-time aspirant,
   full-cycle prep, Sociology optional, UP home state, wants all-State-PSC PYQ coverage.
 
