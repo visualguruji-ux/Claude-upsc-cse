@@ -1,0 +1,123 @@
+<meta charset="utf-8">
+<title>Note 01 - Tables (screenshot-ready)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --ground:#f3efe4;--panel:#fbf8f0;--panel-2:#efe7d3;
+    --ink:#1b2452;--ink-soft:#41487a;--muted:#6c6a63;--line:#d9cfb6;
+    --ochre:#b5651d;
+    --green:#2f6b57;--green-bg:#e2efe6;
+    --red:#9e3b2e;--red-bg:#f6e2db;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--ground:#12141d;--panel:#1a1d29;--panel-2:#232838;
+      --ink:#e7e3f2;--ink-soft:#b9b6cf;--muted:#9a978f;--line:#3a4056;--ochre:#e0994f;
+      --green:#7dc1a6;--green-bg:#18271f;--red:#e08574;--red-bg:#2c1d1a;}
+  }
+  :root[data-theme="dark"]{--ground:#12141d;--panel:#1a1d29;--panel-2:#232838;
+    --ink:#e7e3f2;--ink-soft:#b9b6cf;--muted:#9a978f;--line:#3a4056;--ochre:#e0994f;
+    --green:#7dc1a6;--green-bg:#18271f;--red:#e08574;--red-bg:#2c1d1a;}
+  :root[data-theme="light"]{--ground:#f3efe4;--panel:#fbf8f0;--panel-2:#efe7d3;
+    --ink:#1b2452;--ink-soft:#41487a;--muted:#6c6a63;--line:#d9cfb6;--ochre:#b5651d;
+    --green:#2f6b57;--green-bg:#e2efe6;--red:#9e3b2e;--red-bg:#f6e2db;}
+  *{box-sizing:border-box}
+  html,body{max-width:100%;overflow-x:hidden}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);line-height:1.4}
+  .wrap{max-width:840px;margin:0 auto;padding:clamp(16px,4vw,32px) clamp(12px,4vw,22px)}
+  h1{font-family:var(--serif);font-size:clamp(1.3rem,5vw,1.7rem);margin:0 0 4px;text-wrap:balance}
+  .intro{color:var(--muted);font-size:.85rem;margin:0 0 22px}
+  .tbl-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:clamp(12px,3vw,18px);margin:0 0 22px}
+  .tbl-card h2{font-family:var(--serif);font-size:clamp(1.05rem,4vw,1.3rem);margin:0 0 3px;color:var(--ink)}
+  .tbl-card .cap{color:var(--ochre);font-size:.72rem;font-weight:700;text-transform:uppercase;
+    letter-spacing:.06em;margin:0 0 12px}
+  table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:.78rem}
+  th,td{border:1px solid var(--line);padding:7px 8px;vertical-align:top;text-align:left;
+    overflow-wrap:break-word;word-break:normal;hyphens:auto}
+  thead th{background:var(--panel-2);color:var(--ink);font-size:.72rem;text-transform:uppercase;
+    letter-spacing:.03em}
+  tbody td{color:var(--ink-soft)}
+  .yr{color:var(--ochre);font-weight:700}
+  .nm{color:var(--ink);font-weight:700}
+  tbody tr:nth-child(even) td{background:rgba(0,0,0,.015)}
+  @media (prefers-color-scheme:dark){tbody tr:nth-child(even) td{background:rgba(255,255,255,.03)}}
+  /* Moderates vs Extremists coloured columns */
+  .mve col.c1{width:24%}.mve col.c2{width:38%}.mve col.c3{width:38%}
+  .mve td.b{color:var(--ink);font-weight:700;background:var(--panel-2)}
+  .mve td.m{background:var(--green-bg)}
+  .mve td.e{background:var(--red-bg)}
+  .mve thead th.mh{color:var(--green)}
+  .mve thead th.eh{color:var(--red)}
+  footer{color:var(--muted);font-size:.78rem;border-top:1px solid var(--line);padding-top:12px;margin-top:6px}
+</style>
+
+<div class="wrap">
+  <h1>Modern History - Note 01: Tables</h1>
+  <p class="intro">Foundation of the INC. Each table fits the screen - screenshot one table at a
+    time, no side-scrolling.</p>
+
+  <!-- TABLE 1 -->
+  <div class="tbl-card">
+    <h2>Table 1 - Pre-Congress Associations: Phase 1 (1830s-1850s)</h2>
+    <p class="cap">Landed / aristocratic elites, provincial in character</p>
+    <table>
+      <colgroup><col style="width:9%"><col style="width:24%"><col style="width:14%"><col style="width:53%"></colgroup>
+      <thead><tr><th>Year</th><th>Association</th><th>City</th><th>Founder / Key figures and points</th></tr></thead>
+      <tbody>
+        <tr><td class="yr">1836</td><td class="nm">Bangabhasha Prakashika Sabha</td><td>Calcutta</td><td>Associates of Raja Rammohan Roy. Among the earliest political associations.</td></tr>
+        <tr><td class="yr">1838</td><td class="nm">Landholders' Society (Zamindari Association)</td><td>Calcutta</td><td>Dwarkanath Tagore, Raja Radhakant Deb. First organised political effort; constitutional agitation; safeguarded zamindar (landlord) interests.</td></tr>
+        <tr><td class="yr">1843</td><td class="nm">Bengal British India Society</td><td>Calcutta</td><td>On the advice of George Thompson. Aim: collect and publish info on the real condition of the people.</td></tr>
+        <tr><td class="yr">1851</td><td class="nm">British Indian Association</td><td>Calcutta</td><td>Merger of Landholders' Society + Bengal British India Society (Pres.: Raja Radhakant Deb; Secy.: Debendranath Tagore). 1852 petition to Parliament: separate legislature, separation of executive and judiciary, abolition of certain taxes.</td></tr>
+        <tr><td class="yr">1852</td><td class="nm">Bombay Association</td><td>Bombay</td><td>Jagannath Shankar Seth, Dadabhai Naoroji. First political association of the Bombay Presidency; petitions on the Charter Act 1853.</td></tr>
+        <tr><td class="yr">1852</td><td class="nm">Madras Native Association</td><td>Madras</td><td>Gazulu Lakshminarasu Chetty. Raised ryotwari peasant grievances; short-lived.</td></tr>
+        <tr><td class="yr">1852</td><td class="nm">Deccan Association</td><td>Poona region</td><td>Local reformers. Short-lived; tried to send a mission to England for Charter Act 1853 reforms, but failed.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLE 2 -->
+  <div class="tbl-card">
+    <h2>Table 2 - Pre-Congress Associations: Phase 2 (1860s-1880s)</h2>
+    <p class="cap">More nationalist, broader-based</p>
+    <table>
+      <colgroup><col style="width:9%"><col style="width:26%"><col style="width:65%"></colgroup>
+      <thead><tr><th>Year</th><th>Association</th><th>Founders and points to remember</th></tr></thead>
+      <tbody>
+        <tr><td class="yr">1865</td><td class="nm">London Indian Society</td><td>Dadabhai Naoroji, W.C. Bonnerjee (London). Soon merged into the East India Association.</td></tr>
+        <tr><td class="yr">1866</td><td class="nm">East India Association</td><td>Dadabhai Naoroji (London). Build British public opinion / influence MPs in favour of India; later had branches in India.</td></tr>
+        <tr><td class="yr">1870</td><td class="nm">Poona Sarvajanik Sabha</td><td>G.V. Joshi, S.H. Sathe, S. Chiplunkar (Ranade joined 1871; not a founder). 1875 petition to the House of Commons for direct representation, signed by 23,000+; nurtured Gokhale and Tilak.</td></tr>
+        <tr><td class="yr">1876</td><td class="nm">Indian National Association</td><td>Surendranath Banerjee, Anand Mohan Bose (Calcutta). First avowedly nationalist body; led the Ilbert Bill and Civil Service age-limit agitations; merged into the INC in 1886.</td></tr>
+        <tr><td class="yr">1878</td><td class="nm">National Mohammedan Association</td><td>Syed Amir Ali. A political platform for Muslim concerns.</td></tr>
+        <tr><td class="yr">1884</td><td class="nm">Madras Mahajan Sabha</td><td>G. Subramania Iyer, P. Anandacharlu, M. Viraraghavachariar. Forerunner of the Congress in the South.</td></tr>
+        <tr><td class="yr">1885</td><td class="nm">Bombay Presidency Association</td><td>Pherozeshah Mehta, Badruddin Tyabji, K.T. Telang - the "Bombay Trio". Demanded a larger Indian role in councils and services.</td></tr>
+        <tr><td class="yr">1893</td><td class="nm">Indian Parliamentary Committee</td><td>William Wedderburn, W.S. Caine (Britain). Gather support for Indian reform among the British public.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLE 3 -->
+  <div class="tbl-card">
+    <h2>Table 3 - Moderates vs Extremists</h2>
+    <p class="cap">Two phases of the Congress</p>
+    <table class="mve">
+      <colgroup><col class="c1"><col class="c2"><col class="c3"></colgroup>
+      <thead><tr><th>Basis</th><th class="mh">Moderates (1885-1905)</th><th class="eh">Extremists (1905-1919)</th></tr></thead>
+      <tbody>
+        <tr><td class="b">Leaders</td><td class="m">Naoroji, S.N. Banerjee, Pherozeshah Mehta, Gokhale</td><td class="e">Lal-Bal-Pal, Aurobindo Ghosh, V.O.C. Pillai</td></tr>
+        <tr><td class="b">Demand</td><td class="m">Gradual constitutional progress; self-government within the Empire</td><td class="e">Swaraj</td></tr>
+        <tr><td class="b">Method</td><td class="m">Prayer, petition, protest (3 P's); constitutional agitation; "political mendicancy"</td><td class="e">Passive resistance; swadeshi, boycott, national education</td></tr>
+        <tr><td class="b">Attitude to the British</td><td class="m">Believed in the providential mission; faith in British justice; apprenticeship necessary</td><td class="e">Mission is propaganda and an illusion; no faith; a design to further British rule</td></tr>
+        <tr><td class="b">Social and cultural background</td><td class="m">Urban elite; Brahmo Samaj</td><td class="e">Urban middle class; Arya Samaj</td></tr>
+        <tr><td class="b">Mass base</td><td class="m">Narrow (landlords); lacked faith in the masses</td><td class="e">Wider (youth and masses); Ganesha and Shivaji festivals (Tilak)</td></tr>
+        <tr><td class="b">Inspiration</td><td class="m">Western liberal thought (French and American revolutions)</td><td class="e">India's past tradition and institutions</td></tr>
+        <tr><td class="b">On poverty</td><td class="m">Caused by the social and economic structure of the country</td><td class="e">Caused by the British presence</td></tr>
+        <tr><td class="b">On political reform</td><td class="m">Persuasion / collaborative</td><td class="e">Demanded it as a matter of right</td></tr>
+        <tr><td class="b">British attitude to them</td><td class="m">Appeasement / promotion (carrots)</td><td class="e">Isolation / negation (sticks)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>Modern History - Note 01 | Digitised from Adarsh's handwritten notes.</footer>
+</div>
