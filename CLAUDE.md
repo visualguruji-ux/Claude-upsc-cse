@@ -109,6 +109,11 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-07-22** — Digitised Adarsh's handwritten **Modern History** notes (11 pages) into a
+  UPSC-structured note: *Rise of Nationalism → Foundation of INC → Moderates & Extremists →
+  Indian Councils Acts 1861 & 1892*. Saved under `notes/modern-history/`. Corrected a few facts
+  (R.P. Dutt *India Today* = 1940; added dates for Bombay Presidency Assoc. 1885 & Madras Mahajan
+  Sabha 1884). **Pending:** exact-year UPSC + State PSC PYQ tagging for these sub-topics.
 - **2026-07-22** — Updated profile: **1st attempt**, **English medium**, graduation
   **B.Tech**, plus **2 years work experience as a Data Analyst**. This is a genuine
   edge — strong quantitative/analytical base for CSAT, Economy, and data-driven answers,
