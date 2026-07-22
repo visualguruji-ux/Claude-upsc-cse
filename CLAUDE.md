@@ -109,11 +109,20 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-07-22** — **Expanded Note 01 into a detailed one-stop document** (per Adarsh's request:
+  "don't miss anything, not revision style, enrich with Spectrum/coaching, one-stop solution").
+  Added Phase-wise pre-Congress associations (incl. **Deccan Association 1852, London Indian
+  Society 1865, British Committee of INC 1889 + journal *India***), full theories of INC formation
+  (safety-valve "seven volumes", Dutt, Lajpat Rai, lightning-conductor, Bipan Chandra), Moderates
+  (ideology/methods/demands/achievements/Drain of Wealth) & Extremists (causes/4-point programme/
+  **Surat Split 1907**), and detailed provisions of ICA 1861 & 1892. Fixed the **Moderate method:
+  standard 3 P's (Petition, Prayer, Protest); noted 4th P = Propaganda** used by some materials.
+  Web-verified against Spectrum/Vajiram/Insights/BYJU'S. **Pending:** exact-year PYQ tagging.
 - **2026-07-22** — Digitised Adarsh's handwritten **Modern History** notes (11 pages) into a
   UPSC-structured note: *Rise of Nationalism → Foundation of INC → Moderates & Extremists →
   Indian Councils Acts 1861 & 1892*. Saved under `notes/modern-history/`. Corrected a few facts
   (R.P. Dutt *India Today* = 1940; added dates for Bombay Presidency Assoc. 1885 & Madras Mahajan
-  Sabha 1884). **Pending:** exact-year UPSC + State PSC PYQ tagging for these sub-topics.
+  Sabha 1884).
 - **2026-07-22** — Updated profile: **1st attempt**, **English medium**, graduation
   **B.Tech**, plus **2 years work experience as a Data Analyst**. This is a genuine
   edge — strong quantitative/analytical base for CSAT, Economy, and data-driven answers,
