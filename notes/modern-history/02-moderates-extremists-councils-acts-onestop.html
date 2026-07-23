@@ -1,0 +1,310 @@
+<meta charset="utf-8">
+<title>Moderates, Extremists & Councils Acts - Detailed Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --ground:#f3efe4;--panel:#fbf8f0;--panel-2:#f0ead9;
+    --ink:#1b2452;--ink-soft:#41487a;--muted:#6c6a63;--line:#ded5bf;
+    --ochre:#b5651d;--ochre-soft:#e7d3b3;
+    --green:#2f6b57;--green-bg:#e2efe6;--green-line:#bcd8c6;
+    --red:#9e3b2e;--red-bg:#f6e2db;--red-line:#e3c3b8;
+    --shadow:0 1px 0 rgba(27,36,82,.04), 0 10px 26px -20px rgba(27,36,82,.55);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--ground:#12141d;--panel:#1a1d29;--panel-2:#212533;
+      --ink:#e7e3f2;--ink-soft:#b9b6cf;--muted:#9a978f;--line:#33384c;
+      --ochre:#e0994f;--ochre-soft:#3a3020;
+      --green:#7dc1a6;--green-bg:#18271f;--green-line:#2c4a3b;
+      --red:#e08574;--red-bg:#2c1d1a;--red-line:#4a2e28;
+      --shadow:0 10px 30px -22px rgba(0,0,0,.85);}
+  }
+  :root[data-theme="dark"]{--ground:#12141d;--panel:#1a1d29;--panel-2:#212533;
+    --ink:#e7e3f2;--ink-soft:#b9b6cf;--muted:#9a978f;--line:#33384c;
+    --ochre:#e0994f;--ochre-soft:#3a3020;
+    --green:#7dc1a6;--green-bg:#18271f;--green-line:#2c4a3b;
+    --red:#e08574;--red-bg:#2c1d1a;--red-line:#4a2e28;
+    --shadow:0 10px 30px -22px rgba(0,0,0,.85);}
+  :root[data-theme="light"]{--ground:#f3efe4;--panel:#fbf8f0;--panel-2:#f0ead9;
+    --ink:#1b2452;--ink-soft:#41487a;--muted:#6c6a63;--line:#ded5bf;
+    --ochre:#b5651d;--ochre-soft:#e7d3b3;
+    --green:#2f6b57;--green-bg:#e2efe6;--green-line:#bcd8c6;
+    --red:#9e3b2e;--red-bg:#f6e2db;--red-line:#e3c3b8;
+    --shadow:0 1px 0 rgba(27,36,82,.04), 0 10px 26px -20px rgba(27,36,82,.55);}
+  *{box-sizing:border-box}
+  html,body{max-width:100%;overflow-x:hidden}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:clamp(18px,4vw,40px) clamp(14px,4vw,28px)}
+  header.masthead{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:24px}
+  .kicker{text-transform:uppercase;letter-spacing:.18em;font-size:.68rem;font-weight:700;
+    color:var(--ochre);margin:0 0 8px}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem,6vw,2.2rem);
+    line-height:1.08;margin:0;text-wrap:balance}
+  .sub{color:var(--ink-soft);font-size:.95rem;margin:10px 0 0}
+  .src{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .part{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:clamp(16px,4vw,22px);margin:0 0 18px;box-shadow:var(--shadow)}
+  .part-num{display:inline-block;font-family:var(--serif);font-weight:700;font-size:.72rem;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--ochre);margin:0 0 4px}
+  .part h2{font-family:var(--serif);font-size:clamp(1.2rem,4.6vw,1.5rem);margin:0 0 12px;
+    line-height:1.14;text-wrap:balance}
+  .part h3{font-family:var(--serif);font-size:1.06rem;color:var(--ink);margin:16px 0 6px}
+  .part p{margin:0 0 10px;font-size:.94rem;color:var(--ink-soft)}
+  .part p b,li b,.kv b{color:var(--ink)}
+  ul.plain{margin:6px 0 10px;padding-left:1.15em}
+  ul.plain li{font-size:.93rem;color:var(--ink-soft);margin:6px 0}
+  ol.num{margin:6px 0 10px;padding-left:1.3em}
+  ol.num li{font-size:.93rem;color:var(--ink-soft);margin:7px 0}
+  /* leader chips */
+  .leaders{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0 10px}
+  .chip{background:var(--panel-2);border:1px solid var(--line);border-radius:20px;
+    padding:5px 11px;font-size:.82rem;color:var(--ink)}
+  .chip b{color:var(--ochre)}
+  /* highlight box */
+  .hl{background:var(--ochre-soft);border:1px solid var(--ochre);border-radius:10px;
+    padding:13px 16px;margin:12px 0}
+  .hl .lead{font-family:var(--sans);font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+    font-size:.72rem;color:var(--ochre);display:block;margin-bottom:6px}
+  .hl p{margin:4px 0 0;font-size:.9rem;color:var(--ink)}
+  .hl ul{margin:6px 0 0;padding-left:1.1em}.hl li{font-size:.9rem;color:var(--ink);margin:4px 0}
+  .quote{border-left:4px solid var(--ink);background:var(--panel-2);padding:12px 15px;
+    border-radius:0 8px 8px 0;font-family:var(--serif);font-style:italic;font-size:.97rem;
+    color:var(--ink);margin:12px 0}
+  /* comparison */
+  .poles{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0 16px}
+  .poles .ph{padding:8px 10px;border-radius:8px;font-family:var(--serif);font-weight:700;
+    text-align:center;font-size:1rem}
+  .poles .ph.m{background:var(--green-bg);color:var(--green);border:1px solid var(--green-line)}
+  .poles .ph.e{background:var(--red-bg);color:var(--red);border:1px solid var(--red-line)}
+  .cmp{margin:0 0 12px}
+  .cmp-label{font-weight:700;color:var(--ink);font-size:.86rem;margin:0 0 5px;
+    text-transform:uppercase;letter-spacing:.03em}
+  .cmp-cols{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .cmp-cols>div{padding:9px 11px;border-radius:8px;font-size:.86rem;color:var(--ink-soft)}
+  .cmp-cols .m{background:var(--green-bg);border:1px solid var(--green-line)}
+  .cmp-cols .e{background:var(--red-bg);border:1px solid var(--red-line)}
+  .kv{border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:var(--panel-2);margin:6px 0}
+  .kv b{font-size:.9rem}.kv span{font-size:.9rem;color:var(--ink-soft);display:block;margin-top:2px}
+  .yes{color:var(--green);font-weight:700}.no{color:var(--red);font-weight:700}
+  .tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;
+    letter-spacing:.04em;color:var(--green);background:var(--green-bg);border:1px solid var(--green-line);
+    border-radius:5px;padding:2px 8px;margin-left:6px}
+  footer{margin-top:8px;padding:14px 4px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+  @media print{body{background:#fff}.part{box-shadow:none}}
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <p class="kicker">Modern History | Adarsh - UPSC CSE</p>
+    <h1>Moderates, Extremists and the Councils Acts (1861 &amp; 1892)</h1>
+    <p class="sub">The in-depth, one-stop treatment - leaders, economic nationalism, the causes
+      of Extremism, Swadeshi, the Surat Split, and the full provisions of both Acts.</p>
+    <p class="src">Built from Bipan Chandra (India's Struggle for Independence), Spectrum, and
+      standard coaching material. Every section fits the screen - screenshot any block.</p>
+  </header>
+
+  <!-- MODERATES -->
+  <div class="part">
+    <span class="part-num">Part 1</span>
+    <h2>The Moderates (Early Nationalists), 1885-1905</h2>
+
+    <h3>Prominent leaders</h3>
+    <div class="leaders">
+      <span class="chip"><b>Dadabhai Naoroji</b> - Grand Old Man; Drain theory; first Indian MP</span>
+      <span class="chip"><b>S.N. Banerjee</b> - Indian Association; "Rashtraguru"</span>
+      <span class="chip"><b>Pherozeshah Mehta</b> - "Lion of Bombay"</span>
+      <span class="chip"><b>G.K. Gokhale</b> - Servants of India Society; Gandhi's guru</span>
+      <span class="chip"><b>W.C. Bonnerjee</b> - first Congress president</span>
+      <span class="chip"><b>Badruddin Tyabji</b> - first Muslim president (1887)</span>
+      <span class="chip">Wacha, Ranade, R.C. Dutt, Malaviya, Wedderburn</span>
+    </div>
+
+    <h3>Ideology</h3>
+    <p>Faith in the British sense of justice and in the "providential mission" of British rule
+      (reformable from within); gradualism and constitutionalism; a period of political
+      apprenticeship thought necessary; loyal to the Crown; shaped by Western liberal thought.</p>
+
+    <h3>Methods</h3>
+    <ul class="plain">
+      <li>Constitutional agitation "within the four corners of the law".</li>
+      <li>The <b>3 P's</b> - Petition, Prayer, Protest (some add a 4th P, Propaganda / political education).</li>
+      <li>A two-pronged strategy: build public opinion in India, and persuade Britain via the <b>British Committee of the INC (1889)</b> and its journal <b>"India"</b>, and via Naoroji as an MP.</li>
+      <li>Derided by the Extremists as <b>"political mendicancy"</b> (politics of begging).</li>
+    </ul>
+
+    <div class="hl">
+      <span class="lead">Their greatest contribution: Economic Nationalism (Drain of Wealth)</span>
+      <p>The Moderates built the most powerful economic critique of colonial rule - that British
+        rule itself caused India's poverty.</p>
+      <ul>
+        <li><b>Dadabhai Naoroji</b> - "Poverty and Un-British Rule in India" (1901); the Drain theory.</li>
+        <li><b>R.C. Dutt</b> - "The Economic History of India". <b>William Digby</b> - "Prosperous British India".</li>
+        <li><b>The drain:</b> Home Charges, British salaries/pensions, interest on debt, guaranteed railway profits, military spending.</li>
+        <li><b>Three pillars:</b> de-industrialisation; the drain of wealth; an exploitative land-revenue system.</li>
+      </ul>
+    </div>
+
+    <h3>Political and administrative demands</h3>
+    <ul class="plain">
+      <li>Expansion of the legislative councils, more elected Indians, and control over the budget.</li>
+      <li>Separation of the judiciary from the executive.</li>
+      <li>Indianisation of services - simultaneous ICS exams in India and England; raise the age limit.</li>
+      <li>Repeal of the Arms Act; civil liberties; more spending on education.</li>
+    </ul>
+
+    <h3>Achievements</h3>
+    <ul class="plain">
+      <li>Created a national awakening and trained Indians in modern politics.</li>
+      <li>The economic critique undermined the moral legitimacy of British rule (Bipan Chandra rates this highest).</li>
+      <li>The Indian Councils Act 1892; the Public Service Commission (1886); the Commons resolution (1893) for simultaneous ICS exams; the Welby Commission (1895, Naoroji a member).</li>
+    </ul>
+
+    <h3>Evaluation (Bipan Chandra)</h3>
+    <p>Limitations: a narrow social base and little mass contact, an overestimation of British
+      liberalism, and slow results. But they were <b>pioneers, not failures</b> - they laid the
+      organisation, ideology and economic critique on which every later phase stood; their real
+      work was the political education of a nation.</p>
+  </div>
+
+  <!-- EXTREMISTS -->
+  <div class="part">
+    <span class="part-num">Part 2</span>
+    <h2>The Extremists (Assertive Nationalists), 1905-1919</h2>
+
+    <h3>Causes of the rise of Extremism</h3>
+    <ol class="num">
+      <li>Realisation of the exploitative nature of British rule - the drain, famines (1896-97, 1899-1900), plague.</li>
+      <li>Failure of the Moderate methods (petitions ignored; British hostility).</li>
+      <li>Growth of self-respect and strong individual leaders (Tilak, Pal, Lajpat Rai, Aurobindo).</li>
+      <li>Cultural pride and revival - Vivekananda, Dayananda, Bankim Chandra ("Anandamath", "Vande Mataram").</li>
+      <li>Curzon's reactionary policies - Calcutta Corporation Act (1899), Indian Universities Act (1904), Official Secrets Act (1904), and the <b>Partition of Bengal (1905)</b> - the trigger.</li>
+      <li>International influences - Ethiopia over Italy (1896), Japan over Russia (1905).</li>
+      <li>An existing militant school of thought (Rajnarain Bose, Ashwini Kumar Dutt, Vasudev Balwant Phadke).</li>
+    </ol>
+
+    <h3>Leaders and ideology</h3>
+    <div class="leaders">
+      <span class="chip"><b>Lala Lajpat Rai</b> - Punjab</span>
+      <span class="chip"><b>Bal Gangadhar Tilak</b> - Maharashtra</span>
+      <span class="chip"><b>Bipin Chandra Pal</b> - Bengal</span>
+      <span class="chip">Aurobindo Ghosh</span>
+      <span class="chip">V.O.C. Pillai</span>
+    </div>
+    <p>Goal: <b>Swaraj</b> - "Swaraj is my birthright and I shall have it" (Tilak). Pride in India's
+      past; self-reliance; deep faith in the masses; rights claimed as a matter of right.</p>
+
+    <h3>Methods - the four-fold programme</h3>
+    <div class="hl">
+      <span class="lead">Swadeshi | Boycott | National Education | Passive Resistance</span>
+      <p>Plus mass mobilisation through Tilak's Ganpati Utsav (1893) and Shivaji Utsav (1896), and
+        newspapers (Kesari, Maratha). National education, e.g., the Bengal National College (1906),
+        with Aurobindo as principal.</p>
+    </div>
+
+    <h3>The Swadeshi Movement (1905-1908)</h3>
+    <ul class="plain">
+      <li>Launched in Bengal against the Partition of Bengal (1905).</li>
+      <li>Forms: boycott and burning of foreign cloth; swadeshi enterprises; national education; cultural mobilisation (Tagore's Rakhi Bandhan, "Vande Mataram").</li>
+      <li>The Extremists wanted it spread nationwide and turned into a movement for Swaraj.</li>
+      <li>Limits: limited peasant participation, splits, and severe repression; declined after 1908.</li>
+    </ul>
+
+    <h3>The Surat Split (1907) and repression</h3>
+    <ul class="plain">
+      <li>At Calcutta (1906), the Congress adopted the four resolutions and used "Swaraj" as its goal for the first time (Naoroji presided).</li>
+      <li>At <b>Surat (1907)</b>, the Congress split - Moderates (Gokhale) vs Extremists (Tilak); the Extremists walked out.</li>
+      <li>Repression: <b>Tilak jailed 6 years in Mandalay (1908)</b>; Aurobindo and Pal withdrew; Lajpat Rai left abroad.</li>
+      <li>The two wings reunited at <b>Lucknow (1916)</b>.</li>
+    </ul>
+  </div>
+
+  <!-- COMPARISON -->
+  <div class="part">
+    <span class="part-num">Part 3</span>
+    <h2>Moderates vs Extremists</h2>
+    <div class="poles"><div class="ph m">Moderates</div><div class="ph e">Extremists</div></div>
+    <div class="cmp"><div class="cmp-label">Time frame</div>
+      <div class="cmp-cols"><div class="m">1885 to 1905</div><div class="e">1905 to 1919</div></div></div>
+    <div class="cmp"><div class="cmp-label">Leaders</div>
+      <div class="cmp-cols"><div class="m">Naoroji, S.N. Banerjee, Pherozeshah Mehta, Gokhale</div><div class="e">Lal-Bal-Pal, Aurobindo Ghosh, V.O.C. Pillai</div></div></div>
+    <div class="cmp"><div class="cmp-label">Goal / demand</div>
+      <div class="cmp-cols"><div class="m">Gradual reform; self-government within the Empire</div><div class="e">Swaraj</div></div></div>
+    <div class="cmp"><div class="cmp-label">Methods</div>
+      <div class="cmp-cols"><div class="m">3 P's; constitutional agitation; "political mendicancy"</div><div class="e">Swadeshi, boycott, national education, passive resistance</div></div></div>
+    <div class="cmp"><div class="cmp-label">Attitude to British rule</div>
+      <div class="cmp-cols"><div class="m">Faith in British justice; providential mission; apprenticeship</div><div class="e">No faith; the mission is an illusion; a design to exploit</div></div></div>
+    <div class="cmp"><div class="cmp-label">Social and cultural background</div>
+      <div class="cmp-cols"><div class="m">Urban elite; Brahmo Samaj</div><div class="e">Urban middle class; Arya Samaj and revivalism</div></div></div>
+    <div class="cmp"><div class="cmp-label">Mass base</div>
+      <div class="cmp-cols"><div class="m">Narrow; lacked faith in the masses</div><div class="e">Wider (youth and masses); used festivals</div></div></div>
+    <div class="cmp"><div class="cmp-label">Inspiration</div>
+      <div class="cmp-cols"><div class="m">Western liberal thought (French and American revolutions)</div><div class="e">India's own past, culture and traditions</div></div></div>
+    <div class="cmp"><div class="cmp-label">View on poverty</div>
+      <div class="cmp-cols"><div class="m">India's social and economic structure</div><div class="e">The British presence itself</div></div></div>
+    <div class="cmp"><div class="cmp-label">Approach to reform</div>
+      <div class="cmp-cols"><div class="m">Persuasion and collaboration</div><div class="e">Rights as a matter of right</div></div></div>
+    <div class="cmp"><div class="cmp-label">British response</div>
+      <div class="cmp-cols"><div class="m">Appeasement (carrots)</div><div class="e">Repression (sticks)</div></div></div>
+    <p style="margin-top:6px"><b>Continuity:</b> both were stages of one movement - the Moderates
+      built the base; the Extremists broadened it into a mass struggle.</p>
+  </div>
+
+  <!-- ICA 1861 -->
+  <div class="part">
+    <span class="part-num">Part 4</span>
+    <h2>Indian Councils Act, 1861 <span class="tag">Portfolio + Decentralisation</span></h2>
+    <p><b>Context:</b> after 1857 and Crown rule (1858), Britain sought to associate Indians with
+      law-making and reverse the over-centralisation of the Charter Act 1833.</p>
+    <ul class="plain">
+      <li><b>Portfolio system</b> recognised (introduced by Canning, 1859). Departments (1862): Military, Revenue, Finance, Home, Law; Public Works added 1874.</li>
+      <li><b>Additional (non-official) members</b> for legislation: 6 to 12, nominated, 2-year term.</li>
+      <li><b>First Indians (nominated):</b> the Raja of Banaras, the Maharaja of Patiala, Sir Dinkar Rao (by Canning, 1862).</li>
+      <li><b>Decentralisation begins:</b> legislative powers restored to Bombay and Madras; later councils for Bengal (1862), N.W. Provinces (1886), Punjab (1897).</li>
+      <li><b>Ordinance:</b> the Viceroy could issue ordinances valid for 6 months.</li>
+      <li><b>Limits:</b> purely advisory - <span class="no">cannot</span> discuss the budget, <span class="no">cannot</span> ask questions, no control over the executive; members nominated, not elected.</li>
+    </ul>
+    <p><b>Significance:</b> the beginning of representative institutions and of legislative decentralisation.</p>
+  </div>
+
+  <!-- ICA 1892 -->
+  <div class="part">
+    <span class="part-num">Part 5</span>
+    <h2>Indian Councils Act, 1892 <span class="tag">Representation + Budget</span></h2>
+    <div class="kv"><b>Executive Council</b><span>No change.</span></div>
+    <div class="kv"><b>Additional Members (10 to 16)</b><span>Official: 6. Non-official: 10 - of which 5 appointed by the Viceroy, and 1 each from Bengal, Bombay, Madras, the N.W. Provinces and the Bengal Chamber of Commerce.</span></div>
+    <div class="kv"><b>Principle of representation</b><span>First indirect "election" - members nominated on the recommendation of provincial councils, municipalities, universities and chambers of commerce. The word "election" was avoided ("nomination on recommendation").</span></div>
+    <div class="kv"><b>Powers of members</b><span><span class="yes">Can</span> discuss the budget <span class="no">(cannot vote)</span>. <span class="yes">Can</span> ask questions <span class="no">(no supplementary)</span>.</span></div>
+    <div class="kv"><b>Significance</b><span>The first step towards a representative form of government.</span></div>
+    <h3>Quick contrast: 1861 vs 1892</h3>
+    <ul class="plain">
+      <li><b>Budget:</b> 1861 - cannot discuss; 1892 - can discuss (cannot vote).</li>
+      <li><b>Questions:</b> 1861 - cannot ask; 1892 - can ask (no supplementary).</li>
+      <li><b>Members:</b> 1861 - nomination; 1892 - nomination on recommendation.</li>
+      <li><b>Core idea:</b> 1861 - Portfolio + Decentralisation; 1892 - Principle of Representation.</li>
+    </ul>
+  </div>
+
+  <!-- EXAM -->
+  <div class="part">
+    <span class="part-num">Exam pointers</span>
+    <h2>What gets asked</h2>
+    <h3>Prelims</h3>
+    <ul class="plain">
+      <li>Moderate leaders and epithets; authors/books of the Drain of Wealth (Naoroji, R.C. Dutt, Digby).</li>
+      <li>The four-fold Extremist programme; the Swadeshi resolutions (Calcutta 1906); the Surat Split (1907); Tilak's Mandalay sentence.</li>
+      <li>Powers under the 1861 vs 1892 Acts (budget / questions).</li>
+    </ul>
+    <h3>Mains (GS-I)</h3>
+    <ul class="plain">
+      <li>"The early nationalists laid the firm foundations of the national movement." Discuss.</li>
+      <li>Compare the ideology and methods of the Moderates and the Extremists.</li>
+      <li>The economic critique was the Moderates' most enduring contribution - examine.</li>
+      <li>The 1861-1892 reforms conceded the form of representative government but withheld its substance - analyse.</li>
+    </ul>
+  </div>
+
+  <footer>Detailed one-stop note - built from Bipan Chandra, Spectrum and coaching material.
+    Digitised for Adarsh's UPSC CSE preparation.</footer>
+</div>
