@@ -11,6 +11,13 @@ and PYQ pointers.
 > The **detailed note** is the one-stop study document (Spectrum + coaching-enriched).
 > The **HTML** is a quick-revision one-pager. The **PYQ set** has exam-pattern practice.
 
+**Deep-dive companions**
+- [`02-moderates-extremists-councils-acts-onestop.md`](02-moderates-extremists-councils-acts-onestop.md)
+  — in-depth, one-stop version of Moderates → Extremists → Councils Acts (Bipan Chandra +
+  Spectrum + coaching): leaders, economic nationalism / Drain of Wealth, causes of Extremism,
+  Swadeshi, Surat Split, and full provisions of ICA 1861 & 1892.
+- [`01-tables.html`](01-tables.html) — the 3 screenshot-ready tables (Phase 1, Phase 2, Moderates vs Extremists).
+
 > 💡 The **HTML revision sheet** is a styled, printable one-pager (light/dark, works offline).
 > Open it in any browser; use your browser's **Print → Save as PDF** for a hard copy.
 
