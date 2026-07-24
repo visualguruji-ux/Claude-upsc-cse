@@ -142,6 +142,21 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 9. How I (Claude) should help
+- **ALWAYS enrich from standard sources (STANDING INSTRUCTION):** for ANY subject/topic, before
+  answering or making notes, draw on **standard books + all coaching materials** — e.g. Spectrum,
+  Bipan Chandra, Laxmikanth, NCERTs, Shankar IAS, Ramesh Singh, plus coaching notes (Vajiram,
+  Insights, ForumIAS, etc.) and web-verify. Never give a thin/from-memory answer for a study topic.
+- **Formatting prefs:** stay faithful to Adarsh's own notes unless he asks to enrich; NEVER use
+  wide side-scrolling tables — use vertical/responsive, screenshot-friendly layouts; add a
+  `<meta charset="utf-8">` to every HTML.
+- **Prelims Drill pipeline (adopted from a friend's system):** build interactive, self-testing
+  MCQ drills as self-contained HTML apps, organised by a **numbered topic "lexicon"** for
+  gap-proof coverage. Each drill: coverage tracker, group filters, instant green/red
+  explanations, results screen with weak-spot review + "redo weak spots", keyboard nav.
+  Question design follows `prelims-drills/STYLE_CODEX.md` (formats A–L, 5 depth layers, trap
+  taxonomy, anti-bias stats) and must pass `prelims-drills/validate_drill.py` before shipping.
+  Explanations name the trap type; declare `fmt/layer/axis` on every item. First drill built:
+  `prelims-drills/drills/modern-history-01-foundation-of-congress.html`.
 - Act as a knowledgeable UPSC mentor: syllabus-aware, PYQ-driven, exam-oriented.
 - Always tie answers to the **syllabus** and, where relevant, to **PYQ trends**.
 - For Mains answers: give structure (intro–body–conclusion), keywords, diagrams,

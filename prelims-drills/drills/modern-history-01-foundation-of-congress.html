@@ -1,0 +1,365 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prelims Drill · Modern History · Foundation of the INC, Moderates & Extremists</title>
+<style>
+:root{
+  --paper:#f3efe4; --paper2:#ece3d0; --card:#fbf8f0; --ink:#1b2452; --ink2:#4a4f73;
+  --line:#d9cfb6; --brand:#b5651d; --brand-d:#8a4c15; --gold:#a9791f;
+  --hard:#7c4a86; --wrong:#9e3b2e; --good:#2f6b57; --deep:#2c3f78;
+  --shadow:0 10px 30px -14px rgba(27,36,82,.34);
+  --mono:ui-monospace,"SFMono-Regular","Menlo",monospace; --disp:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; --body:"Iowan Old Style",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#13151d; --paper2:#232838; --card:#1a1d29; --ink:#e7e3f2; --ink2:#b9b6cf;
+  --line:#343a50; --brand:#e0994f; --brand-d:#e0994f; --gold:#d8ab53;
+  --hard:#c79bd0; --wrong:#e08574; --good:#7dc1a6; --deep:#9db0e6; --shadow:0 12px 34px -20px rgba(0,0,0,.85);}}
+*{box-sizing:border-box} html,body{margin:0;max-width:100%;overflow-x:hidden}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding:24px 16px 80px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font-family:var(--disp);font-weight:700;font-size:30px;line-height:1.1;margin:.3em 0 .18em;text-wrap:balance}
+.sub{color:var(--ink2);font-size:15.5px;margin:0 0 14px}
+.pill{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:var(--brand);color:#fff;padding:4px 10px;border-radius:999px;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow)}
+.masthead{padding:20px;margin-bottom:16px}
+.cov{padding:15px 16px;margin-bottom:16px}
+.cov h3{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);margin:0 0 10px;font-weight:600;display:flex;justify-content:space-between}
+.dots{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.dot{aspect-ratio:1;border-radius:6px;border:1px solid var(--line);background:var(--paper2);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:10px;color:var(--ink2)}
+.dot.ok{background:var(--good);border-color:var(--good);color:#fff}
+.dot.bad{background:var(--wrong);border-color:var(--wrong);color:#fff}
+.controls{padding:15px 16px;margin-bottom:16px;display:flex;flex-direction:column;gap:12px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font-family:var(--mono);font-size:12px;padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:var(--paper2);color:var(--ink2);cursor:pointer}
+.seg button.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.toggle{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12.5px;color:var(--ink2)}
+.switch{width:44px;height:25px;border-radius:999px;background:var(--line);position:relative;cursor:pointer;border:none}
+.switch.on{background:var(--brand)}
+.switch::after{content:"";position:absolute;top:3px;left:3px;width:19px;height:19px;border-radius:50%;background:#fff;transition:.15s}
+.switch.on::after{left:22px}
+.btn{font-family:var(--mono);font-weight:600;font-size:14px;letter-spacing:.02em;padding:12px 20px;border-radius:11px;border:none;background:var(--brand);color:#fff;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn:disabled{opacity:.4;cursor:default}
+.scorebar{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12.5px;color:var(--ink2);margin-bottom:12px}
+.prog{flex:1;height:7px;border-radius:999px;background:var(--paper2);overflow:hidden;border:1px solid var(--line)}
+.prog>i{display:block;height:100%;background:var(--brand);width:0;transition:.25s}
+.q{padding:22px 20px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;padding:4px 9px;border-radius:6px;font-weight:600}
+.tag.topic{background:var(--paper2);color:var(--ink2);border:1px solid var(--line)}
+.tag.type{background:#f0e2c4;color:var(--gold)}
+.tag.hard{background:#efe0f2;color:var(--hard)}
+.tag.layer{background:#dfe6f5;color:var(--deep)}
+@media(prefers-color-scheme:dark){.tag.type{background:#3a3016}.tag.layer{background:#212a44}.tag.hard{background:#33223a}}
+.stem{font-size:20px;line-height:1.42;margin:0 0 18px}
+.stem .stmt{display:block;margin:8px 0;padding:5px 0 5px 14px;border-left:3px solid var(--line);font-size:18px}
+.stem .passage{font-style:italic;border-left:3px solid var(--brand);padding:.45em .9em;margin:.6em 0;background:rgba(0,0,0,.03);border-radius:6px;font-size:18.5px}
+.stem .pairs-wrap{overflow-x:auto;margin:.6em 0}
+.stem .pairs{width:100%;border-collapse:collapse;font-size:16px}
+.stem .pairs th,.stem .pairs td{border:1px solid var(--line);padding:.4em .6em;text-align:left;vertical-align:top}
+.stem .pairs thead th{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;color:var(--ink2)}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;padding:13px 15px;border-radius:11px;border:1px solid var(--line);background:var(--paper2);cursor:pointer;font-family:var(--body);font-size:17px;color:var(--ink);line-height:1.4}
+.opt:hover:not(:disabled){border-color:var(--brand)}
+.opt .key{font-family:var(--mono);font-size:12px;font-weight:600;width:22px;height:22px;flex:none;border-radius:6px;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--ink2)}
+.opt.correct{background:#e2efe6;border-color:var(--good)}
+.opt.correct .key{background:var(--good);color:#fff;border-color:var(--good)}
+.opt.wrong{background:#f6e2db;border-color:var(--wrong)}
+.opt.wrong .key{background:var(--wrong);color:#fff;border-color:var(--wrong)}
+@media(prefers-color-scheme:dark){.opt.correct{background:#18271f}.opt.wrong{background:#2c1d1a}}
+.opt:disabled{cursor:default}
+.mark{margin-left:auto;font-family:var(--mono);font-weight:700}
+.expl{margin-top:16px;padding:14px 16px;border-radius:11px;font-size:16px;line-height:1.5;display:none}
+.expl.show{display:block}
+.expl.g{background:#e2efe6;border:1px solid #bcd8c6}
+.expl.r{background:#f6e2db;border:1px solid #e3c3b8}
+@media(prefers-color-scheme:dark){.expl.g{background:#18271f;border-color:#2c4a3b}.expl.r{background:#2c1d1a;border-color:#4a2e28}}
+.verdict{font-family:var(--mono);font-size:12px;font-weight:600;text-transform:uppercase;display:block;margin-bottom:6px}
+.expl.g .verdict{color:var(--good)} .expl.r .verdict{color:var(--wrong)}
+.nav{display:flex;justify-content:flex-end;margin-top:18px}
+.results{padding:26px 22px;text-align:center}
+.bigscore{font-family:var(--disp);font-weight:700;font-size:56px;line-height:1;margin:6px 0}
+.bigscore small{font-size:24px;color:var(--ink2)}
+.grade{font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--brand-d);font-weight:600;margin-bottom:20px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
+.stat{background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:13px 8px}
+.stat b{display:block;font-family:var(--disp);font-size:24px;font-weight:700}
+.stat span{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2)}
+.weak{text-align:left;margin-top:20px}
+.weak h3{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--wrong)}
+.weakitem{background:var(--paper2);border:1px solid var(--line);border-left:3px solid var(--wrong);border-radius:10px;padding:12px 14px;margin-bottom:9px;font-size:15.5px}
+.weakitem .wq{font-weight:600;margin-bottom:5px}
+.weakitem .wa{font-family:var(--mono);font-size:12px;color:var(--good);margin-bottom:5px}
+.rbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.hidden{display:none!important}
+.foot{font-family:var(--mono);font-size:11px;color:var(--ink2);text-align:center;margin-top:26px;letter-spacing:.03em}
+@media(max-width:520px){h1{font-size:25px}.stem{font-size:18.5px}.dots{grid-template-columns:repeat(8,1fr)}.bigscore{font-size:46px}}
+</style>
+
+<div class="wrap">
+  <div class="card masthead">
+    <div class="eyebrow">Prelims Drill · Modern History · Note 01</div>
+    <h1>Foundation of the INC, Moderates &amp; Extremists, Councils Acts</h1>
+    <p class="sub">Pre-Congress associations · theories of the Congress's birth · Moderate and Extremist phases · the Indian Councils Acts of 1861 and 1892. Built to Adarsh's Prelims Style Codex.</p>
+    <span class="pill">Difficulty · Prelims Standard</span>
+  </div>
+
+  <div class="card cov"><h3><span>Coverage tracker</span><span id="covCount">0 tested</span></h3><div class="dots" id="dots"></div></div>
+
+  <div class="card controls" id="controls">
+    <div class="seg" id="filters"></div>
+    <div class="row">
+      <div class="toggle"><button class="switch on" id="shuf" aria-label="Shuffle"></button><span>Shuffle questions</span></div>
+      <button class="btn" id="start">Start drill →</button>
+    </div>
+  </div>
+
+  <div id="quizArea" class="hidden">
+    <div class="scorebar"><span id="qpos">Q 1</span><div class="prog"><i id="progbar"></i></div><span id="scoretxt">Score 0 · 0%</span></div>
+    <div class="card q" id="qcard"></div>
+  </div>
+
+  <div id="resultArea" class="hidden"></div>
+  <div class="foot">Active-recall drill · instant explanations · weak-spot review. Facts cross-checked to Spectrum / Bipan Chandra.</div>
+</div>
+
+<script>
+var topicName={
+ 3:"Landholders' Society",4:"British Indian Association",5:"Bombay Association",6:"Madras Native Association",
+ 7:"Deccan Association",8:"'British India' bodies",9:"East India Association",10:"Poona Sarvajanik Sabha",
+ 11:"Indian National Association",12:"Madras Mahajan Sabha",13:"Bombay Presidency Assoc.",15:"Foundation of INC 1885",
+ 16:"Safety-valve theory",17:"Conspiracy theory",18:"Lightning-conductor",19:"Conscious-efforts view",
+ 20:"Moderates — leaders",21:"Moderates — methods",22:"Drain of Wealth",23:"Moderates — achievements",
+ 24:"Rise of Extremism",25:"Extremist leaders",26:"Four-fold programme",27:"Swadeshi Movement",
+ 28:"Surat Split",29:"Councils Act 1861",30:"Councils Act 1892"
+};
+var groups=[
+ {k:"ASSOC",label:"Pre-Congress Associations"},
+ {k:"INC",label:"Foundation & Theories"},
+ {k:"MOD",label:"The Moderates"},
+ {k:"EXT",label:"The Extremists"},
+ {k:"ACTS",label:"Councils Acts"}
+];
+
+var BANK=[
+{t:4,g:"ASSOC",fmt:"A",layer:4,axis:"formation",type:"Single-best",hard:false,
+ q:"The British Indian Association (1851) of Calcutta is best described as:",
+ o:["A body founded by Dadabhai Naoroji in London to sway British Members of Parliament","The political wing of the Brahmo Samaj set up to press for social reform","A merger of the Bombay Association and the Madras Native Association","A merger of the Landholders' Society and the Bengal British India Society"],a:3,
+ e:"The British Indian Association was formed in 1851 by merging the Landholders' Society (1838) and the Bengal British India Society (1843). (a) is the East India Association; (b) and (c) are invented pairings — a named-entity confusion set."},
+{t:8,g:"ASSOC",fmt:"G",layer:3,axis:"chronology",type:"Pairs",hard:true,
+ q:"Consider the following pairs (body — year of founding):<div class='pairs-wrap'><table class='pairs'><thead><tr><th>Body</th><th>Year</th></tr></thead><tbody><tr><td>1. British India Society (London)</td><td>1839</td></tr><tr><td>2. Bengal British India Society</td><td>1843</td></tr><tr><td>3. British Indian Association</td><td>1851</td></tr></tbody></table></div>How many of the pairs given above are correctly matched?",
+ o:["Only one","Only two","All three","None"],a:2,
+ e:"All three are correct: British India Society (1839, London, William Adam), Bengal British India Society (1843, Calcutta) and British Indian Association (1851, the merger). The three near-identical names are the standard confusion trap; here every pairing holds."},
+{t:9,g:"ASSOC",fmt:"D",layer:3,axis:"attribution",type:"Statement-I/II",hard:true,
+ q:"Consider the following statements:<span class='stmt'>Statement-I: The East India Association was set up in 1866 in London to build British public opinion in favour of India's political progress.</span><span class='stmt'>Statement-II: It was founded by Surendranath Banerjee.</span>Which one of the following is correct in respect of the above statements?",
+ o:["Both correct and II explains I","Both correct but II is not the explanation of I","Statement-I is correct but Statement-II is incorrect","Statement-I is incorrect but Statement-II is correct"],a:2,
+ e:"Statement-I is correct. Statement-II is false — the East India Association was founded by Dadabhai Naoroji, not Surendranath Banerjee (who founded the Indian Association of 1876). A swapped-founder trap; I correct, II incorrect."},
+{t:10,g:"ASSOC",fmt:"B",layer:3,axis:"founder-and-act",type:"Statements",hard:true,
+ q:"With reference to the Poona Sarvajanik Sabha, consider the following statements:<span class='stmt'>1. It was founded in 1870 with M.G. Ranade as its founder, who established it before any other member joined.</span><span class='stmt'>2. In 1875 it petitioned the British House of Commons demanding India's direct representation in Parliament, a memorial signed by over 23,000 people.</span>Which of the statements given above is/are correct?",
+ o:["1 only","2 only","Both 1 and 2","Neither 1 nor 2"],a:1,
+ e:"Statement 2 is correct. Statement 1 mis-attributes the founding — the Sabha was founded in 1870 by G.V. Joshi, S.H. Sathe and S. Chiplunkar; M.G. Ranade joined only in 1871 and was not its founder. The planted qualifier ('before any other member joined') is where the falsehood sits."},
+{t:11,g:"ASSOC",fmt:"A",layer:4,axis:"identity",type:"Single-best",hard:false,
+ q:"Which one of the following correctly describes the Indian (National) Association founded in 1876?",
+ o:["A body founded by Dadabhai Naoroji in London to influence British Members of Parliament in India's favour","A landlord association created by the 1851 merger of two Bengal bodies in Calcutta","Founded by S.N. Banerjee and A.M. Bose, it was the first avowedly nationalist body and merged into the INC in 1886","A political platform founded by Syed Amir Ali to represent Muslim interests before the government"],a:2,
+ e:"The Indian Association (1876), founded by Surendranath Banerjee and Anand Mohan Bose, was the first avowedly nationalist organisation and merged into the Congress in 1886. (a) is the East India Association, (b) the British Indian Association, (d) the National Mohammedan Association — all real neighbours."},
+{t:13,g:"ASSOC",fmt:"C",layer:4,axis:"membership",type:"How many",hard:false,
+ q:"Consider the following persons:<span class='stmt'>1. Pherozeshah Mehta</span><span class='stmt'>2. K.T. Telang</span><span class='stmt'>3. Badruddin Tyabji</span><span class='stmt'>4. Dadabhai Naoroji</span>How many of the above were members of the 'Bombay Trio' associated with the Bombay Presidency Association (1885)?",
+ o:["Only one","Only two","Only three","All four"],a:2,
+ e:"The 'Bombay Trio' were Pherozeshah Mehta, K.T. Telang and Badruddin Tyabji — three. Dadabhai Naoroji, though a Bombay leader, was not part of the Trio; he is the planted non-member."},
+{t:5,g:"ASSOC",fmt:"C",layer:3,axis:"chronology",type:"How many",hard:true,
+ q:"Consider the following associations:<span class='stmt'>1. Bombay Association</span><span class='stmt'>2. Madras Native Association</span><span class='stmt'>3. Deccan Association</span><span class='stmt'>4. British Indian Association</span><span class='stmt'>5. Poona Sarvajanik Sabha</span>How many of the above were founded in the single year 1852?",
+ o:["Only two","Only three","Only four","All five"],a:1,
+ e:"Three were founded in 1852 — the Bombay Association, the Madras Native Association and the Deccan Association. The British Indian Association dates to 1851 and the Poona Sarvajanik Sabha to 1870 — the two planted off-year members."},
+{t:3,g:"ASSOC",fmt:"A",layer:3,axis:"objective",type:"Single-best",hard:false,
+ q:"The Landholders' Society (1838), often called the first organised political effort in India, was set up mainly to:",
+ o:["safeguard the interests of the zamindars (landlords) through constitutional agitation","organise the industrial workers of Bengal into a trade union","demand complete independence from British rule at an early date","promote the boycott of British manufactured cloth and goods"],a:0,
+ e:"The Landholders' Society defended the class interests of the zamindars by constitutional means. (c) and (d) are anachronistic — swaraj and boycott belong to a far later phase — the classic period-mismatch distractors."},
+{t:12,g:"ASSOC",fmt:"A",layer:2,axis:"founder",type:"Single-best",hard:false,
+ q:"The Madras Mahajan Sabha (1884) was founded by which of the following?",
+ o:["Pherozeshah Mehta, K.T. Telang and Badruddin Tyabji","G. Subramania Iyer, P. Anandacharlu and M. Viraraghavachariar","Surendranath Banerjee and Anand Mohan Bose","Dadabhai Naoroji and W.C. Bonnerjee"],a:1,
+ e:"The Madras Mahajan Sabha was founded by G. Subramania Iyer, P. Anandacharlu and M. Viraraghavachariar. (a) is the Bombay Trio and (c) the Indian Association's founders — a named-entity confusion set of real leaders."},
+{t:15,g:"INC",fmt:"B",layer:3,axis:"facts",type:"Statements",hard:false,
+ q:"With reference to the foundation of the Indian National Congress, consider the following statements:<span class='stmt'>1. Its first session, held at Bombay in December 1885, was presided over by A.O. Hume as its first president.</span><span class='stmt'>2. W.C. Bonnerjee was elected the first president of the Congress.</span>Which of the statements given above is/are correct?",
+ o:["1 only","2 only","Both 1 and 2","Neither 1 nor 2"],a:1,
+ e:"Statement 2 is correct. Statement 1 is false — A.O. Hume was the general secretary and organiser, not the president; the first session was presided over by W.C. Bonnerjee. Swapping Hume's role for the presidency is the trap."},
+{t:16,g:"INC",fmt:"B",layer:3,axis:"content",type:"Statements",hard:false,
+ q:"With reference to the 'safety-valve' theory of the founding of the Congress, consider the following statements:<span class='stmt'>1. It holds that A.O. Hume organised the Congress, with the knowledge of Viceroy Lord Dufferin, to provide a safe outlet for a discontent that might otherwise erupt in a violent upheaval.</span><span class='stmt'>2. Its advocates pointed to 'seven volumes' of secret reports that Hume was said to possess, warning of an imminent revolt.</span>Which of the statements given above is/are correct?",
+ o:["1 only","2 only","Both 1 and 2","Neither 1 nor 2"],a:2,
+ e:"Both statements correctly state the safety-valve thesis and its 'seven volumes' evidence — a claim later debunked by Bipan Chandra as a myth. Both are accurate descriptions of the theory (not of established fact)."},
+{t:17,g:"INC",fmt:"A",layer:3,axis:"attribution",type:"Single-best",hard:false,
+ q:"The 'conspiracy theory' — that the Congress was a device to abort a popular upheaval — elaborated in the book <i>India Today</i> (1940), is associated with:",
+ o:["G.K. Gokhale","R.P. Dutt","Bipan Chandra","A.O. Hume"],a:1,
+ e:"The conspiracy theory, building on the safety-valve idea, was elaborated by the Marxist historian R.P. Dutt in India Today (1940). Bipan Chandra, by contrast, debunked it; Gokhale is linked to the lightning-conductor idea — a who-said-it confusion set."},
+{t:18,g:"INC",fmt:"D",layer:4,axis:"attribution",type:"Statement-I/II",hard:true,
+ q:"Consider the following statements:<span class='stmt'>Statement-I: The 'lightning-conductor' theory holds that the Moderate leaders deliberately kept A.O. Hume in the lead to shield the infant Congress from official suppression.</span><span class='stmt'>Statement-II: This theory is attributed to Bipan Chandra, who described it as the most acceptable account of the Congress's origin.</span>Which one of the following is correct in respect of the above statements?",
+ o:["Both correct and II explains I","Both correct but II is not the explanation of I","Statement-I is correct but Statement-II is incorrect","Statement-I is incorrect but Statement-II is correct"],a:2,
+ e:"Statement-I correctly states the lightning-conductor theory, which is associated with G.K. Gokhale. Statement-II mis-attributes it to Bipan Chandra — whose position is the separate 'conscious-efforts' view. I correct, II incorrect."},
+{t:19,g:"INC",fmt:"D",layer:4,axis:"interpretation",type:"Statement-I/II",hard:true,
+ q:"Consider the following statements:<span class='stmt'>Statement-I: Bipan Chandra regarded the early Congress leaders as 'stooges' of the government, created by an official design.</span><span class='stmt'>Statement-II: The accepted 'conscious-efforts' view holds that the Congress was the culmination of decades of Indian political effort, its leaders being patriots of high character.</span>Which one of the following is correct in respect of the above statements?",
+ o:["Both correct and II explains I","Both correct but II is not the explanation of I","Statement-I is correct but Statement-II is incorrect","Statement-I is incorrect but Statement-II is correct"],a:3,
+ e:"Statement-I reverses Bipan Chandra's actual view — he explicitly held that the early leaders were patriots of high character, NOT stooges. Statement-II states the conscious-efforts view correctly. I incorrect, II correct — the full reversal."},
+{t:19,g:"INC",fmt:"A",layer:3,axis:"attribution",type:"Single-best",hard:false,
+ q:"The view that the Congress was not a sudden creation but the culmination of decades of conscious Indian effort — regarded as the most acceptable account of its origin — is chiefly associated with which one of the following?",
+ o:["Lord Dufferin","R.P. Dutt","Lala Lajpat Rai","Bipan Chandra"],a:3,
+ e:"The 'conscious-efforts' view — the accepted account — is associated with Bipan Chandra. Lord Dufferin belongs to the safety-valve story, R.P. Dutt to the conspiracy theory, and Lajpat Rai used the safety-valve claim against the Moderates — all genuine neighbours."},
+{t:20,g:"MOD",fmt:"G",layer:4,axis:"attribution",type:"Pairs",hard:true,
+ q:"Consider the following pairs (leader — description):<div class='pairs-wrap'><table class='pairs'><thead><tr><th>Leader</th><th>Description</th></tr></thead><tbody><tr><td>1. Dadabhai Naoroji</td><td>First Indian to become a British MP</td></tr><tr><td>2. G.K. Gokhale</td><td>Founder of the Servants of India Society</td></tr><tr><td>3. W.C. Bonnerjee</td><td>First Muslim president of the Congress</td></tr></tbody></table></div>How many of the pairs given above are correctly matched?",
+ o:["Only one","Only two","All three","None"],a:1,
+ e:"Pairs 1 and 2 are correct. Pair 3 is wrong — W.C. Bonnerjee was the first president of the Congress but was not Muslim; the first Muslim president was Badruddin Tyabji (1887). The 'first president' vs 'first Muslim president' overlap is the trap."},
+{t:21,g:"MOD",fmt:"A",layer:3,axis:"methods",type:"Single-best",hard:true,
+ q:"Which one of the following best characterises the political methods of the Moderates (1885–1905)?",
+ o:["Constitutional agitation within the law — petitions, resolutions and deputations — backed by propaganda in Britain through the Congress's British Committee and its journal 'India'","Boycott of British goods, national education and passive resistance designed to paralyse the colonial administration","Underground revolutionary activity and the assassination of officials aimed at the immediate overthrow of British rule","Mass civil disobedience and organised non-payment of land revenue across the countryside"],a:0,
+ e:"The Moderates worked through strictly constitutional agitation — the '3 P's' plus propaganda in Britain via the British Committee (1889) and its journal 'India'. (b) is the Extremist programme, (c) revolutionary terrorism, (d) later Gandhian mass action — each a real method from another phase."},
+{t:22,g:"MOD",fmt:"G",layer:4,axis:"attribution",type:"Pairs",hard:true,
+ q:"With reference to the economic critique ('Drain of Wealth') of the early nationalists, consider the following pairs (author — work):<div class='pairs-wrap'><table class='pairs'><thead><tr><th>Author</th><th>Work</th></tr></thead><tbody><tr><td>1. Dadabhai Naoroji</td><td>Poverty and Un-British Rule in India</td></tr><tr><td>2. R.C. Dutt</td><td>The Economic History of India</td></tr><tr><td>3. William Digby</td><td>Prosperous British India</td></tr><tr><td>4. Bipan Chandra</td><td>India Today</td></tr></tbody></table></div>How many of the pairs given above are correctly matched?",
+ o:["Only one","Only two","Only three","All four"],a:2,
+ e:"Pairs 1, 2 and 3 are correctly matched. Pair 4 is wrong — India Today was written by R.P. Dutt, not Bipan Chandra; a near-identical-surname trap (R.P. Dutt vs R.C. Dutt vs Bipan Chandra)."},
+{t:22,g:"MOD",fmt:"A",layer:3,axis:"mechanism",type:"Single-best",hard:true,
+ q:"The 'Drain of Wealth' theory advanced by the early nationalists held essentially that:",
+ o:["skilled Indian artisans and workers were steadily migrating to Britain, draining the country of talent","India's gold and silver reserves were being physically smuggled out of the country by private traders","excessive Indian imports of British machinery were exhausting the country's foreign-exchange reserves","a part of India's wealth was transferred to Britain without an adequate economic return — through home charges, official salaries and pensions, and interest on debt"],a:3,
+ e:"The drain was an unrequited transfer of India's wealth to Britain via home charges, salaries/pensions of British officials, and interest on debt — argued by Naoroji and R.C. Dutt. The other three are plausible-sounding but wrong mechanisms; this inverted format forces you to hold all four."},
+{t:23,g:"MOD",fmt:"B",layer:3,axis:"achievements",type:"Statements",hard:false,
+ q:"With reference to the achievements of the Moderates, consider the following statements:<span class='stmt'>1. The Welby Commission on Indian Expenditure (1895), on which Dadabhai Naoroji served as a member, examined the drain of resources from India to Britain.</span><span class='stmt'>2. The Indian Councils Act of 1892 was enacted partly in response to the sustained agitation of the early nationalists.</span>Which of the statements given above is/are correct?",
+ o:["1 only","2 only","Both 1 and 2","Neither 1 nor 2"],a:2,
+ e:"Both are correct: Naoroji served on the Welby Commission (1895), and Moderate pressure was a factor behind the 1892 Act. Both statements state genuine achievements of the early nationalists."},
+{t:24,g:"EXT",fmt:"C",layer:4,axis:"period-attribution",type:"How many",hard:true,
+ q:"Consider the following measures:<span class='stmt'>1. The Partition of Bengal (1905)</span><span class='stmt'>2. The Indian Universities Act (1904)</span><span class='stmt'>3. The Calcutta Corporation Act (1899)</span><span class='stmt'>4. The Official Secrets Act (1904)</span><span class='stmt'>5. The Ilbert Bill</span>How many of the above were measures of Lord Curzon that fuelled the rise of the Extremists?",
+ o:["Only two","Only three","Only four","All five"],a:2,
+ e:"Four were Curzon's measures — the Partition of Bengal, the Indian Universities Act, the Calcutta Corporation Act and the Official Secrets Act. The Ilbert Bill (1883) belongs to Lord Ripon's viceroyalty, not Curzon's — the planted wrong-period member."},
+{t:25,g:"EXT",fmt:"C",layer:3,axis:"membership",type:"How many",hard:false,
+ q:"Consider the following leaders:<span class='stmt'>1. Lala Lajpat Rai</span><span class='stmt'>2. Bal Gangadhar Tilak</span><span class='stmt'>3. Bipin Chandra Pal</span><span class='stmt'>4. Gopal Krishna Gokhale</span>How many of the above were leaders of the Moderate group?",
+ o:["Only one","Only two","Only three","All four"],a:0,
+ e:"Only one — Gopal Krishna Gokhale — was a Moderate. Lajpat Rai, Tilak and Bipin Chandra Pal are the Extremist trio 'Lal-Bal-Pal'. The question tests the group boundary by asking for the odd Moderate out."},
+{t:26,g:"EXT",fmt:"C",layer:4,axis:"membership",type:"How many",hard:true,
+ q:"Consider the following:<span class='stmt'>1. Swadeshi</span><span class='stmt'>2. Boycott</span><span class='stmt'>3. National Education</span><span class='stmt'>4. Passive Resistance</span><span class='stmt'>5. Simultaneous ICS examinations in India and England</span>How many of the above formed part of Tilak's four-fold Extremist programme?",
+ o:["Only two","Only three","Only four","All five"],a:2,
+ e:"Four — Swadeshi, Boycott, National Education and Passive Resistance — made up the four-fold programme. 'Simultaneous ICS examinations' was a Moderate demand, planted here as a cross-topic red herring."},
+{t:27,g:"EXT",fmt:"J",layer:3,axis:"identification",type:"Scenario",hard:true,
+ q:"<blockquote class='passage'>Following a government proclamation in 1905 dividing a large eastern province, a mass agitation erupts: bonfires of imported cloth are lit in public squares, students walk out of official schools, a new national college is opened with Aurobindo Ghosh as its principal, shops selling foreign goods are picketed, and a leading poet urges people to tie rakhis on one another's wrists as a symbol of Hindu–Muslim unity.</blockquote>The movement described above is:",
+ o:["The Non-Cooperation Movement (1920–22)","The Swadeshi Movement, launched against the Partition of Bengal (1905)","The Civil Disobedience Movement (1930–34)","The Home Rule Movement (1916)"],a:1,
+ e:"The 1905 partition of Bengal, the burning of foreign cloth, national education (the Bengal National College under Aurobindo) and Tagore's Rakhi Bandhan all identify the Swadeshi Movement. The other three are later movements offered as same-family distractors — no free elimination by era."},
+{t:28,g:"EXT",fmt:"D",layer:4,axis:"sequence-consequence",type:"Statement-I/II",hard:true,
+ q:"Consider the following statements:<span class='stmt'>Statement-I: The Congress split into the Moderate and Extremist wings at its Surat session in 1907.</span><span class='stmt'>Statement-II: In the repression that followed, Bal Gangadhar Tilak was sentenced to six years' imprisonment and deported to Mandalay.</span>Which one of the following is correct in respect of the above statements?",
+ o:["Both correct and II explains I","Both correct but II is not the explanation of I","Statement-I is correct but Statement-II is incorrect","Statement-I is incorrect but Statement-II is correct"],a:1,
+ e:"Both statements are correct. But Tilak's Mandalay sentence (II) is a consequence of the government's later crackdown, not the cause or explanation of the Surat split itself (I) — both correct, II not the explanation."},
+{t:29,g:"ACTS",fmt:"B",layer:4,axis:"powers",type:"Statements",hard:true,
+ q:"With reference to the Indian Councils Act, 1861, consider the following statements:<span class='stmt'>1. It gave statutory recognition to the portfolio system introduced earlier by Lord Canning.</span><span class='stmt'>2. It empowered the Viceroy to issue ordinances that remained valid for a period of six months.</span><span class='stmt'>3. Its additional (non-official) members were empowered both to discuss and to vote on the annual budget.</span>Which of the statements given above are correct?",
+ o:["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"],a:0,
+ e:"Statements 1 and 2 are correct. Statement 3 is false — under the 1861 Act the members could neither discuss nor vote on the budget; budget discussion (without a vote) came only with the 1892 Act. A powers-boundary trap, and a 3-statement menu."},
+{t:29,g:"ACTS",fmt:"C",layer:3,axis:"membership",type:"How many",hard:false,
+ q:"Consider the following persons:<span class='stmt'>1. The Raja of Banaras</span><span class='stmt'>2. The Maharaja of Patiala</span><span class='stmt'>3. Sir Dinkar Rao</span><span class='stmt'>4. Surendranath Banerjee</span>How many of the above were nominated as non-official Indian members to the Governor-General's Legislative Council under the Indian Councils Act of 1861?",
+ o:["Only one","Only two","Only three","All four"],a:2,
+ e:"Three — the Raja of Banaras, the Maharaja of Patiala and Sir Dinkar Rao — were nominated by Canning in 1862. Surendranath Banerjee, a later nationalist leader, was not among them — the planted anachronistic member."},
+{t:30,g:"ACTS",fmt:"B",layer:4,axis:"provisions",type:"Statements",hard:false,
+ q:"With reference to the Indian Councils Act, 1892, consider the following statements:<span class='stmt'>1. It introduced the principle of representation, though the word 'election' was deliberately avoided in favour of 'nomination on the recommendation of certain bodies'.</span><span class='stmt'>2. Its additional members could vote on the annual budget but could not discuss it.</span>Which of the statements given above is/are correct?",
+ o:["1 only","2 only","Both 1 and 2","Neither 1 nor 2"],a:0,
+ e:"Statement 1 is correct. Statement 2 inverts the actual powers — under the 1892 Act members could DISCUSS the budget but could NOT vote on it. Reversing the discuss/vote permission is the trap."},
+{t:30,g:"ACTS",fmt:"H",layer:4,axis:"contrast",type:"Indirection",hard:true,
+ q:"Consider the following statements about the Councils Acts:<span class='stmt'>1. Under the Act of 1861 the additional members could not put questions to the government.</span><span class='stmt'>2. Under the Act of 1892 the members were permitted to ask questions, including supplementary questions.</span><span class='stmt'>3. The Act of 1892 introduced, for the first time, an indirect element of election.</span>Which one of the following conclusions based on the above statements is correct?",
+ o:["All three statements are correct","There are two correct statements, which include statement 3","There is only one correct statement","There are two correct statements, which include statement 2"],a:1,
+ e:"Statements 1 and 3 are correct. Statement 2 is false — the 1892 Act allowed questions but NOT supplementary questions. So there are two correct statements, and they include statement 3 — the indirection format, template 2."},
+{t:30,g:"ACTS",fmt:"A",layer:3,axis:"significance",type:"Single-best",hard:false,
+ q:"The Indian Councils Act of 1892 is described as the 'first step towards representative government in India' primarily because:",
+ o:["it established universal adult franchise for Indian subjects","it created a fully elected Central Legislative Assembly","it introduced, for the first time, an indirect element of election to the enlarged legislative councils","it transferred the provincial subjects to elected Indian ministers"],a:2,
+ e:"The 1892 Act's claim to be a 'first step' rests on its introduction of an indirect, limited element of election (via recommending bodies). (a), (b) and (d) describe far later constitutional developments — a period-inflation trap."}
+];
+
+/* ---------- engine ---------- */
+var NODES=[];(function(){var s={};BANK.forEach(function(q){s[q.t]=1;});NODES=Object.keys(s).map(Number).sort(function(a,b){return a-b;});})();
+var state={filter:"ALL",shuffle:true,order:[],idx:0,score:0,answered:0,results:[]};
+
+var dotsEl=document.getElementById('dots');
+NODES.forEach(function(t){var d=document.createElement('div');d.className='dot';d.id='dot'+t;d.textContent=t;d.title=topicName[t]||('T'+t);dotsEl.appendChild(d);});
+function covText(){var n=0;NODES.forEach(function(t){var d=document.getElementById('dot'+t);if(d&&(d.classList.contains('ok')||d.classList.contains('bad')))n++;});return n+' / '+NODES.length+' nodes';}
+document.getElementById('covCount').textContent=covText();
+
+var filtersEl=document.getElementById('filters');
+function mkFilter(k,label){var b=document.createElement('button');b.textContent=label;b.dataset.k=k;
+  b.onclick=function(){state.filter=k;[].forEach.call(filtersEl.children,function(c){c.classList.toggle('on',c.dataset.k===k);});};return b;}
+filtersEl.appendChild(mkFilter("ALL","All "+BANK.length));
+groups.forEach(function(gp){filtersEl.appendChild(mkFilter(gp.k,gp.label));});
+filtersEl.firstChild.classList.add('on');
+
+var shufBtn=document.getElementById('shuf');
+shufBtn.onclick=function(){state.shuffle=!state.shuffle;shufBtn.classList.toggle('on',state.shuffle);};
+document.getElementById('start').onclick=startDrill;
+
+function pool(){var arr=BANK.map(function(q,i){return i;});if(state.filter!=="ALL")arr=arr.filter(function(i){return BANK[i].g===state.filter;});return arr;}
+function shuffleArr(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+function startDrill(){
+  state.order=pool();if(state.shuffle)shuffleArr(state.order);
+  state.idx=0;state.score=0;state.answered=0;state.results=[];
+  document.getElementById('controls').classList.add('hidden');
+  document.getElementById('resultArea').classList.add('hidden');
+  document.getElementById('quizArea').classList.remove('hidden');
+  render();
+}
+var qcard=document.getElementById('qcard');
+function render(){
+  var qi=state.order[state.idx],q=BANK[qi];
+  document.getElementById('qpos').textContent='Q '+(state.idx+1)+' / '+state.order.length;
+  document.getElementById('progbar').style.width=((state.idx)/state.order.length*100)+'%';
+  document.getElementById('scoretxt').textContent='Score '+state.score+' · '+(state.answered?Math.round(state.score/state.answered*100):0)+'%';
+  var html='<div class="tags"><span class="tag topic">T'+q.t+' · '+(topicName[q.t]||'')+'</span>'+
+    '<span class="tag '+(q.hard?'hard':'type')+'">'+(q.hard?'Hard · ':'')+q.type+'</span>'+
+    '<span class="tag layer">Layer '+q.layer+'</span></div>'+
+    '<div class="stem">'+q.q+'</div><div class="opts" id="opts"></div><div class="expl" id="expl"></div>'+
+    '<div class="nav"><button class="btn" id="next" disabled>'+(state.idx===state.order.length-1?'See results →':'Next →')+'</button></div>';
+  qcard.innerHTML=html;
+  var optsEl=document.getElementById('opts'),keys=['A','B','C','D'];
+  q.o.forEach(function(txt,i){var b=document.createElement('button');b.className='opt';b.dataset.i=i;
+    b.innerHTML='<span class="key">'+keys[i]+'</span><span>'+txt+'</span>';b.onclick=function(){pick(i);};optsEl.appendChild(b);});
+  document.getElementById('next').onclick=nextQ;window.scrollTo(0,0);
+}
+function pick(i){
+  var qi=state.order[state.idx],q=BANK[qi];var opts=document.querySelectorAll('#opts .opt');
+  if(opts[0].disabled)return;var correct=(i===q.a);
+  [].forEach.call(opts,function(b,bi){b.disabled=true;
+    if(bi===q.a){b.classList.add('correct');b.insertAdjacentHTML('beforeend','<span class="mark">✓</span>');}
+    else if(bi===i){b.classList.add('wrong');b.insertAdjacentHTML('beforeend','<span class="mark">✗</span>');}});
+  state.answered++;if(correct)state.score++;state.results.push({qi:qi,correct:correct});
+  var dot=document.getElementById('dot'+q.t);
+  if(dot){if(correct){dot.classList.remove('bad');dot.classList.add('ok');}else if(!dot.classList.contains('ok')){dot.classList.add('bad');}}
+  document.getElementById('covCount').textContent=covText();
+  var ex=document.getElementById('expl');ex.className='expl show '+(correct?'g':'r');
+  ex.innerHTML='<span class="verdict">'+(correct?'Correct':'Not quite — correct answer: '+['A','B','C','D'][q.a])+'</span>'+q.e;
+  document.getElementById('next').disabled=false;
+  document.getElementById('scoretxt').textContent='Score '+state.score+' · '+Math.round(state.score/state.answered*100)+'%';
+}
+function nextQ(){if(state.idx<state.order.length-1){state.idx++;render();}else showResults();}
+function showResults(){
+  document.getElementById('quizArea').classList.add('hidden');
+  var ra=document.getElementById('resultArea');ra.classList.remove('hidden');
+  var total=state.order.length,acc=Math.round(state.score/total*100);
+  var touched={};state.results.forEach(function(r){touched[BANK[r.qi].t]=true;});
+  var weak=state.results.filter(function(r){return !r.correct;});
+  var grade=acc>=90?'Exam-ready · full-marks zone':acc>=75?'Strong':acc>=60?'Getting there':'Needs another pass';
+  var html='<div class="card results"><div class="eyebrow">Result · Note 01</div>'+
+    '<div class="bigscore">'+state.score+'<small>/'+total+'</small></div><div class="grade">'+grade+'</div>'+
+    '<div class="stats"><div class="stat"><b>'+acc+'%</b><span>Accuracy</span></div>'+
+    '<div class="stat"><b>'+Object.keys(touched).length+'</b><span>Nodes touched</span></div>'+
+    '<div class="stat"><b>'+weak.length+'</b><span>Weak spots</span></div></div>';
+  if(weak.length){html+='<div class="weak"><h3>Weak spots — review</h3>';
+    weak.forEach(function(r){var q=BANK[r.qi];html+='<div class="weakitem"><div class="wq">T'+q.t+' · '+(topicName[q.t]||'')+'</div>'+
+      '<div class="wa">✓ '+['A','B','C','D'][q.a]+': '+strip(q.o[q.a])+'</div><div>'+q.e+'</div></div>';});
+    html+='</div>';}
+  else{html+='<p style="font-family:var(--mono);font-size:13px;color:var(--good)">Clean sweep — no weak spots.</p>';}
+  html+='<div class="rbtns">'+(weak.length?'<button class="btn" id="redo">Redo weak spots ('+weak.length+') →</button>':'')+
+    '<button class="btn ghost" id="restart">Restart</button></div></div>';
+  ra.innerHTML=html;
+  if(weak.length)document.getElementById('redo').onclick=function(){state.order=weak.map(function(r){return r.qi;});if(state.shuffle)shuffleArr(state.order);
+    state.idx=0;state.score=0;state.answered=0;state.results=[];ra.classList.add('hidden');document.getElementById('quizArea').classList.remove('hidden');render();};
+  document.getElementById('restart').onclick=function(){ra.classList.add('hidden');document.getElementById('controls').classList.remove('hidden');
+    NODES.forEach(function(t){var d=document.getElementById('dot'+t);if(d)d.classList.remove('ok','bad');});
+    document.getElementById('covCount').textContent=covText();window.scrollTo(0,0);};
+  window.scrollTo(0,0);
+}
+function strip(s){return String(s).replace(/<[^>]+>/g,'');}
+document.addEventListener('keydown',function(e){
+  if(document.getElementById('quizArea').classList.contains('hidden'))return;
+  if(e.key>='1'&&e.key<='4'){var o=document.querySelectorAll('#opts .opt'),i=+e.key-1;if(o[i]&&!o[i].disabled)o[i].click();}
+  else if(e.key==='Enter'){var n=document.getElementById('next');if(n&&!n.disabled)n.click();}
+});
+</script>
