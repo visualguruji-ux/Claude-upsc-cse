@@ -109,6 +109,17 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-07-26** — **Created Note 03 — Lord Curzon: the Kitchener Controversy & Departure (M.H. #15).**
+  Digitised Adarsh's handwritten page ("Departure of Curzon from India" — Kitchener–Curzon
+  controversy, Military Member = "eyes & ears of the G.G. in the Army," Curzon resigns Nov 1905)
+  and enriched into a one-stop note per his ask ("cover ALL standard books & UPSC coaching").
+  Anchored on the controversy (dual control of the army → abolition of the Military Member →
+  Brodrick/Balfour side with Kitchener → resign Aug 1905, leave India Nov 1905 → Lord Minto II),
+  plus Curzon's full reform record (Universities Act 1904, Ancient Monuments Act 1904 + ASI/John
+  Marshall, CID via 1902 Police Commission, NWFP 1901, Younghusband/Tibet 1903–04, Pusa 1905,
+  Railway Board) and Partition of Bengal 1905 → Swadeshi. Files: `03-...-onestop.md` +
+  screenshot-friendly `03-...html` (reused the vertical, responsive, light/dark stylesheet).
+  Web-verified the resignation timeline (Aug 1905 offer / Nov 1905 departure) & Brodrick's role.
 - **2026-07-22** — **Reworked Note 01 to be faithful to the handwritten notes only** (Adarsh:
   "don't include extra topics like the safety-valve expansion; include ALL Moderates-vs-Extremists
   rows I wrote — social/cultural background, poverty, political reform; and format so I can

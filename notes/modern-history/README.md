@@ -7,6 +7,7 @@ and PYQ pointers.
 | # | Topic | Covers | Detailed note | Revision sheet | PYQ set |
 |---|---|---|---|---|---|
 | 01 | Rise of Nationalism, Foundation of INC, Moderates & Extremists, Councils Acts | Pre-Congress associations (both phases) · theories of INC formation · Moderates (ideology/methods/demands/achievements) · Extremists (causes/methods/Surat Split) · Indian Councils Acts 1861 & 1892 | [detailed .md](01-foundation-of-congress-moderates-extremists.md) | [HTML (print)](01-foundation-of-congress-revision-sheet.html) | [practice](01-pyq-practice.md) |
+| 03 | Lord Curzon: administration, the Kitchener controversy & his departure (M.H. #15) | Curzon's viceroyalty (1899–1905) · **Kitchener–Curzon controversy** (Military Member = "eyes & ears of the Viceroy"; abolition; Brodrick/Balfour back Kitchener; resignation Aug→Nov 1905) · full reform record (Universities Act 1904, Ancient Monuments Act 1904, CID, NWFP 1901, Younghusband, Pusa) · Partition of Bengal 1905 → Swadeshi | [detailed .md](03-lord-curzon-kitchener-controversy-onestop.md) | [HTML (print)](03-lord-curzon-kitchener-controversy.html) | — |
 
 > The **detailed note** is the one-stop study document (Spectrum + coaching-enriched).
 > The **HTML** is a quick-revision one-pager. The **PYQ set** has exam-pattern practice.
