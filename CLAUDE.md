@@ -102,13 +102,28 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 7. Current Focus  _(update every few sessions)_
-- **Now:** Setting up the preparation system and memory file. ✅ (in progress)
-- **Next:** Decide/confirm target year & attempt number; build a study plan and
-  subject-wise trackers.
+- **Now:** Building interactive Prelims tools from source books. ✅ Economy simulator (NCERT XI
+  *Indian Economic Development*, 162 Qs, drill + timed-exam) shipped.
+- **Next:** Extend the simulator pipeline to NCERT XII *Macroeconomics* / *Introductory
+  Microeconomics* and to Statistics; PYQ-tag the Economy bank (UPSC + State PSCs); decide/confirm
+  target year & attempt number; build subject-wise trackers.
 
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-07-30** — **Built the Economy Prelims Simulator from NCERT Class XI *Indian Economic
+  Development*** (Adarsh uploaded the PDF to branch `claude/upsc-cse-prep-i9mvve`). Authored
+  **162 of the hardest UPSC-grade MCQs** covering **all 10 chapters / 79 lexicon nodes**
+  (Eve of Independence → 1950–90 planning → LPG 1991 → Poverty, Human Capital, Rural Dev,
+  Employment, Infrastructure, Environment → China/Pakistan comparison). Facts verified page-by-page
+  against the rationalised NCERT edition (e.g. life expectancy 32 yrs, IMR 218/1000, first census
+  1881, 2400/2100 calorie norm, IPR-1956 three schedules, WTO 1995/GATT 1948, reforms China 1978 /
+  Pakistan 1988 / India 1991, Herman Daly's plimsoll-line criteria). Delivered as ONE self-contained
+  HTML app with **two modes**: (1) **Drill** — instant green/red, trap-named explanations, coverage
+  tracker, weak-spot redo; (2) **Timed Exam** — countdown, question palette, mark-for-review, −1/3
+  negative marking, chapter-wise result breakdown + full solutions. Passes `validate_drill.py` with
+  **zero warnings** (99% items at depth-layer 3+, key spread a/b/c/d balanced, 113 named entities).
+  File: `prelims-drills/drills/economics-ncert11-indian-economic-development.html`.
 - **2026-07-22** — **Reworked Note 01 to be faithful to the handwritten notes only** (Adarsh:
   "don't include extra topics like the safety-valve expansion; include ALL Moderates-vs-Extremists
   rows I wrote — social/cultural background, poverty, political reform; and format so I can
