@@ -16,6 +16,12 @@ and PYQ pointers.
   — in-depth, one-stop version of Moderates → Extremists → Councils Acts (Bipan Chandra +
   Spectrum + coaching): leaders, economic nationalism / Drain of Wealth, causes of Extremism,
   Swadeshi, Surat Split, and full provisions of ICA 1861 & 1892.
+- [`03-office-acceptance-debate-onestop.md`](03-office-acceptance-debate-onestop.md)
+  — the **Office-Acceptance debate (1937)**: should the Congress form ministries under the
+  rejected Government of India Act, 1935? Arguments **for** vs **against** (Right/Gandhian wing
+  vs Nehru–Bose Left), Gandhi's position, the 1936–37 compromise, Linlithgow's assurance, the
+  1937–39 Congress ministries, and their 1939 resignation. HTML companion:
+  [`03-office-acceptance-debate.html`](03-office-acceptance-debate.html).
 - [`01-tables.html`](01-tables.html) — the 3 screenshot-ready tables (Phase 1, Phase 2, Moderates vs Extremists).
 
 > 💡 The **HTML revision sheet** is a styled, printable one-pager (light/dark, works offline).

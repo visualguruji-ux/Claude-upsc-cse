@@ -102,13 +102,25 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 7. Current Focus  _(update every few sessions)_
-- **Now:** Setting up the preparation system and memory file. ✅ (in progress)
-- **Next:** Decide/confirm target year & attempt number; build a study plan and
-  subject-wise trackers.
+- **Now:** Building **Modern History one-stop notes** (freedom-struggle sequence). Latest =
+  Note 03, the **Office-Acceptance debate (1937)**.
+- **Next:** exact-year PYQ tagging for Notes 02–03; decide/confirm target year & attempt number;
+  build a study plan and subject-wise trackers.
 
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-08-03** — **Built Note 03 — the Office-Acceptance debate (1937)** (Adarsh: "on issue of
+  office acceptance, for acceptance and against acceptance, Modern History, from POV of UPSC CSE,
+  referring all coaching materials and standard books"). Created `notes/modern-history/
+  03-office-acceptance-debate-onestop.md` (detailed one-stop) + `03-office-acceptance-debate.html`
+  (screenshot-friendly, light/dark, for-vs-against panels). Covers: 1935 Act & provincial autonomy
+  (in force 1 Apr 1937), the 1937 election sweep, the two-phase debate, full arguments **FOR**
+  (Patel/Rajendra Prasad/Rajaji/Satyamurti + Gandhi's blessing) vs **AGAINST** (Nehru/Bose/CSP/
+  Communists — "responsibility without power", the "deadlock" alternative), Gandhi's "crowns of
+  thorns" nuance, Linlithgow's June-1937 assurance, ministries in ~8/11 provinces, the 1937–39
+  record, and the 1939 resignation ("Deliverance Day"). Enriched from Bipan Chandra + Spectrum +
+  coaching (Vajiram/Insights/Edukemy/ClearIAS), web-verified. **Pending:** exact-year PYQ tagging.
 - **2026-07-22** — **Reworked Note 01 to be faithful to the handwritten notes only** (Adarsh:
   "don't include extra topics like the safety-valve expansion; include ALL Moderates-vs-Extremists
   rows I wrote — social/cultural background, poverty, political reform; and format so I can
