@@ -112,6 +112,22 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-08-06** — **Rebuilt Note 01 into a true one-stop from Adarsh's own materials.** Adarsh uploaded
+  his **coaching handouts (LevelUp IAS — "Sociology Foundation 1.0 2026", Handout 1 *Sociology: The
+  Discipline* + Handout 2 *Sociology as Science*)** and his **own handwritten notes** (scanned;
+  organised as **KEYWORDS / CONCEPTS / QUOTES / BOOKS** value-addition banks + Topic notes 1–3).
+  Rewrote `paper1-01-scope-science-method` (.md + HTML) to be **faithful to his notes' structure and
+  scholar value-additions** and enriched from the handouts + standard sources. New coverage vs first
+  draft: **"Goal of Sociology" grid (OU-of-OR / SU-of-OR / SU-of-SR; R.K. Mukherjee)**, 3-phase
+  evolution of scope, subject-matter scope list, **3-phase relationship** + full comparisons (History
+  w/ Wallerstein/Halbwachs/Skocpol/Abrams/E.H. Carr; Economics w/ Granovetter/Gary Becker/Wootton;
+  Psychology w/ Gerth-Mills/Cohen; Anthropology w/ Kroeber/Voget/Béteille/Srinivas; Pol-Sci w/
+  Kothari/Michels; Philosophy). Part B now has **Merton's CUDOS, 8-step method (DINK example),
+  Popper/Feyerabend/Kuhn/Feminist critique, fact-value-objectivity (Weber Wertfreiheit, Gouldner,
+  Myrdal, Becker, Giddens' double hermeneutic, Bourdieu reflexivity), Bierstedt + Sayer's open/closed
+  systems ("most scientific of humanities…")**. Added **Part E — Value-Addition Bank** (his quotes/
+  books/keywords). **Key facts to remember:** Adarsh's coaching = **LevelUp IAS**; his handwritten
+  notes keep separate **KEYWORDS/QUOTES/BOOKS/CONCEPTS** banks — reuse these for answer value-adds.
 - **2026-08-06** — **Started Sociology Optional (Paper I, Unit 1).** Built the first Sociology
   material in the repo: a one-stop, PYQ-tagged note on **(1) Scope of the subject & comparison
   with other social sciences** and **(2) Science, scientific method & critique**. Part A —

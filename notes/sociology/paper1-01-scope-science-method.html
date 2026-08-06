@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Sociology P-I · Scope & Comparison + Science & Method</title>
+<title>Sociology P-I · Scope & Comparison + Science, Method & Critique</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root{
@@ -8,6 +8,7 @@
     --ochre:#b5651d;--ochre-soft:#e7d3b3;
     --green:#2f6b57;--green-bg:#e2efe6;--green-line:#bcd8c6;
     --red:#9e3b2e;--red-bg:#f6e2db;--red-line:#e3c3b8;
+    --hl:#8a6d00;
     --shadow:0 1px 0 rgba(27,36,82,.04), 0 10px 26px -20px rgba(27,36,82,.55);
     --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
     --sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
@@ -19,6 +20,7 @@
       --ochre:#e0994f;--ochre-soft:#3a3020;
       --green:#7dc1a6;--green-bg:#18271f;--green-line:#2c4a3b;
       --red:#e08574;--red-bg:#2c1d1a;--red-line:#4a2e28;
+      --hl:#e8c34a;
       --shadow:0 10px 30px -22px rgba(0,0,0,.85);
     }
   }
@@ -28,6 +30,7 @@
     --ochre:#e0994f;--ochre-soft:#3a3020;
     --green:#7dc1a6;--green-bg:#18271f;--green-line:#2c4a3b;
     --red:#e08574;--red-bg:#2c1d1a;--red-line:#4a2e28;
+    --hl:#e8c34a;
     --shadow:0 10px 30px -22px rgba(0,0,0,.85);
   }
   :root[data-theme="light"]{
@@ -36,212 +39,260 @@
     --ochre:#b5651d;--ochre-soft:#e7d3b3;
     --green:#2f6b57;--green-bg:#e2efe6;--green-line:#bcd8c6;
     --red:#9e3b2e;--red-bg:#f6e2db;--red-line:#e3c3b8;
+    --hl:#8a6d00;
     --shadow:0 1px 0 rgba(27,36,82,.04), 0 10px 26px -20px rgba(27,36,82,.55);
   }
   *{box-sizing:border-box}
   html,body{max-width:100%;overflow-x:hidden}
   body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
     line-height:1.55;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:760px;margin:0 auto;padding:clamp(18px,4vw,40px) clamp(14px,4vw,28px)}
-  header.masthead{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:24px}
+  .wrap{max-width:780px;margin:0 auto;padding:clamp(18px,4vw,40px) clamp(14px,4vw,28px)}
+  header.masthead{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:22px}
   .kicker{text-transform:uppercase;letter-spacing:.18em;font-size:.68rem;font-weight:700;
     color:var(--ochre);margin:0 0 8px}
-  h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.4rem,5.4vw,2rem);
-    line-height:1.1;margin:0;text-wrap:balance}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.35rem,5.2vw,2rem);
+    line-height:1.12;margin:0;text-wrap:balance}
   .sub{color:var(--ink-soft);font-size:.9rem;margin:10px 0 0}
+  .toc{background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:10px 14px;
+    margin:16px 0 0;font-size:.86rem;color:var(--ink-soft)}
+  .toc b{color:var(--ink)}
   .part{background:var(--panel);border:1px solid var(--line);border-radius:12px;
-    padding:clamp(16px,4vw,22px);margin:0 0 18px;box-shadow:var(--shadow)}
+    padding:clamp(16px,4vw,22px);margin:18px 0 0;box-shadow:var(--shadow)}
   .part-num{display:inline-block;font-family:var(--serif);font-weight:700;font-size:.72rem;
     letter-spacing:.06em;text-transform:uppercase;color:var(--ochre);margin:0 0 4px}
-  .part h2{font-family:var(--serif);font-size:clamp(1.15rem,4.5vw,1.45rem);margin:0 0 12px;
+  .part h2{font-family:var(--serif);font-size:clamp(1.15rem,4.5vw,1.45rem);margin:0 0 10px;
     line-height:1.15;text-wrap:balance}
-  .part h3.grouphead{font-family:var(--serif);color:var(--ochre);font-size:1.02rem;font-weight:700;
+  h3.gh{font-family:var(--serif);color:var(--ochre);font-size:1.02rem;font-weight:700;
     margin:18px 0 4px;padding-top:10px;border-top:1px dashed var(--line)}
-  .part h3.grouphead:first-of-type{border-top:none;padding-top:0;margin-top:4px}
-  .part p{margin:0 0 10px;font-size:.93rem;color:var(--ink-soft)}
-  .part p b,li b,.card b,.kv b{color:var(--ink)}
-  ul.plain{margin:8px 0 0;padding-left:1.1em}
-  ul.plain li{font-size:.92rem;color:var(--ink-soft);margin:6px 0}
+  h3.gh:first-of-type{border-top:none;padding-top:0;margin-top:2px}
+  h4.sh{font-family:var(--serif);color:var(--ink);font-size:.98rem;margin:14px 0 2px}
+  p{margin:0 0 9px;font-size:.92rem;color:var(--ink-soft)}
+  p b,li b,.card b,.kv b{color:var(--ink)}
+  em.hl{font-style:normal;color:var(--hl);font-weight:600}
+  ul.plain{margin:6px 0 0;padding-left:1.1em}
+  ul.plain li{font-size:.9rem;color:var(--ink-soft);margin:5px 0}
   .card{border-left:3px solid var(--ochre);background:var(--panel-2);border-radius:0 8px 8px 0;
-    padding:10px 12px;margin:10px 0}
-  .card .lbl{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:.98rem}
-  .card .body{font-size:.9rem;color:var(--ink-soft);margin-top:3px}
-  .split{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+    padding:9px 12px;margin:9px 0}
+  .card .lbl{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:.96rem}
+  .card .body{font-size:.88rem;color:var(--ink-soft);margin-top:2px}
+  .split{display:grid;grid-template-columns:1fr;gap:10px;margin:10px 0}
   @media(min-width:560px){.split{grid-template-columns:1fr 1fr}}
-  .pos{border:1px solid var(--green-line);background:var(--green-bg);border-radius:10px;padding:12px}
-  .neg{border:1px solid var(--red-line);background:var(--red-bg);border-radius:10px;padding:12px}
-  .pos h4,.neg h4{margin:0 0 6px;font-family:var(--serif);font-size:.98rem}
-  .pos h4{color:var(--green)}.neg h4{color:var(--red)}
-  .pos ul,.neg ul{margin:0;padding-left:1.05em}
-  .pos li,.neg li{font-size:.86rem;margin:4px 0}
-  .pos li{color:var(--green)}.neg li{color:var(--red)}
+  .box{border:1px solid var(--line);background:var(--panel-2);border-radius:10px;padding:11px 13px}
+  .box h4{margin:0 0 5px;font-family:var(--serif);font-size:.96rem;color:var(--ochre)}
+  .box ul{margin:0;padding-left:1.05em}.box li{font-size:.85rem;margin:4px 0;color:var(--ink-soft)}
+  .neg{border:1px solid var(--red-line);background:var(--red-bg);border-radius:10px;padding:11px 13px}
+  .neg h4{margin:0 0 5px;font-family:var(--serif);font-size:.96rem;color:var(--red)}
+  .neg ul{margin:0;padding-left:1.05em}.neg li{font-size:.85rem;margin:4px 0;color:var(--red)}
+  .pos{border:1px solid var(--green-line);background:var(--green-bg);border-radius:10px;padding:11px 13px}
+  .pos h4{margin:0 0 5px;font-family:var(--serif);font-size:.96rem;color:var(--green)}
+  .pos ul{margin:0;padding-left:1.05em}.pos li{font-size:.85rem;margin:4px 0;color:var(--green)}
   .callout{border:1px solid var(--ochre-soft);background:var(--panel-2);border-left:4px solid var(--ochre);
-    border-radius:0 10px 10px 0;padding:12px 14px;margin:14px 0;font-size:.92rem;color:var(--ink-soft)}
+    border-radius:0 10px 10px 0;padding:11px 14px;margin:13px 0;font-size:.9rem;color:var(--ink-soft)}
   .callout b{color:var(--ink)}
   pre.map{background:var(--panel-2);border:1px solid var(--line);border-radius:10px;
-    padding:12px;overflow-x:auto;font-size:.78rem;line-height:1.4;color:var(--ink-soft);margin:12px 0}
-  .pyq{border-left:3px solid var(--green);padding:3px 0 3px 12px;margin:9px 0;font-size:.9rem;color:var(--ink-soft)}
+    padding:12px;overflow-x:auto;font-size:.76rem;line-height:1.45;color:var(--ink-soft);margin:11px 0}
+  .pyq{border-left:3px solid var(--green);padding:3px 0 3px 12px;margin:8px 0;font-size:.88rem;color:var(--ink-soft)}
   .pyq .yr{color:var(--green);font-weight:700;white-space:nowrap}
-  .steps{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0;font-size:.8rem}
-  .steps span{background:var(--panel-2);border:1px solid var(--line);border-radius:20px;padding:4px 10px;color:var(--ink-soft)}
-  footer{color:var(--muted);font-size:.78rem;border-top:1px solid var(--line);margin-top:8px;padding-top:14px}
+  .steps{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0;font-size:.78rem}
+  .steps span{background:var(--panel-2);border:1px solid var(--line);border-radius:20px;padding:4px 9px;color:var(--ink-soft)}
+  .q{font-size:.86rem;color:var(--ink-soft);border-left:2px solid var(--line);padding-left:10px;margin:6px 0}
+  .q b{color:var(--ink)}
+  footer{color:var(--muted);font-size:.78rem;border-top:1px solid var(--line);margin-top:20px;padding-top:14px}
 </style>
 
 <div class="wrap">
 <header class="masthead">
-  <p class="kicker">Sociology Optional · Paper I · Unit 1</p>
+  <p class="kicker">Sociology Optional · Paper I · Unit 1–2</p>
   <h1>Scope &amp; Comparison with Other Social Sciences · Science, Method &amp; Critique</h1>
-  <p class="sub">One-stop, PYQ-tagged note · enriched from Haralambos, Ritzer, IGNOU, Bottomore &amp; coaching material.</p>
+  <p class="sub">One-stop, PYQ-tagged. Faithful to your handwritten notes + LevelUp IAS Handouts 1 &amp; 2, enriched with Haralambos, Ritzer, IGNOU, Bierstedt, Bottomore.</p>
+  <div class="toc"><b>A</b> Scope &amp; Comparison &nbsp;·&nbsp; <b>B</b> Science, Method &amp; Critique &nbsp;·&nbsp; <b>C</b> Diagrams &nbsp;·&nbsp; <b>D</b> PYQs &nbsp;·&nbsp; <b>E</b> Value-Addition Bank</div>
 </header>
 
-<!-- ======================= PART A ======================= -->
+<!-- ============ PART A ============ -->
 <section class="part">
   <span class="part-num">Part A · The Discipline</span>
   <h2>Scope of the Subject &amp; Comparison with Other Social Sciences</h2>
 
-  <h3 class="grouphead">A.1 What is Sociology?</h3>
-  <p><b>Etymology:</b> <i>socius</i> (Latin, companion) + <i>logos</i> (Greek, study) → "science of society." <b>Coined by Auguste Comte, 1839</b> — first called "social physics," then renamed after A. Quetelet used that term.</p>
-  <div class="card"><span class="lbl">Comte</span><div class="body">Science of <b>social order (statics)</b> &amp; <b>progress (dynamics)</b>.</div></div>
-  <div class="card"><span class="lbl">Durkheim</span><div class="body">Science of <b>social institutions</b>; study of <b>social facts</b>.</div></div>
-  <div class="card"><span class="lbl">Max Weber</span><div class="body">Interpretive understanding (<b>Verstehen</b>) of <b>social action</b>.</div></div>
-  <div class="card"><span class="lbl">Ginsberg</span><div class="body">Study of <b>human interactions &amp; inter-relations</b>, their conditions &amp; consequences.</div></div>
+  <h3 class="gh">A.0 Nature of Sociology (open with this)</h3>
+  <p>Sociology <b>is a scientific discipline</b> — objective, systematic, empirical — <b>but cannot be directly modelled on natural science</b>, since human behaviour is conscious &amp; volitional, unlike the world of objects. <em class="hl">Bierstedt</em>: sociology is <b>generalising</b>, a <b>social</b> (not natural) science, and largely <b>pure</b>.</p>
 
-  <h3 class="grouphead">A.2 Scope — the two schools</h3>
+  <h3 class="gh">A.1 – A.2 Scope &amp; the two schools</h3>
+  <p>Scope = subject-matter/boundaries. <b>There is no single agreed scope</b> → the classic debate:</p>
   <div class="split">
-    <div class="pos" style="border-color:var(--line);background:var(--panel-2)">
-      <h4 style="color:var(--ochre)">Formalistic / Specialistic</h4>
-      <ul style="color:var(--ink-soft)">
-        <li><b>Simmel</b>, Von Wiese, Vierkandt, Tönnies, Weber, Small</li>
-        <li>Pure, <b>independent, limited</b> science</li>
-        <li>Studies <b>FORMS</b> of relations (competition, cooperation, sub/super-ordination) abstracted from <b>contents</b></li>
-        <li><i>Critique:</i> form &amp; content inseparable; too narrow</li>
-      </ul>
-    </div>
-    <div class="pos" style="border-color:var(--line);background:var(--panel-2)">
-      <h4 style="color:var(--ochre)">Synthetic</h4>
-      <ul style="color:var(--ink-soft)">
-        <li><b>Durkheim</b>, Ginsberg, Hobhouse, Sorokin</li>
-        <li><b>General, synthesising</b> science of society</li>
-        <li>Durkheim's 3 parts: <b>Social Morphology</b> · <b>Social Physiology</b> · <b>General Sociology</b></li>
-        <li><i>Critique:</i> risks losing a distinct identity</li>
-      </ul>
-    </div>
+    <div class="box"><h4>Formalistic / Specialistic</h4>
+      <ul><li><b>Simmel</b>, Von Wiese, Vierkandt, Tönnies, Weber, Small</li>
+      <li>Pure, <b>independent, limited</b> science</li>
+      <li>Studies <b>FORMS</b> (competition, cooperation, sub/super-ordination) abstracted from <b>contents</b></li>
+      <li><i>Critique:</i> form &amp; content inseparable; too narrow</li></ul></div>
+    <div class="box"><h4>Synthetic</h4>
+      <ul><li><b>Durkheim</b>, Ginsberg, Hobhouse, Sorokin</li>
+      <li><b>General, synthesising</b> science</li>
+      <li>Durkheim's 3 parts: <b>Social Morphology · Social Physiology · General Sociology</b></li>
+      <li><i>Critique:</i> risks losing a distinct identity</li></ul></div>
   </div>
-  <div class="callout"><b>Balanced view:</b> Sociology = a <b>general science of society with its own perspective</b> — it studies society <i>as a whole &amp; as a system of relationships</i>, while other social sciences study particular segments. Scope is <b>wide but distinctive.</b></div>
 
-  <h3 class="grouphead">A.3 Nature of Sociology (Bierstedt)</h3>
-  <p>Independent · a <b>social</b> (not natural) science · <b>categorical</b> ("what is") not normative · <b>pure</b> not applied · relatively <b>abstract</b> · <b>generalising</b> · a <b>general</b> social science · <b>both rational &amp; empirical.</b></p>
+  <h3 class="gh">A.3 "Goal of Sociology" grid (value-add framing)</h3>
+  <div class="card"><span class="lbl">OU of OR</span><div class="body"><b>Objective Understanding of Objective Reality</b> — scope restricted to hard facts. <em class="hl">Positivists — Durkheim, Comte.</em></div></div>
+  <div class="card"><span class="lbl">SU of OR</span><div class="body"><b>Subjective Understanding of Objective Reality</b> — <b>value-accommodation</b>. <em class="hl">Weber, Symbolic Interactionism; R.K. Mukherjee.</em></div></div>
+  <div class="card"><span class="lbl">SU of SR</span><div class="body"><b>Subjective Understanding of Subjective Reality</b>. <em class="hl">Anti-positivists — Schutz, Garfinkel.</em></div></div>
+  <p>Theory ladder: <b>Grand/universal theories → Ideal types (Weber) → Middle-Range Theory (Merton) → concepts</b> (e.g. Beck's <i>Risk Society</i>). <b>"All sociology is contextual &amp; ad-hoc."</b></p>
 
-  <h3 class="grouphead">A.4 Comparison with other social sciences</h3>
-  <div class="card"><span class="lbl">↔ Anthropology — "twin sisters" (Kroeber)</span><div class="body">Anthropology: <b>small, simple, pre-literate, homogeneous, tribal</b> societies studied <b>holistically</b> via fieldwork/ethnography. Sociology: <b>large, complex, modern, heterogeneous</b> societies via surveys/statistics. Line is blurring — e.g. <b>M.N. Srinivas' village studies.</b></div></div>
-  <div class="card"><span class="lbl">↔ Political Science</span><div class="body">PS = <b>State, government, power, formal politics</b> (man as <i>political</i> being). Sociology = <b>all</b> social relations incl. political. Overlap → <b>Political Sociology.</b> Sociology is broader.</div></div>
-  <div class="card"><span class="lbl">↔ Economics</span><div class="body">Economics = <b>production–distribution–exchange–consumption</b>, one specialised aspect; precise &amp; quantitative (<i>ceteris paribus</i>). Sociology sees economic life as <b>embedded in social life</b> → <b>Economic Sociology</b> (Weber's Protestant Ethic, Marx's base–superstructure, Veblen).</div></div>
-  <div class="card"><span class="lbl">↔ History</span><div class="body">History = <b>concrete, unique past events</b> (particularising). Sociology = <b>recurrent patterns &amp; general laws</b> (generalising). <b>G.E. Howard:</b> "History is past sociology; sociology is present history." → <b>Historical Sociology.</b></div></div>
-  <div class="card"><span class="lbl">↔ Psychology</span><div class="body">Psychology = the <b>individual mind &amp; behaviour</b>; Sociology = <b>group/collective</b> behaviour. Bridge = <b>Social Psychology</b> (G.H. Mead). Durkheim: social facts are <b>sui generis</b> — explained by other social facts, not psychology.</div></div>
-  <div class="callout"><b>Memory hook:</b> Economics, Political Science, History study <b>slices</b> of social reality; <b>Sociology studies the whole loaf</b> — and how the slices interconnect.</div>
+  <h3 class="gh">A.4 Evolution of the scope</h3>
+  <ul class="plain">
+    <li><b>Initial phase (macro):</b> Comte's <b>Social Statics &amp; Dynamics</b>; inductive/deductive; Spencer's <b>organismic analogy</b>; humanistic <b>Chicago School</b>.</li>
+    <li><b>2nd phase:</b> <b>Formal</b> → micro-phenomena (Tönnies) · <b>Informal</b> → "study everything" (Mannheim, Sorokin) → General vs Special/Historical sociology.</li>
+    <li><b>3rd phase — Blending:</b> Parsons; <b>Merton's MRT &amp; SOSA</b>.</li>
+    <li><b>Now — Multidisciplinary</b> (<em class="hl">Bryman</em>). <em class="hl">Howard Becker</em>: good sociology = meaningful descriptions + valid explanations + realistic proposals.</li>
+  </ul>
+
+  <h3 class="gh">A.5 Scope by subject-matter (recall list)</h3>
+  <p>Social <b>institutions</b> · social <b>control</b> (formal; informal — <b>ridicule, opprobrium</b>) · social <b>networks</b> (formal/informal) · social <b>pathology</b> · social <b>processes</b> (associative/dissociative) · social <b>action</b> · social <b>change</b>. <b>India:</b> caste, village, joint family, religion, agrarian classes, movements → under <b>globalisation</b>: westernisation, social media, queer/environmental movements.</p>
+
+  <h3 class="gh">A.6 Comparison — 3 phases of the relationship</h3>
+  <p><b>①&nbsp;Competitive beginnings</b> (society as <i>sui generis</i> — Durkheim) → <b>②&nbsp;Collaborative borrowings</b> (fieldwork ← anthropology, survey ← statistics) → <b>③&nbsp;Interdisciplinary convergence</b> (political/environmental sociology). <i>Multidisciplinary</i> = side-by-side; <i>Interdisciplinary</i> = integrated.</p>
+
+  <h4 class="sh">↔ History</h4>
+  <p><em class="hl">Radcliffe-Brown</em>: "history &amp; sociology have no relation" — history <b>idiographic/conjectural</b>, sociology <b>nomothetic/empirical</b> (patterns vs unique events). <em class="hl">Howard</em>: "history is past sociology, sociology is present history." <em class="hl">Abrams</em>: sociology is deeply historical. <em class="hl">E.H. Carr</em>: the more sociological history is, the better. <b>Historical Sociology:</b> Ghurye (caste), <b>A.R. Desai</b> (nationalism), <b>Barrington Moore</b> (democracy &amp; dictatorship), Weber (capitalism). <b>Value-adds:</b> <em class="hl">Wallerstein</em> (World-Systems), <em class="hl">Halbwachs</em> (Collective Memory), <em class="hl">Theda Skocpol</em>, subaltern vs colonial historiography.</p>
+
+  <h4 class="sh">↔ Economics</h4>
+  <p>Economics = production–consumption–exchange; <b>Homo economicus</b>; quantitative. Sociology: economy is <b>one institution</b>; man is a <b>social being</b> (wealth for prestige = Veblen's <b>conspicuous consumption</b>; caste networks in jobs). <em class="hl">Smith</em> "Eco&gt;Socio", <em class="hl">Durkheim</em> "Socio&gt;Eco", <em class="hl">Marx</em> economic determinism, <em class="hl">Weber</em> PESC. <b>Economic Sociology value-adds:</b> <em class="hl">Granovetter</em> (embeddedness), <em class="hl">Gary Becker</em> (Human Capital), Behavioural economics/Nudge, Barbara Wootton, gender budgeting, dependency theory, CSR; <em class="hl">Béteille</em> (caste × economic inequality).</p>
+
+  <h4 class="sh">↔ Psychology</h4>
+  <p>Psychology = individual mind/cognition/emotion (<b>psychic facts</b>; Freud's psychoanalysis) — <b>personal troubles</b>; Sociology = external <b>social facts</b> — <b>public issues</b> (suicide: why the <i>rate</i> varies). <em class="hl">Radcliffe-Brown</em>: mental vs social systems. Bridge: <b>social psychology</b>; <em class="hl">Gerth &amp; Mills</em> — <b>role</b> bridges the two; Cooley ("Me"), Mead. <b>Value-adds:</b> C.W. Mills, Oscar Lewis (subculture of poverty), Goffman, Albert Cohen (status frustration), Judith Butler (gender acts).</p>
+
+  <h4 class="sh">↔ Social Anthropology</h4>
+  <p><em class="hl">Kroeber</em>: "twin sisters." Anthropology = small, simple, pre-literate, tribal societies, <b>holistic fieldwork/ethnography</b> (Malinowski, Evans-Pritchard/Nuer, Radcliffe-Brown/Andamanese). Sociology = modern, complex, industrial societies via surveys. <em class="hl">Voget</em>: difference now is of <b>application</b>, not scope. <b>Value-adds:</b> Radcliffe-Brown ("comparative sociology", nomothetic), <b>Ghurye</b>, <em class="hl">Béteille</em> ("tribal village → anthropologist; non-tribal → sociologist"), <b>M.N. Srinivas</b> (village studies bridge both), Deshpande &amp; Uberoi.</p>
+
+  <h4 class="sh">↔ Political Science</h4>
+  <p>PS = State, government, power, authority, statecraft (documents, census, elections); Sociology gives <b>no primacy</b> to one institution — power in family/religion/university via micro fieldwork. Overlap → <b>Political Sociology</b>: <em class="hl">Weber</em> (authority), <em class="hl">C.W. Mills</em> (Power Elite), <em class="hl">Michels</em> (Iron Law of Oligarchy), Dahl, Foucault. Indian: <em class="hl">Rajni Kothari</em> — <i>Caste in Indian Politics</i>.</p>
+
+  <h4 class="sh">↔ Philosophy</h4>
+  <p>Philosophy = reality in <b>totality</b>, concerned with <b>ends/values</b>; sociology grew <b>out of</b> philosophy (Comte, Enlightenment, Hegel's dialectic, Rousseau's General Will). Post-modernism &amp; Marxism = philosophy <b>+</b> sociological theory.</p>
+
+  <div class="callout"><b>Comparison template:</b> (a) subject matter → (b) method → (c) unit &amp; logic (micro/macro, idiographic/nomothetic) → (d) convergence — name the hybrid field → (e) an Indian scholar. Dropping <b>Wallerstein, Halbwachs, Granovetter, Kothari, Béteille</b> is what lifts the marks.</div>
 </section>
 
-<!-- ======================= PART B ======================= -->
+<!-- ============ PART B ============ -->
 <section class="part">
   <span class="part-num">Part B · Sociology as Science</span>
   <h2>Science, Scientific Method &amp; Critique</h2>
 
-  <h3 class="grouphead">B.1 What is "science"?</h3>
-  <p>Two meanings: a <b>body of systematic, verified knowledge</b> + a <b>method/approach.</b> Attributes: empiricism · objectivity · value-neutrality · verifiability · cause–effect · generalisation · prediction · quantification · reliability &amp; validity.</p>
-  <div class="steps">
-    <span>1 · Observation</span><span>2 · Hypothesis</span><span>3 · Data collection</span>
-    <span>4 · Analysis/testing</span><span>5 · Generalisation/theory</span><span>6 · Prediction</span><span>7 · Verification/falsification</span>
+  <h3 class="gh">B.1 What is science?</h3>
+  <p><em class="hl">Giddens</em>: science = the <b>systematic use of method &amp; logical argument to build a body of knowledge</b> (a body of knowledge <b>+</b> a method). <b>Goals:</b> explain · generalise · predict.</p>
+  <p><b>7 features:</b> empirical · testable/falsifiable · provisional · cumulative · objective · replicable · theoretical. <b>Merton's CUDOS:</b> Communalism · Universalism · Disinterestedness · Originality · Skepticism (Salk not patenting the polio vaccine).</p>
+
+  <h3 class="gh">B.2 The scientific method</h3>
+  <p><em class="hl">Bacon</em> — observation, data, measurement, experiment (<b>empiricism/induction</b>). Characteristics (<em class="hl">Horton &amp; Hunt</em>): objectivity, accuracy, precision, trained investigators, replicability, neutrality. Classical <b>swan</b> postulate; one <b>black swan</b> refutes.</p>
+  <div class="steps"><span>1 · Topic</span><span>2 · Research Q</span><span>3 · Literature/gap</span><span>4 · Hypothesis + operationalise</span><span>5 · Method &amp; sample</span><span>6 · Collect data</span><span>7 · Analyse (SPSS) + generalise</span><span>8 · Conclude &amp; publish</span></div>
+  <p>Standardisation (e.g. <b>NSSO</b>) → validity &amp; reliability, prediction, universal applicability, ethical neutrality.</p>
+
+  <h3 class="gh">B.3 Is Sociology a Science? (YES → BUT → THEREFORE)</h3>
+  <div class="pos"><h4>YES — Positivist (Comte, Durkheim)</h4>
+    <ul><li>Society = natural system "out there"; objective, quantitative method → laws</li>
+    <li><b>Durkheim's <i>Suicide</i> (1897) &amp; <i>Rules</i> (1895)</b> — social facts as things</li>
+    <li>"Positivism = not romanticism but empirical reality" (Durkheim); <b>Homans</b>: took sociology from nowhere to a discipline</li></ul></div>
+  <p><b>Weber</b> — still a science, but a <b>special social science</b>: subject matter differs → method differs (<b>Verstehen</b>). Non-positivist methodology <b>is</b> scientific (systematic, empirical via interviews, value-free, logical, open to scrutiny).</p>
+
+  <h3 class="gh">B.4 CRITIQUE — limits of scientific method in social science</h3>
+  <div class="neg"><h4>Seven limitations</h4>
+    <ul><li><b>Experimentation</b> — no control; humans are not guinea pigs</li>
+    <li><b>Measurement</b> — quantify beauty, secularism, nationalism?</li>
+    <li><b>Generalisation</b> — man is volitional; free will &amp; consciousness ("I" &amp; "Me" — Mead)</li>
+    <li><b>Objectivity</b> — <em class="hl">Myrdal</em>: "total objectivity is an illusion"</li>
+    <li><b>Reductionism</b> — overlooks qualitative depth (Indian rituals → symbolic meanings)</li>
+    <li><b>Oversimplification</b> + validity/reliability (dishonest/desirable responses)</li>
+    <li><b>Plurality of causes</b> &amp; cause–effect intermixture</li></ul></div>
+  <p><b>Fix:</b> lab → interview/questionnaire/field observation; objectivity complemented by <b>inter-subjectivity &amp; interpretation.</b></p>
+
+  <h3 class="gh">B.5 Philosophy-of-science CRITIQUE (the syllabus "critique")</h3>
+  <div class="card"><span class="lbl">Karl Popper — Falsificationism</span><div class="body">Science grows by <b>falsification</b>, not verification; <b>demarcation</b> — scientific = falsifiable. Astrology/Freud = unfalsifiable; Marxism → pseudo-science via "false consciousness."</div></div>
+  <div class="card"><span class="lbl">Paul Feyerabend — Epistemological Anarchism</span><div class="body">"Worst enemy of method"; no single method — intuition, hunches, serendipity → <b>"anything goes"</b>; science is just another ideology.</div></div>
+  <div class="card"><span class="lbl">Thomas Kuhn — Paradigms</span><div class="body"><b>Pre-science → normal science → crisis → paradigm shift.</b> Community decides "science" → science is a <b>social process</b>; sociology is <b>multi-paradigmatic / pre-scientific.</b></div></div>
+  <div class="card"><span class="lbl">Feminist critique</span><div class="body">Objectivity doesn't exist — <b>androcentric/sexist</b> bias; over-generalisation from male samples; <b>Antoinette Brown Blackwell</b> vs Darwin; <b>D. Smith &amp; P.H. Collins</b> — standpoint theory.</div></div>
+  <div class="card"><span class="lbl">Post-positivism / Critical Realism</span><div class="body">Observation is theory-laden; knowledge is <b>provisional &amp; fallible</b>; mixed methods; <b>probabilistic</b> causality. Critical Realism sits between positivism &amp; interpretivism.</div></div>
+
+  <h3 class="gh">B.6 Objectivity &amp; Value-Neutrality</h3>
+  <pre class="map">Value-NEUTRALITY ──► Value-RELEVANCE ──► Value-LADEN / based
+ (Positivists:       (Weber: values in     (Committed socio:
+  Comte, Durkheim)    topic choice only)    Gouldner, Myrdal, Becker)</pre>
+  <p><b>Weber's method:</b> value-relevance in <b>topic choice</b> BUT <b>value-freedom (<i>Wertfreiheit</i>)</b> in the process — separate <b>"what is"</b> from <b>"what ought"</b>; plus <b>Verstehen, ideal types, causal probabilism, historical context.</b> <em class="hl">Radcliffe-Brown</em>: abandon ethnocentric/egocentric bias.</p>
+  <div class="split">
+    <div class="box"><h4>The committed-sociology challenge</h4>
+      <ul><li><b>Gouldner</b> — "Anti-Minotaur": value-freedom is a myth → <b>Reflexive Sociology</b></li>
+      <li><b>Myrdal</b> — objectivity is an illusion → state value premises</li>
+      <li><b>Becker</b> — "Whose side are we on?" → the underdog</li>
+      <li><b>Gomm</b>, <b>Marsland</b>; feminists — "classical sociology is male-streamed"</li></ul></div>
+    <div class="box"><h4>Reflexivity &amp; the double bind</h4>
+      <ul><li><b>Giddens — Double Hermeneutic</b>: sociologist is part of the world; concepts feed back ("role model", "vote bank")</li>
+      <li><b>Bourdieu</b> — researcher embedded → reflexivity</li>
+      <li><b>Merton</b> — confirmation bias; <b>Carspecken</b> — critical ethnography</li></ul></div>
   </div>
+  <p><b>Problems maintaining objectivity:</b> inherent bias · socio-cultural background · emotional involvement (Ann Oakley) · interpretation of data · funding/gatekeepers · selective recording · reactivity + <b>Hawthorne effect.</b></p>
 
-  <h3 class="grouphead">B.2 The case FOR — Positivist tradition</h3>
-  <ul class="plain">
-    <li><b>Comte (Positivism):</b> society ruled by <b>invariable natural laws</b>; <b>Law of Three Stages</b> — Theological → Metaphysical → <b>Positive.</b></li>
-    <li><b>Durkheim — <i>Rules of Sociological Method</i> (1895):</b> treat <b>social facts as things</b> (external · constraining · general); study objectively.</li>
-    <li><b>Durkheim — <i>Suicide</i> (1897):</b> statistics + comparative method + correlation → linked suicide rates to <b>integration &amp; regulation</b> (egoistic/altruistic/anomic/fatalistic). Explained a "personal" act by <b>social facts.</b></li>
-    <li>Tools sociology <i>does</i> use: observation, comparative &amp; historical method, surveys, sampling, statistics, (limited) experiments.</li>
-  </ul>
-
-  <h3 class="grouphead">B.3 The CRITIQUE — why it isn't natural science</h3>
-  <div class="neg">
-    <h4>Seven limitations</h4>
-    <ul>
-      <li><b>Objectivity</b> — researcher is inside society; bias of value/class/gender</li>
-      <li><b>Experimentation</b> — no controlled lab; ethical limits; humans not passive</li>
-      <li><b>Prediction</b> — free will &amp; reflexivity; self-fulfilling prophecy (Merton)</li>
-      <li><b>Generalisation</b> — societies vary by time, space, culture</li>
-      <li><b>Measurement</b> — attitudes/values lack natural units</li>
-      <li><b>Hawthorne Effect</b> — the observed change their behaviour</li>
-      <li><b>Distinct subject</b> — humans have <b>consciousness &amp; meaning</b> (Weber)</li>
-    </ul>
-  </div>
-
-  <h3 class="grouphead">B.4 The interpretive / anti-positivist alternative</h3>
-  <ul class="plain">
-    <li><b>Weber — <i>Verstehen</i>:</b> social action carries <b>subjective meaning</b>; combine interpretive <b>understanding</b> with causal <b>explanation</b>. Sociology = a <b>special social science</b>. Tools: <b>Ideal type</b>, value-relevance + value-freedom.</li>
-    <li><b>Non-positivist methods (syllabus):</b> Phenomenology (<b>Schutz</b>) · Ethnomethodology (<b>Garfinkel</b>) · Symbolic Interactionism (<b>Mead, Blumer</b>) · Social Constructionism (<b>Berger &amp; Luckmann, 1966</b>).</li>
-    <li><b>Anti-naturalism:</b> society ≠ nature → natural-science method inappropriate.</li>
-  </ul>
-
-  <h3 class="grouphead">B.5 Post-positivist &amp; critical challenges</h3>
-  <ul class="plain">
-    <li><b>Popper — Falsificationism:</b> science advances by <b>falsifying</b>, not verifying.</li>
-    <li><b>Kuhn — Paradigms:</b> science is community/paradigm-bound; sociology is <b>multi-paradigmatic.</b></li>
-    <li><b>Critical Theory (Habermas):</b> positivism serves the <b>status quo</b>; three knowledge-interests (technical / practical / <b>emancipatory</b>).</li>
-    <li><b>Feminist critique:</b> mainstream = <b>"malestream"</b>; Standpoint theory (D. Smith, S. Harding).</li>
-    <li><b>Postmodernism</b> (Lyotard, Foucault): rejects grand narratives &amp; universal truth.</li>
-  </ul>
-
-  <h3 class="grouphead">B.6 Fact, Value &amp; Objectivity</h3>
-  <div class="card"><span class="lbl">Weber</span><div class="body"><b>Value-free</b> in analysis, but <b>value-relevant</b> in choosing the problem. Objectivity = rigorous method free of bias; value-neutrality = own preferences don't distort findings.</div></div>
-  <div class="card"><span class="lbl">Myrdal</span><div class="body">A fully value-free sociology is a <b>myth</b> → <b>state your value-premises explicitly.</b></div></div>
-  <div class="card"><span class="lbl">Gouldner</span><div class="body"><i>"Anti-Minotaur: The Myth of a Value-Free Sociology"</i> — value-freedom itself became an ideology.</div></div>
-
-  <div class="callout"><b>Verdict:</b> Sociology <b>is a science</b> — systematic, empirical, self-correcting, striving for objectivity — <b>but a <i>social</i> science, not a copy of physics.</b> Its subject (conscious, meaning-making humans) needs <b>both explanation <i>and</i> understanding</b>. It is <b>multi-paradigmatic</b>; objectivity is a disciplined aspiration via method, peer scrutiny &amp; reflexivity.</div>
+  <h3 class="gh">B.7 Verdict (conclusion)</h3>
+  <div class="callout"><em class="hl">Bierstedt</em>: generalising, social, pure science. <em class="hl">Sayer</em>: society is too complex for exact prediction → sociology is a science not like physics/chemistry (<b>closed systems</b>) but like <b>seismology &amp; meteorology</b> (<b>open systems</b>). <b>Bottom line — sociology is the <em class="hl">most scientific of the humanities and the most humanistic of the sciences</em></b>: a <b>special social science</b> needing both explanation and interpretive understanding; objectivity is a disciplined aspiration via method, peer scrutiny &amp; reflexivity.</div>
 </section>
 
-<!-- ======================= PART C ======================= -->
+<!-- ============ PART C ============ -->
 <section class="part">
   <span class="part-num">Part C · Diagrams</span>
-  <h2>Memory Maps (draw these in the answer)</h2>
-  <p style="margin-bottom:4px"><b>Positivism vs Interpretivism</b></p>
-<pre class="map">POSITIVISM  (Durkheim)        INTERPRETIVISM (Weber)
-- macro / structure           - micro / action
-- objective, quantitative     - subjective, qualitative
-- social FACTS as things      - MEANINGS (Verstehen)
-- explanation (Erklaren)      - understanding (Verstehen)
-- natural-science model       - anti-naturalist / special
-      \___ both aim at systematic knowledge ___/</pre>
-  <p style="margin-bottom:4px"><b>Scope — two schools</b></p>
-<pre class="map">            SCOPE OF SOCIOLOGY
-      +----------+-----------+
-  FORMALISTIC            SYNTHETIC
-  Simmel, Weber,         Durkheim, Ginsberg,
-  Von Wiese, Tonnies     Hobhouse, Sorokin
-  pure / limited;        general / synthesis;
-  FORMS of relations     whole of social life</pre>
+  <h2>Memory Maps (reproduce in the answer)</h2>
+<pre class="map">IS SOCIOLOGY A SCIENCE?
+ +----------+---------------+
+YES         WEBER            NO / LIMITS
+(Positivism) (special social  (experiment, measure,
+ Comte,       science -        generalise, objectivity,
+ Durkheim)    Verstehen)       reductionism)
+     +--> Popper (falsify) . Feyerabend (anything goes)
+          Kuhn (multi-paradigm) . Feminist critique
+     +--> Sayer: open system (like meteorology)</pre>
+<pre class="map">           SCOPE OF SOCIOLOGY
+     +----------+-----------+
+ FORMALISTIC            SYNTHETIC
+ Simmel, Weber,         Durkheim, Ginsberg,
+ Von Wiese, Tonnies     Hobhouse, Sorokin
+ pure / limited;        general / synthesis;
+ FORMS of relations     whole of social life</pre>
 </section>
 
-<!-- ======================= PART D ======================= -->
+<!-- ============ PART D ============ -->
 <section class="part">
   <span class="part-num">Part D · PYQs</span>
   <h2>Previous Year Questions (UPSC Sociology Optional)</h2>
-  <h3 class="grouphead">Science / Method / Positivism / Objectivity</h3>
-  <p class="pyq"><span class="yr">2018 ·</span> Does scientific method make Sociology a Science? Illustrate with Durkheim's method. <i>(10m)</i></p>
-  <p class="pyq"><span class="yr">2018 ·</span> Is non-positivistic methodology scientific? Illustrate. <i>(20m)</i></p>
-  <p class="pyq"><span class="yr">2017 ·</span> Examine the basic postulates of positivism and post-positivism. <i>(20m)</i></p>
-  <p class="pyq"><span class="yr">2017 ·</span> Ethnomethodological &amp; phenomenological perspectives as a critique of positivism. <i>(10m)</i></p>
-  <p class="pyq"><span class="yr">2017 ·</span> Main tenets of the interpretative perspective in sociology. <i>(10m)</i></p>
-  <p class="pyq"><span class="yr">2016 ·</span> What is "value-free sociology"? Clarify. <i>(10m)</i></p>
-  <p class="pyq"><span class="yr">2016 ·</span> How is objectivity different from value neutrality? (Weber) <i>(150 words)</i></p>
-  <p class="pyq"><span class="yr">2015 ·</span> Is Sociology a Science? Give reasons. <i>(10m)</i></p>
-  <h3 class="grouphead">Scope / Comparison</h3>
+  <h3 class="gh">Science / Method / Positivism / Objectivity</h3>
+  <p class="pyq"><span class="yr">2018 ·</span> Does scientific method make Sociology a Science? Illustrate with Durkheim's method. <i>(10)</i></p>
+  <p class="pyq"><span class="yr">2018 ·</span> Is non-positivistic methodology scientific? Illustrate. <i>(20)</i></p>
+  <p class="pyq"><span class="yr">2017 ·</span> Basic postulates of positivism and post-positivism. <i>(20)</i></p>
+  <p class="pyq"><span class="yr">2017 ·</span> Ethnomethodological &amp; phenomenological critique of positivism. <i>(10)</i></p>
+  <p class="pyq"><span class="yr">2016 ·</span> What is "value-free sociology"? Clarify. <i>(10)</i></p>
+  <p class="pyq"><span class="yr">2016 ·</span> How is objectivity different from value neutrality? (Weber)</p>
+  <p class="pyq"><span class="yr">2015 ·</span> Is Sociology a Science? Give reasons. <i>(10)</i></p>
+  <h3 class="gh">Scope / Comparison</h3>
   <p class="pyq"><span class="yr">Rep. ·</span> Compare and contrast Sociology with Anthropology.</p>
   <p class="pyq"><span class="yr">Rep. ·</span> "Sociology is pre-eminently the study of modern societies." Substantiate.</p>
   <p class="pyq"><span class="yr">Rep. ·</span> Distinguish Sociology from Economics / Political Science.</p>
-  <div class="callout"><b>Answer template</b> for "Is Sociology a Science?": <b>YES</b> (Comte/Durkheim + method) → <b>BUT</b> (7 limitations) → <b>THEREFORE</b> (Weber's special social science + multi-paradigm). Thesis → antithesis → synthesis scores.</div>
+  <div class="callout"><b>Master template — "Is Sociology a Science?":</b> <b>YES</b> (Comte/Durkheim + method + CUDOS) → <b>BUT</b> (7 limits) → <b>critique of the method</b> (Popper, Feyerabend, Kuhn, feminist) → <b>THEREFORE</b> (Weber's special social science; Sayer's open systems; "most scientific of the humanities…").</div>
+</section>
+
+<!-- ============ PART E ============ -->
+<section class="part">
+  <span class="part-num">Part E · Value-Addition Bank</span>
+  <h2>From your KEYWORDS / QUOTES / BOOKS</h2>
+  <h3 class="gh">Keywords to sprinkle</h3>
+  <p>value-neutrality · objectivity · methodological anarchism/pluralism · falsifiability · reliability &amp; validity · <b>triangulation (Norman Denzin)</b> · reflexivity · double hermeneutic · dialectic of Enlightenment · verstehen · ideal type · causal probabilism · dynamic social reality vs static social laws.</p>
+  <h3 class="gh">Quotes (attribute exactly)</h3>
+  <p class="q">"Technology leads to enslavement of man; man becomes a tool in the hands of the machine." — <b>Simmel</b></p>
+  <p class="q">"In modern society, productivity is valued over creativity." — <b>Weber</b></p>
+  <p class="q">"Isolated individuals and non-individual societies do not exist." — <b>C.W. Mills</b></p>
+  <p class="q">"Consumerism has changed chains of iron to chains of gold; people forgot the spirit of revolution." — <b>Marcuse</b></p>
+  <p class="q">"Sociology is the intellectual product of the French Revolution." — <b>Peter Berger</b> · "Modernity is an unfinished agenda." — <b>Habermas</b></p>
+  <p class="q">"The goal of sociology is to reveal what is hidden." — <b>Bourdieu</b> · good sociology "sharpens our understanding of the obvious" — <b>Berger</b></p>
+  <p class="q">"Every scientific inquiry starts from common sense." — <b>John Madge</b> · "Science is a critical reflection of common sense." — <b>Ronald Fletcher</b></p>
+  <h3 class="gh">Books to title-drop</h3>
+  <p>Giddens <i>Runaway World</i> · Beck <i>Risk Society</i> · Bauman <i>Liquid Modernity</i> · Cooley (looking-glass self) · Schutz <i>Phenomenology of the Social World</i> · Mills <i>The Power Elite</i> · Goffman <i>Presentation of Self in Everyday Life</i> · Weber <i>"Objectivity" in Social Science</i> · Berger &amp; Luckmann <i>Social Construction of Reality</i> · Gouldner <i>Anti-Minotaur</i> · Wallerstein <i>The Modern World-System</i>.</p>
 </section>
 
 <footer>
-  Sources: Haralambos &amp; Holborn · Ritzer, <i>Sociological Theory</i> · IGNOU ESO-13 &amp; ESO-16 · Bottomore · MacIver &amp; Page · Durkheim, <i>Rules</i> (1895) &amp; <i>Suicide</i> (1897) · Weber, <i>Economy &amp; Society</i>. PYQs cross-checked vs Edukemy / SleepyClasses / Gokulam topic-wise compilations. · For Adarsh's UPSC CSE prep.
+  Sources: Adarsh's handwritten notes + LevelUp IAS Handouts 1 &amp; 2 · Haralambos &amp; Holborn · Ritzer · IGNOU ESO-13/16 · Bierstedt <i>The Social Order</i> · Bottomore · Durkheim <i>Rules</i> (1895) &amp; <i>Suicide</i> (1897) · Weber. PYQs cross-checked vs Edukemy / SleepyClasses / Gokulam. · For Adarsh's UPSC CSE prep.
 </footer>
 </div>
