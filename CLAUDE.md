@@ -102,13 +102,25 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 7. Current Focus  _(update every few sessions)_
-- **Now:** Setting up the preparation system and memory file. ✅ (in progress)
-- **Next:** Decide/confirm target year & attempt number; build a study plan and
-  subject-wise trackers.
+- **Now:** Modern History note-building. Completed **Note 03 (Quit India → Independence, 1942–47)**:
+  detailed one-stop `.md`, screenshot-friendly HTML revision sheet, PYQ practice, and a 34-Q
+  interactive Prelims drill (nodes 31–60, passes `validate_drill.py`).
+- **Next:** Fill the gap — **Note 02-topic content** between Councils Acts and Quit India (Swadeshi
+  → Home Rule → NCM → CDM → Govt of India Acts 1919/1935); confirm target year & attempt.
 
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-08-06** — **Built Note 03: Quit India Movement → Independence & Partition (1942–47)** from
+  Adarsh's uploaded *Modern History (ForumIAS)* doc (Quit India → last page), enriched with
+  Spectrum / Bipan Chandra / Sumit Sarkar and web-verified. Deliverables:
+  `notes/modern-history/03-quit-india-to-independence.md` (one-stop), `…-revision-sheet.html`
+  (vertical, screenshot-friendly, light/dark), `03-pyq-practice.md`, and the second interactive
+  drill `prelims-drills/drills/modern-history-03-quit-india-to-independence.html` (**34 Qs, nodes
+  31–60**, all hard checks pass, **0 warnings**; 100% layer 3+, keys 26/26/24/24). **Corrected 4
+  slips** in the source: INA Moirang flag = **1944** (not 1945); League joined Interim Govt
+  **26 Oct 1946** (not 14 Oct); J.P. Narayan escaped **Hazaribagh** (not Deoli); A.V. Alexander =
+  First Lord of the Admiralty, Y.B. Chavan at Satara.
 - **2026-07-22** — **Reworked Note 01 to be faithful to the handwritten notes only** (Adarsh:
   "don't include extra topics like the safety-valve expansion; include ALL Moderates-vs-Extremists
   rows I wrote — social/cultural background, poverty, political reform; and format so I can

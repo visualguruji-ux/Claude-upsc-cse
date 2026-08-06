@@ -25,3 +25,4 @@ Exit 0 = hard checks pass. Fix hard failures; justify or fix warnings.
 | Subject | Topic | File |
 |---|---|---|
 | Modern History | Foundation of the INC, Moderates & Extremists, Councils Acts 1861 & 1892 | `drills/modern-history-01-foundation-of-congress.html` |
+| Modern History | Quit India Movement → Independence & Partition (1942–47) — 34 Qs, nodes 31–60 | `drills/modern-history-03-quit-india-to-independence.html` |

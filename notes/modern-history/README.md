@@ -7,6 +7,7 @@ and PYQ pointers.
 | # | Topic | Covers | Detailed note | Revision sheet | PYQ set |
 |---|---|---|---|---|---|
 | 01 | Rise of Nationalism, Foundation of INC, Moderates & Extremists, Councils Acts | Pre-Congress associations (both phases) · theories of INC formation · Moderates (ideology/methods/demands/achievements) · Extremists (causes/methods/Surat Split) · Indian Councils Acts 1861 & 1892 | [detailed .md](01-foundation-of-congress-moderates-extremists.md) | [HTML (print)](01-foundation-of-congress-revision-sheet.html) | [practice](01-pyq-practice.md) |
+| 03 | Quit India Movement → Independence & Partition (1942–47) | Cripps Mission & Quit India · 3 phases, underground & parallel governments · martyrs · constitutional deadlock (C.R. Formula → Wavell) · INA & trials · 3 post-war upsurges & RIN Mutiny · elections 1945–46 · Cabinet Mission · Direct Action & Interim Govt · Mountbatten/3 June Plan · Indian Independence Act 1947 | [detailed .md](03-quit-india-to-independence.md) | [HTML](03-quit-india-to-independence-revision-sheet.html) | [practice](03-pyq-practice.md) · [drill](../../prelims-drills/drills/modern-history-03-quit-india-to-independence.html) |
 
 > The **detailed note** is the one-stop study document (Spectrum + coaching-enriched).
 > The **HTML** is a quick-revision one-pager. The **PYQ set** has exam-pattern practice.
