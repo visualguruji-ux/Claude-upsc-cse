@@ -102,13 +102,26 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 7. Current Focus  _(update every few sessions)_
-- **Now:** Setting up the preparation system and memory file. ✅ (in progress)
-- **Next:** Decide/confirm target year & attempt number; build a study plan and
-  subject-wise trackers.
+- **Now:** **Sociology Optional, Paper I, Unit 1** — discipline foundations started
+  (scope & comparison; science, method & critique). First Sociology notes now in
+  `notes/sociology/`. ✅
+- **Next:** Continue Paper I — *Sociology & common sense*, then *positivism & its critique /
+  fact-value-objectivity / non-positivist methodologies*, then Research Methods & the Thinkers.
+- **(Parked)** Confirm target year & attempt; build subject-wise trackers.
 
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-08-06** — **Started Sociology Optional (Paper I, Unit 1).** Built the first Sociology
+  material in the repo: a one-stop, PYQ-tagged note on **(1) Scope of the subject & comparison
+  with other social sciences** and **(2) Science, scientific method & critique**. Part A —
+  etymology/definitions (Comte 1839), **Formalistic (Simmel) vs Synthetic (Durkheim) schools**,
+  Bierstedt's nature of sociology, comparison with Anthropology/PoliSci/Economics/History/
+  Psychology. Part B — positivist case (Comte; Durkheim's *Rules* 1895 & *Suicide* 1897); the
+  **7-point critique**; Weber's *Verstehen* & non-positivist methods (Schutz/Garfinkel/Mead/
+  Berger-Luckmann); Popper/Kuhn/Habermas/feminist/postmodern challenges; **fact-value-objectivity**
+  (Weber/Myrdal/Gouldner). Saved `.md` + **screenshot-friendly vertical HTML** + folder
+  `README.md` with Paper I roadmap. PYQ years web-verified (2015–2018). Files in `notes/sociology/`.
 - **2026-07-22** — **Reworked Note 01 to be faithful to the handwritten notes only** (Adarsh:
   "don't include extra topics like the safety-valve expansion; include ALL Moderates-vs-Extremists
   rows I wrote — social/cultural background, poverty, political reform; and format so I can
