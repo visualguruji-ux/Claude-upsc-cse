@@ -11,6 +11,12 @@ and PYQ pointers.
 > The **detailed note** is the one-stop study document (Spectrum + coaching-enriched).
 > The **HTML** is a quick-revision one-pager. The **PYQ set** has exam-pattern practice.
 
+> 🃏 **Flashcards (active recall + spaced repetition):**
+> [`flashcards/modern-history-01-foundation-of-congress.html`](../../flashcards/modern-history-01-foundation-of-congress.html)
+> — 80 flip-cards in 9 decks, built from Notes 01 & 02. Open in any browser (works offline);
+> flip to recall, rate *Again / Good / Easy*, and the app schedules your revision. See
+> [`flashcards/README.md`](../../flashcards/README.md).
+
 **Deep-dive companions**
 - [`02-moderates-extremists-councils-acts-onestop.md`](02-moderates-extremists-councils-acts-onestop.md)
   — in-depth, one-stop version of Moderates → Extremists → Councils Acts (Bipan Chandra +

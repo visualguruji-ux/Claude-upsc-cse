@@ -102,13 +102,27 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 7. Current Focus  _(update every few sessions)_
-- **Now:** Setting up the preparation system and memory file. ✅ (in progress)
-- **Next:** Decide/confirm target year & attempt number; build a study plan and
-  subject-wise trackers.
+- **Now:** Building revision tools for Modern History — notes ✅, PYQ set ✅, Prelims drill ✅,
+  and now a **Flashcards app** (active recall + spaced repetition) ✅.
+- **Next:** Extend flashcards to new topics as notes grow; decide/confirm target year & attempt
+  number; build a study plan and subject-wise trackers.
+- **Daily habit to suggest to Adarsh:** run the flashcards' **"Review due"** mode each morning.
 
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-08-09** — **Built a Flashcards app for active recall** (Adarsh: "flashcards for active
+  recalling, or suggest a better approach… so I can quickly revise"). Recommended and implemented
+  **active recall + spaced repetition (SRS)** as the higher-retention approach. Created
+  `flashcards/modern-history-01-foundation-of-congress.html` — a self-contained, offline HTML app
+  with **80 cards across 9 decks** built faithfully from Notes 01 & 02 (Pre-Congress associations
+  Phase 1 & 2 · INC foundation theories · Moderates · Extremists · Moderates-vs-Extremists ·
+  Councils Acts 1861 & 1892). Features: **Leitner-box SRS** (Again/Good/Easy → scheduled review),
+  modes (Review-due / Learn-all / Weak-spots / Starred), per-deck progress + mastery ring, star
+  bookmarks, keyboard shortcuts, light/dark, localStorage persistence, mobile/screenshot-friendly.
+  Added `flashcards/README.md` and linked it from `notes/modern-history/README.md`.
+  **Prefs honoured:** `<meta charset>`, responsive vertical layout, no wide tables. Smoke-tested
+  headless (no console errors). **Next:** add flashcard decks for future topics as notes are built.
 - **2026-07-22** — **Reworked Note 01 to be faithful to the handwritten notes only** (Adarsh:
   "don't include extra topics like the safety-valve expansion; include ALL Moderates-vs-Extremists
   rows I wrote — social/cultural background, poverty, political reform; and format so I can

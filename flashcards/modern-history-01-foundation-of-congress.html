@@ -1,0 +1,717 @@
+<meta charset="utf-8">
+<title>Flashcards · Foundation of INC, Moderates & Extremists, Councils Acts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --ground:#f3efe4;--panel:#fbf8f0;--panel-2:#f0ead9;
+    --ink:#1b2452;--ink-soft:#41487a;--muted:#6c6a63;--line:#ded5bf;
+    --ochre:#b5651d;--ochre-soft:#e7d3b3;
+    --green:#2f6b57;--green-bg:#e2efe6;--green-line:#bcd8c6;
+    --red:#9e3b2e;--red-bg:#f6e2db;--red-line:#e3c3b8;
+    --blue:#2e5c9e;--blue-bg:#e1e9f6;--blue-line:#bcccE6;
+    --shadow:0 1px 0 rgba(27,36,82,.04), 0 10px 26px -20px rgba(27,36,82,.55);
+    --shadow-lg:0 30px 60px -30px rgba(27,36,82,.45);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#12141d;--panel:#1a1d29;--panel-2:#212533;
+      --ink:#e7e3f2;--ink-soft:#b9b6cf;--muted:#9a978f;--line:#33384c;
+      --ochre:#e0994f;--ochre-soft:#3a3020;
+      --green:#7dc1a6;--green-bg:#18271f;--green-line:#2c4a3b;
+      --red:#e08574;--red-bg:#2c1d1a;--red-line:#4a2e28;
+      --blue:#8fb2e6;--blue-bg:#182234;--blue-line:#2c3a52;
+      --shadow:0 10px 30px -22px rgba(0,0,0,.85);
+      --shadow-lg:0 30px 60px -28px rgba(0,0,0,.9);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#12141d;--panel:#1a1d29;--panel-2:#212533;
+    --ink:#e7e3f2;--ink-soft:#b9b6cf;--muted:#9a978f;--line:#33384c;
+    --ochre:#e0994f;--ochre-soft:#3a3020;
+    --green:#7dc1a6;--green-bg:#18271f;--green-line:#2c4a3b;
+    --red:#e08574;--red-bg:#2c1d1a;--red-line:#4a2e28;
+    --blue:#8fb2e6;--blue-bg:#182234;--blue-line:#2c3a52;
+    --shadow:0 10px 30px -22px rgba(0,0,0,.85);
+    --shadow-lg:0 30px 60px -28px rgba(0,0,0,.9);
+  }
+  :root[data-theme="light"]{
+    --ground:#f3efe4;--panel:#fbf8f0;--panel-2:#f0ead9;
+    --ink:#1b2452;--ink-soft:#41487a;--muted:#6c6a63;--line:#ded5bf;
+    --ochre:#b5651d;--ochre-soft:#e7d3b3;
+    --green:#2f6b57;--green-bg:#e2efe6;--green-line:#bcd8c6;
+    --red:#9e3b2e;--red-bg:#f6e2db;--red-line:#e3c3b8;
+    --blue:#2e5c9e;--blue-bg:#e1e9f6;--blue-line:#bcccE6;
+    --shadow:0 1px 0 rgba(27,36,82,.04), 0 10px 26px -20px rgba(27,36,82,.55);
+    --shadow-lg:0 30px 60px -30px rgba(27,36,82,.45);
+  }
+  *{box-sizing:border-box}
+  html,body{max-width:100%;overflow-x:hidden}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:clamp(14px,3.5vw,32px) clamp(12px,4vw,26px) 60px}
+
+  /* ---- Masthead ---- */
+  header.masthead{border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:18px;
+    display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+  .kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.62rem;font-weight:700;
+    color:var(--ochre);margin:0 0 6px}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.25rem,4.6vw,1.7rem);
+    line-height:1.12;margin:0;text-wrap:balance}
+  .sub{color:var(--ink-soft);font-size:.85rem;margin:8px 0 0}
+  .icon-btn{flex:none;background:var(--panel);border:1px solid var(--line);color:var(--ink);
+    width:38px;height:38px;border-radius:10px;font-size:1.1rem;cursor:pointer;box-shadow:var(--shadow)}
+  .icon-btn:hover{border-color:var(--ochre)}
+
+  /* ---- Overall progress ---- */
+  .overall{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);
+    border-radius:12px;padding:12px 14px;margin:0 0 18px;box-shadow:var(--shadow)}
+  .ring{--p:0;flex:none;width:52px;height:52px;border-radius:50%;
+    background:conic-gradient(var(--green) calc(var(--p)*1%), var(--panel-2) 0);
+    display:grid;place-items:center;position:relative}
+  .ring::before{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--panel)}
+  .ring span{position:relative;font-weight:700;font-size:.8rem;color:var(--green)}
+  .overall .txt{font-size:.82rem;color:var(--ink-soft)}
+  .overall .txt b{color:var(--ink);font-size:.95rem}
+
+  /* ---- Section titles ---- */
+  .sec-title{font-family:var(--serif);font-size:1rem;color:var(--ink);margin:22px 0 10px;
+    display:flex;align-items:center;gap:8px}
+  .sec-title .dot{width:7px;height:7px;border-radius:50%;background:var(--ochre)}
+
+  /* ---- Mode buttons ---- */
+  .modes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 6px}
+  @media(max-width:460px){.modes{grid-template-columns:1fr}}
+  .mode{display:flex;gap:11px;align-items:center;text-align:left;background:var(--panel);
+    border:1px solid var(--line);border-radius:12px;padding:13px 14px;cursor:pointer;
+    box-shadow:var(--shadow);color:inherit;font:inherit}
+  .mode:hover{border-color:var(--ochre)}
+  .mode .em{font-size:1.4rem;flex:none}
+  .mode .mt{font-weight:700;font-size:.95rem}
+  .mode .md{font-size:.76rem;color:var(--muted);margin-top:2px}
+  .mode .badge{margin-left:auto;flex:none;background:var(--ochre);color:#fff;border-radius:20px;
+    padding:2px 9px;font-size:.72rem;font-weight:700}
+  :root[data-theme="dark"] .mode .badge,@media(prefers-color-scheme:dark){.mode .badge{color:#12141d}}
+  .mode.disabled{opacity:.5;cursor:not-allowed}
+
+  /* ---- Deck list ---- */
+  .decks{display:flex;flex-direction:column;gap:8px}
+  .deck{display:flex;align-items:center;gap:11px;background:var(--panel);border:1px solid var(--line);
+    border-radius:11px;padding:11px 13px;cursor:pointer;box-shadow:var(--shadow);color:inherit;
+    font:inherit;text-align:left;width:100%}
+  .deck:hover{border-color:var(--ochre)}
+  .deck.active{border-color:var(--ochre);background:var(--ochre-soft)}
+  .deck .num{flex:none;width:26px;height:26px;border-radius:7px;background:var(--panel-2);
+    display:grid;place-items:center;font-weight:700;font-size:.78rem;color:var(--ochre)}
+  .deck .nm{font-weight:600;font-size:.9rem;line-height:1.2}
+  .deck .meta{margin-left:auto;flex:none;display:flex;gap:6px;align-items:center}
+  .pill{font-size:.68rem;font-weight:700;border-radius:20px;padding:2px 8px;white-space:nowrap}
+  .pill.due{background:var(--red-bg);color:var(--red);border:1px solid var(--red-line)}
+  .pill.new{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-line)}
+  .pill.done{background:var(--green-bg);color:var(--green);border:1px solid var(--green-line)}
+  .deck .bar{flex:none;width:44px;height:5px;border-radius:3px;background:var(--panel-2);overflow:hidden}
+  .deck .bar i{display:block;height:100%;background:var(--green)}
+
+  .hint-line{font-size:.76rem;color:var(--muted);margin:12px 2px 0;line-height:1.5}
+  kbd{font-family:var(--sans);font-size:.72rem;background:var(--panel-2);border:1px solid var(--line);
+    border-bottom-width:2px;border-radius:5px;padding:1px 6px;color:var(--ink-soft);font-weight:700}
+
+  /* ---- Study screen ---- */
+  #study{display:none}
+  .studybar{display:flex;align-items:center;gap:10px;margin:0 0 14px}
+  .studybar .back{background:none;border:none;color:var(--ink-soft);font:inherit;font-size:.9rem;
+    cursor:pointer;padding:6px 4px;display:flex;align-items:center;gap:5px}
+  .studybar .back:hover{color:var(--ochre)}
+  .progress-wrap{flex:1;height:8px;background:var(--panel-2);border-radius:5px;overflow:hidden;
+    border:1px solid var(--line)}
+  .progress-wrap i{display:block;height:100%;background:var(--ochre);transition:width .25s ease}
+  .counter{font-size:.8rem;font-weight:700;color:var(--ink-soft);flex:none;min-width:52px;text-align:right}
+
+  .stage{perspective:1600px}
+  .card{position:relative;width:100%;min-height:340px;transform-style:preserve-3d;
+    transition:transform .5s cubic-bezier(.2,.7,.2,1);cursor:pointer}
+  .card.flipped{transform:rotateY(180deg)}
+  .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+    display:flex;flex-direction:column;border-radius:18px;border:1px solid var(--line);
+    background:var(--panel);box-shadow:var(--shadow-lg);padding:clamp(18px,5vw,30px);overflow:auto}
+  .face .toprow{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+  .deck-tag{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--ochre);background:var(--ochre-soft);border-radius:20px;padding:3px 10px}
+  .side-tag{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .star{margin-left:auto;background:none;border:none;font-size:1.25rem;cursor:pointer;
+    line-height:1;color:var(--muted);opacity:.6}
+  .star.on{color:var(--ochre);opacity:1}
+  .q{font-family:var(--serif);font-size:clamp(1.15rem,4.6vw,1.5rem);line-height:1.28;
+    color:var(--ink);margin:auto 0;text-wrap:balance}
+  .back .side-tag{color:var(--green)}
+  .a{font-size:clamp(.95rem,3.6vw,1.05rem);color:var(--ink-soft);line-height:1.6}
+  .a b{color:var(--ink)}
+  .a ul,.a ol{margin:8px 0 0;padding-left:1.2em}
+  .a li{margin:5px 0}
+  .a .cmp{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
+  .a .cmp>div{padding:10px 12px;border-radius:10px;font-size:.9rem}
+  .a .cmp .m{background:var(--green-bg);border:1px solid var(--green-line)}
+  .a .cmp .e{background:var(--red-bg);border:1px solid var(--red-line)}
+  .a .cmp .lbl{display:block;font-size:.64rem;text-transform:uppercase;letter-spacing:.06em;
+    font-weight:700;margin-bottom:3px}
+  .a .cmp .m .lbl{color:var(--green)}
+  .a .cmp .e .lbl{color:var(--red)}
+  .face .front-hint{margin-top:auto;padding-top:14px;font-size:.76rem;color:var(--muted);text-align:center}
+
+  .front{transform:rotateY(0)}
+  .back{transform:rotateY(180deg)}
+
+  /* ---- Rating buttons ---- */
+  .rate{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:16px}
+  .rate button{font:inherit;font-weight:700;font-size:.9rem;padding:14px 6px;border-radius:12px;
+    cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--ink);
+    box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;gap:3px}
+  .rate button small{font-weight:600;font-size:.66rem;color:var(--muted)}
+  .rate .again{background:var(--red-bg);border-color:var(--red-line);color:var(--red)}
+  .rate .good{background:var(--blue-bg);border-color:var(--blue-line);color:var(--blue)}
+  .rate .easy{background:var(--green-bg);border-color:var(--green-line);color:var(--green)}
+  .rate .again small{color:var(--red)}.rate .good small{color:var(--blue)}.rate .easy small{color:var(--green)}
+  .rate button:hover{filter:brightness(.97);transform:translateY(-1px)}
+  .flip-cta{margin-top:16px}
+  .flip-cta button{width:100%;font:inherit;font-weight:700;font-size:1rem;padding:15px;border-radius:12px;
+    cursor:pointer;border:1px solid var(--ochre);background:var(--ochre);color:#fff;box-shadow:var(--shadow)}
+  :root[data-theme="dark"] .flip-cta button{color:#12141d}
+  @media(prefers-color-scheme:dark){.flip-cta button{color:#12141d}}
+  .hidden{display:none!important}
+
+  /* ---- Done screen ---- */
+  #done{display:none;text-align:center;padding:20px 0}
+  #done .big{font-size:3rem;margin:0}
+  #done h2{font-family:var(--serif);font-size:1.4rem;margin:8px 0 4px}
+  #done p{color:var(--ink-soft);font-size:.9rem;margin:0 auto 18px;max-width:340px}
+  .tally{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 20px}
+  .tally .t{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;
+    box-shadow:var(--shadow);min-width:78px}
+  .tally .t b{display:block;font-size:1.5rem;font-family:var(--serif)}
+  .tally .t span{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  .tally .t.again b{color:var(--red)} .tally .t.good b{color:var(--blue)} .tally .t.easy b{color:var(--green)}
+  .btn-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .btn{font:inherit;font-weight:700;font-size:.9rem;padding:12px 20px;border-radius:11px;cursor:pointer;
+    border:1px solid var(--line);background:var(--panel);color:var(--ink);box-shadow:var(--shadow)}
+  .btn.primary{background:var(--ochre);border-color:var(--ochre);color:#fff}
+  :root[data-theme="dark"] .btn.primary{color:#12141d}
+  @media(prefers-color-scheme:dark){.btn.primary{color:#12141d}}
+  .btn:hover{border-color:var(--ochre)}
+
+  footer{margin-top:34px;border-top:1px solid var(--line);padding-top:14px;
+    display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+  footer .note{font-size:.72rem;color:var(--muted);line-height:1.5}
+  .txt-btn{background:none;border:none;color:var(--red);font:inherit;font-size:.76rem;cursor:pointer;
+    text-decoration:underline;padding:4px}
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <div>
+      <p class="kicker">Modern History · Note 01 · Active Recall</p>
+      <h1>Foundation of INC · Moderates &amp; Extremists · Councils Acts</h1>
+      <p class="sub">Flip-card revision with spaced repetition. Tap a card to reveal, then rate your recall — the app schedules each card for you. Progress saves in this browser.</p>
+    </div>
+    <button class="icon-btn" id="theme" title="Toggle light / dark">◐</button>
+  </header>
+
+  <!-- HOME -->
+  <div id="home">
+    <div class="overall">
+      <div class="ring" id="ring"><span id="ringpct">0%</span></div>
+      <div class="txt">
+        <b id="masteredN">0 of 0 cards mastered</b><br>
+        <span id="dueMsg">Loading…</span>
+      </div>
+    </div>
+
+    <div class="sec-title"><span class="dot"></span>Study mode</div>
+    <div class="modes">
+      <button class="mode" id="m-review">
+        <span class="em">🎯</span>
+        <span><span class="mt">Review due</span><span class="md">Only cards due today (spaced repetition)</span></span>
+        <span class="badge" id="dueBadge">0</span>
+      </button>
+      <button class="mode" id="m-learn">
+        <span class="em">📚</span>
+        <span><span class="mt">Learn all</span><span class="md">Every card in the deck, shuffled</span></span>
+      </button>
+      <button class="mode" id="m-weak">
+        <span class="em">⚠️</span>
+        <span><span class="mt">Weak spots</span><span class="md">Cards you've rated "Again"</span></span>
+        <span class="badge" id="weakBadge">0</span>
+      </button>
+      <button class="mode" id="m-star">
+        <span class="em">⭐</span>
+        <span><span class="mt">Starred</span><span class="md">Cards you've bookmarked</span></span>
+        <span class="badge" id="starBadge">0</span>
+      </button>
+    </div>
+    <p class="hint-line">Studying: <b id="scopeName">All decks</b>. Pick a deck below to focus, or keep “All decks”.</p>
+
+    <div class="sec-title"><span class="dot"></span>Decks</div>
+    <div class="decks" id="deckList"></div>
+
+    <p class="hint-line">Shortcuts while studying — <kbd>Space</kbd> flip · <kbd>1</kbd> Again · <kbd>2</kbd> Good · <kbd>3</kbd> Easy · <kbd>S</kbd> star · <kbd>Esc</kbd> back.</p>
+  </div>
+
+  <!-- STUDY -->
+  <div id="study">
+    <div class="studybar">
+      <button class="back" id="exit">‹ Decks</button>
+      <div class="progress-wrap"><i id="prog"></i></div>
+      <div class="counter" id="counter">0 / 0</div>
+    </div>
+    <div class="stage">
+      <div class="card" id="card">
+        <div class="face front">
+          <div class="toprow">
+            <span class="deck-tag" id="fDeck">Deck</span>
+            <span class="side-tag">Question</span>
+            <button class="star" id="fStar" title="Star (S)">★</button>
+          </div>
+          <div class="q" id="qText"></div>
+          <div class="front-hint">Tap card or press <kbd>Space</kbd> to flip</div>
+        </div>
+        <div class="face back">
+          <div class="toprow">
+            <span class="deck-tag" id="bDeck">Deck</span>
+            <span class="side-tag">Answer</span>
+            <button class="star" id="bStar" title="Star (S)">★</button>
+          </div>
+          <div class="a" id="aText"></div>
+        </div>
+      </div>
+    </div>
+    <div class="flip-cta" id="flipCta"><button id="flipBtn">Show answer</button></div>
+    <div class="rate hidden" id="rateRow">
+      <button class="again" data-r="again">Again<small>&lt; 1 day · 1</small></button>
+      <button class="good" data-r="good">Good<small>on track · 2</small></button>
+      <button class="easy" data-r="easy">Easy<small>push out · 3</small></button>
+    </div>
+  </div>
+
+  <!-- DONE -->
+  <div id="done">
+    <p class="big" id="doneEmoji">🎉</p>
+    <h2 id="doneTitle">Session complete</h2>
+    <p id="doneMsg"></p>
+    <div class="tally">
+      <div class="t again"><b id="tAgain">0</b><span>Again</span></div>
+      <div class="t good"><b id="tGood">0</b><span>Good</span></div>
+      <div class="t easy"><b id="tEasy">0</b><span>Easy</span></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn primary" id="againBtn">Study again</button>
+      <button class="btn" id="homeBtn">Back to decks</button>
+    </div>
+  </div>
+
+  <footer>
+    <p class="note">Built from Adarsh's notes 01 &amp; 02 (Bipan Chandra + Spectrum + coaching, web-verified).<br>80 cards · works offline · progress stored only in this browser.</p>
+    <button class="txt-btn" id="reset">Reset all progress</button>
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   CARD DATA  — faithful to notes/modern-history/01 & 02
+   ============================================================ */
+const DECKS = [
+  "Political Consciousness",
+  "Pre-Congress · Phase 1",
+  "Pre-Congress · Phase 2",
+  "INC Foundation & Theories",
+  "The Moderates",
+  "The Extremists",
+  "Moderates vs Extremists",
+  "Councils Act 1861",
+  "Councils Act 1892"
+];
+
+const CARDS = [
+  // ---- Political Consciousness ----
+  {d:0,q:`What does the "Regional Integration" idea say about the birth of the INC?`,
+   a:`The Congress was the <b>culmination and integration of pre-existing regional political activity</b> — <b>not a sudden creation</b>. Scattered local associations matured into regional ones, which finally integrated into one national body: the <b>INC (1885)</b>.`},
+  {d:0,q:`Which social class led early political awakening in 19th-century India, and how?`,
+   a:`The <b>English-educated Indian middle class</b> — lawyers, teachers, journalists. They spread awareness through <b>newspapers, journals and books</b>, and worked through social-reform &amp; literary bodies that raised similar grievances.`},
+
+  // ---- Pre-Congress · Phase 1 (1830s–1850s) ----
+  {d:1,q:`Bangabhasha Prakashika Sabha — year and founders?`,
+   a:`<b>1836</b>; formed by the <b>associates of Raja Rammohan Roy</b>. Among the <b>earliest</b> political associations.`},
+  {d:1,q:`Landholders' Society (Zamindari Association) — year, founders, why it matters?`,
+   a:`<b>1838</b>; <b>Dwarkanath Tagore &amp; Raja Radhakant Deb</b>. The <b>first organised political effort</b>; used <b>constitutional agitation</b> to guard zamindar (landlord) interests.`},
+  {d:1,q:`Bengal British India Society — year and aim?`,
+   a:`<b>1843</b>; formed on the advice of <b>George Thompson</b>. Aim: to <b>collect and publish information on the real condition of the people</b>.`},
+  {d:1,q:`British India Association (1851) — how was it formed and who led it?`,
+   a:`Formed in <b>1851</b> by the <b>merger</b> of the Landholders' Society + Bengal British India Society. President: <b>Raja Radhakant Deb</b>; Secretary: <b>Debendranath Tagore</b>.`},
+  {d:1,q:`What did the British India Association's 1852 petition to Parliament seek?`,
+   a:`A <b>separate legislature</b>; <b>separation of the executive and judiciary</b>; and <b>abolition of certain taxes</b>.`},
+  {d:1,q:`Bombay Association — year and founders?`,
+   a:`<b>1852</b>; <b>Jagannath Shankar Seth &amp; Dadabhai Naoroji</b>. Aim: ascertain the people's demands and present them to the British.`},
+  {d:1,q:`Madras Native Association — year, founder, focus?`,
+   a:`<b>1852</b>; <b>Gazulu Lakshminarasu Chetty</b>. Raised grievances of <b>peasants under the ryotwari settlement</b>; short-lived.`},
+  {d:1,q:`Deccan Association (1852) — what did it attempt?`,
+   a:`Short-lived; tried to send a <b>mission to England</b> to suggest reforms for the <b>Charter Act 1853</b> — but <b>failed</b>.`},
+  {d:1,q:`Distinguish the three easily-confused "British India" bodies.`,
+   a:`<ul><li><b>British India Society</b> — 1839, <b>London</b>, by William Adam (with George Thompson); paper "British Indian Advocate".</li><li><b>Bengal British India Society</b> — 1843, Calcutta.</li><li><b>British Indian Association</b> — 1851, Calcutta (the merger).</li></ul>`},
+  {d:1,q:`The 4 demands of the early associations (linked to the Charter Act 1853)?`,
+   a:`<ol><li>A legislature with a <b>representative</b> character.</li><li><b>Separation of executive from judiciary</b>.</li><li><b>Indianisation of services</b> + cut high officials' salaries.</li><li>Abolition of oppressive taxes — the <b>salt duty</b> &amp; <b>stamp duty</b>.</li></ol>`},
+
+  // ---- Pre-Congress · Phase 2 (1860s–1880s) ----
+  {d:2,q:`London Indian Society — year, founders, fate?`,
+   a:`<b>1865</b>; <b>Dadabhai Naoroji &amp; W.C. Bonnerjee</b>, in London. Soon <b>merged into the East India Association</b>.`},
+  {d:2,q:`East India Association — year, founder, aim?`,
+   a:`<b>1866</b>; <b>Dadabhai Naoroji</b>, in London. Aim: build public opinion (&amp; influence MPs) for India's political progress; later had branches in India.`},
+  {d:2,q:`Poona Sarvajanik Sabha — year and founders? (watch the trap)`,
+   a:`<b>1870</b>; founders <b>G.V. Joshi, S.H. Sathe, S. Chiplunkar</b>. ⚠️ <b>M.G. Ranade joined in 1871 — he was NOT a founder</b>. The Sabha later nurtured Gokhale &amp; Tilak.`},
+  {d:2,q:`Poona Sarvajanik Sabha's famous 1875 petition?`,
+   a:`Sent to the <b>House of Commons</b> demanding India's <b>direct representation in the British Parliament</b> — signed by <b>more than 23,000 people</b>.`},
+  {d:2,q:`Indian National Association (1876) — founders and significance?`,
+   a:`<b>Surendranath Banerjee &amp; Anand Mohan Bose</b>, Calcutta. The <b>first avowedly nationalist body</b>; led the <b>Ilbert Bill</b> &amp; <b>civil-service age-limit</b> agitations; <b>merged into the INC in 1886</b>.`},
+  {d:2,q:`Mohammedan National Association — year and founder?`,
+   a:`<b>1878</b>; founded by <b>Syed Amir Ali</b> — a platform to voice Muslim concerns.`},
+  {d:2,q:`Madras Mahajan Sabha — year and founders?`,
+   a:`<b>1884</b>; <b>G. Subramania Iyer, P. Anandacharlu, M. Viraraghavachariar</b>. A southern forerunner of the Congress.`},
+  {d:2,q:`Bombay Presidency Association (1885) — who were the "Bombay Trio"?`,
+   a:`<b>Pherozeshah Mehta, Badruddin Tyabji, K.T. Telang</b>. Demanded a larger Indian role in the councils &amp; services.`},
+  {d:2,q:`Indian Parliamentary Committee — year, founders, where?`,
+   a:`<b>1893</b>; <b>William Wedderburn &amp; W.S. Caine</b>, in Britain — to gather British public support for Indian reform.`},
+  {d:2,q:`Overall contribution and limitations of the pre-Congress associations?`,
+   a:`<b>Contribution:</b> spread political consciousness, trained the educated classes, critiqued British law/policy, and built a strong base for the Congress.<br><b>Limitations:</b> narrow social base, a regional/parochial outlook, and an elite bias.`},
+
+  // ---- INC Foundation & Theories ----
+  {d:3,q:`Foundation of the INC — when, where, key persons, delegates?`,
+   a:`<b>December 1885, Bombay</b>. <b>A.O. Hume</b> (retired British ICS officer) = the prime mover; <b>W.C. Bonnerjee</b> = first president; <b>72 delegates</b>.`},
+  {d:3,q:`The Safety-valve theory of the INC's formation?`,
+   a:`The Congress was allegedly created as a <b>"safety valve"</b> to release discontent and prevent a revolt bigger than 1857. Cites Hume's <b>"seven volumes"</b> of secret reports at Simla, acting with Viceroy <b>Lord Dufferin</b>'s knowledge.`},
+  {d:3,q:`The Conspiracy theory — whose, in which book, and what year?`,
+   a:`<b>R.P. Dutt</b>, in <b>India Today (1940)</b>. Building on the safety-valve idea: the INC was a conspiracy to <b>abort a mass uprising</b>, with the bourgeois leadership as a complacent partner.`},
+  {d:3,q:`How did the Extremists turn the safety-valve claim to their own use?`,
+   a:`<b>Lala Lajpat Rai</b> used it against the Moderates — arguing the Congress had been a device to <b>protect British rule</b>, so Indians must now fight for their rights.`},
+  {d:3,q:`The Lightning-conductor theory — whose, and what does it argue?`,
+   a:`<b>G.K. Gokhale</b>. The Moderates deliberately kept <b>A.O. Hume</b> (white, an ex-civil servant) in the lead as a <b>shield / lightning conductor</b> — an openly Indian-founded body would have been suppressed by a suspicious Government.`},
+  {d:3,q:`The accepted "conscious efforts" view — whose is it, and what does it say?`,
+   a:`<b>Bipin Chandra</b>. Debunks the "seven volumes" and safety-valve thesis as a <b>myth</b>. The INC was the culmination of <b>decades of conscious Indian effort</b>; Hume was a <b>facilitator, not a creator</b>; the leaders were patriots, not stooges.`},
+
+  // ---- The Moderates ----
+  {d:4,q:`Name the leading Moderates (Early Nationalists).`,
+   a:`Dadabhai Naoroji, Dinshaw Wacha, Pherozeshah Mehta, Surendranath Banerjee, G.K. Gokhale, Badruddin Tyabji, M.G. Ranade, W.C. Bonnerjee — English-educated professionals.`},
+  {d:4,q:`Dadabhai Naoroji — epithet and "firsts"?`,
+   a:`The <b>"Grand Old Man of India"</b>; author of the <b>Drain of Wealth</b> theory; Congress president <b>3 times</b>; the <b>first Indian to become a British MP</b> (1892, Liberal).`},
+  {d:4,q:`Surendranath Banerjee — epithets?`,
+   a:`The <b>"Indian Burke"</b> / <b>"Rashtraguru"</b>; founder of the Indian (National) Association.`},
+  {d:4,q:`Pherozeshah Mehta — epithet?`,
+   a:`The <b>"Lion of Bombay"</b>.`},
+  {d:4,q:`G.K. Gokhale — two things he's known for?`,
+   a:`Founded the <b>Servants of India Society (1905)</b>; was <b>Gandhi's political guru</b>.`},
+  {d:4,q:`Who was the first Muslim president of the Congress?`,
+   a:`<b>Badruddin Tyabji</b>, in <b>1887</b>.`},
+  {d:4,q:`Moderate ideology and beliefs?`,
+   a:`Faith in the <b>British sense of justice</b> and in the <b>"providential mission"</b> of British rule (reformable from within); a period of <b>political apprenticeship</b> thought necessary; loyal to the Crown; steeped in <b>Western liberal thought</b>.`},
+  {d:4,q:`Moderate methods — the "3 P's" (and the disputed 4th)?`,
+   a:`<b>Petition, Prayer, Protest</b> — petitions, memorials, resolutions, meetings, deputations, press. Some coaching materials add a <b>4th P: Propaganda</b> (political education). Mocked by Extremists as <b>"political mendicancy"</b>.`},
+  {d:4,q:`How did the Moderates work inside Britain?`,
+   a:`Through the <b>British Committee of the INC (1889)</b> and its journal <b>"India"</b>; and via <b>Naoroji as a British MP (1892)</b>, pleading India's case in the House of Commons.`},
+  {d:4,q:`The "Drain of Wealth" — the three authors and their books?`,
+   a:`<b>Dadabhai Naoroji</b> — <i>Poverty and Un-British Rule in India</i> (1901); <b>R.C. Dutt</b> — <i>The Economic History of India</i>; <b>William Digby</b> — <i>Prosperous British India</i>.`},
+  {d:4,q:`Through what channels did wealth "drain" to Britain?`,
+   a:`The <b>Home Charges</b>, salaries &amp; pensions of British officials, interest on the public debt, guaranteed profits to British railways/investment, and <b>military expenditure</b>.`},
+  {d:4,q:`The three pillars of the Moderate economic critique?`,
+   a:`<ol><li><b>De-industrialisation</b> (ruin of handicrafts by free-trade goods).</li><li>The <b>Drain of Wealth</b>.</li><li>An <b>exploitative land-revenue system</b> &amp; heavy taxation.</li></ol>`},
+  {d:4,q:`Key Moderate administrative demands?`,
+   a:`<b>Indianisation of the civil service</b> — hold the <b>ICS exam simultaneously in India &amp; England</b> and <b>raise the age limit</b>; <b>separate the judiciary from the executive</b>; <b>repeal the Arms Act</b>.`},
+  {d:4,q:`Concrete achievements of the Moderates?`,
+   a:`<b>Indian Councils Act 1892</b>; the <b>Public Service Commission (1886)</b>; a <b>House of Commons resolution (1893)</b> for simultaneous ICS exams; the <b>Welby Commission (1895)</b> on Indian expenditure (Naoroji a member) — plus exposing the economic character of British rule.`},
+  {d:4,q:`Bipin Chandra's evaluation of the Moderates?`,
+   a:`<b>Limits:</b> narrow social base, "lacked faith in the masses," slow results. <b>But pioneers, not failures</b> — they built the <b>organisation, ideology and economic critique</b> that every later phase stood on ("laid the firm foundations").`},
+
+  // ---- The Extremists ----
+  {d:5,q:`What else are the Extremists called, and what period?`,
+   a:`The <b>Garam Dal</b> / assertive nationalists / neo-nationalists — active <b>1905–1919</b>.`},
+  {d:5,q:`Main causes of the rise of Extremism?`,
+   a:`<ol><li>Realisation of British <b>exploitation</b> (the drain; <b>famines 1896–97, 1899–1900</b>; plague).</li><li><b>Failure of Moderate methods</b>.</li><li>Growing <b>self-respect</b> &amp; strong leaders.</li><li><b>Pride in India's heritage</b> (Vivekananda, Dayananda, Bankim's <i>Anandamath</i> / "Vande Mataram").</li><li><b>Curzon's</b> reactionary policies — esp. the <b>Partition of Bengal (1905)</b>.</li><li><b>International</b> influences.</li></ol>`},
+  {d:5,q:`Which of Curzon's measures fed Extremism (and the immediate trigger)?`,
+   a:`<b>Calcutta Corporation Act (1899)</b>, <b>Indian Universities Act (1904)</b>, <b>Official Secrets Act (1904)</b> — and, above all, the immediate trigger, the <b>Partition of Bengal (1905)</b>.`},
+  {d:5,q:`Which international events shattered the "myth of European invincibility"?`,
+   a:`<b>Ethiopia (Abyssinia)'s defeat of Italy (1896)</b> and <b>Japan's defeat of Russia (1905)</b>.`},
+  {d:5,q:`The Extremist leaders — "Lal-Bal-Pal" (plus two more)?`,
+   a:`<b>La</b>la Lajpat Rai (Punjab), <b>Bal</b> Gangadhar Tilak (Maharashtra), Bipin Chandra <b>Pal</b> (Bengal) — plus <b>Aurobindo Ghosh</b> and <b>V.O. Chidambaram Pillai</b>.`},
+  {d:5,q:`The Extremist goal and Tilak's famous slogan?`,
+   a:`<b>Swaraj</b> (self-rule) — <b>"Swaraj is my birthright and I shall have it"</b> (Tilak). Rights claimed as a matter of <b>right</b>, not begged as favours.`},
+  {d:5,q:`The Extremists' four-fold programme?`,
+   a:`<b>Swadeshi · Boycott · National Education · Passive Resistance</b>. (National education e.g. the <b>Bengal National College, 1906</b>, with <b>Aurobindo</b> as principal.)`},
+  {d:5,q:`How did Tilak mobilise the masses?`,
+   a:`Through <b>Ganpati Utsav (1893)</b> and <b>Shivaji Utsav (1896)</b>, melas, and his newspapers <b>Kesari</b> (Marathi) &amp; <b>Maratha</b> (English).`},
+  {d:5,q:`The Swadeshi Movement (1905–08) — context and forms?`,
+   a:`Launched in Bengal against the <b>Partition of Bengal (1905)</b>. Forms: boycott &amp; burning of foreign cloth, <b>swadeshi enterprises</b>, <b>national education</b>, and cultural mobilisation — Tagore's <b>Rakhi Bandhan</b> (unity) and <b>"Vande Mataram"</b>.`},
+  {d:5,q:`Calcutta session (1906) — what was adopted?`,
+   a:`The four resolutions — <b>Swaraj, Swadeshi, Boycott, National Education</b>. The word <b>"Swaraj"</b> was declared the goal <b>for the first time</b> (<b>Dadabhai Naoroji</b> presided).`},
+  {d:5,q:`The Surat Split (1907) — what happened?`,
+   a:`The Congress <b>split</b> into Moderates (led by <b>Gokhale</b>) and Extremists (led by <b>Tilak</b>) over the presidency (Rash Behari Ghosh) and the resolutions; the <b>Extremists walked out</b>. The wings <b>reunited at Lucknow (1916)</b>.`},
+  {d:5,q:`What government repression followed the split?`,
+   a:`<b>Tilak was jailed for 6 years in Mandalay (Burma), 1908</b>; Aurobindo &amp; B.C. Pal withdrew from active politics; Lajpat Rai left for abroad; the press was muzzled by new laws.`},
+  {d:5,q:`Evaluation of the Extremists?`,
+   a:`First to demand <b>Swaraj as a birthright</b>, first to attempt wide <b>mass mobilisation</b>, and gave the movement a confident, self-reliant direction. Weakness: <b>weak organisation</b>, limited durability under repression, and the 1907 split.`},
+
+  // ---- Moderates vs Extremists ----
+  {d:6,q:`Moderates vs Extremists — time frame?`,
+   a:`<div class="cmp"><div class="m"><span class="lbl">Moderates</span>1885 – 1905</div><div class="e"><span class="lbl">Extremists</span>1905 – 1919</div></div>`},
+  {d:6,q:`Moderates vs Extremists — goal / demand?`,
+   a:`<div class="cmp"><div class="m"><span class="lbl">Moderates</span>Gradual constitutional reform; self-government within the Empire</div><div class="e"><span class="lbl">Extremists</span>Swaraj (self-rule)</div></div>`},
+  {d:6,q:`Moderates vs Extremists — methods?`,
+   a:`<div class="cmp"><div class="m"><span class="lbl">Moderates</span>3 P's (Petition, Prayer, Protest); constitutional agitation — "political mendicancy"</div><div class="e"><span class="lbl">Extremists</span>Swadeshi, Boycott, National Education, Passive Resistance</div></div>`},
+  {d:6,q:`Moderates vs Extremists — attitude to British rule?`,
+   a:`<div class="cmp"><div class="m"><span class="lbl">Moderates</span>Faith in British justice; "providential mission"; apprenticeship needed</div><div class="e"><span class="lbl">Extremists</span>No faith; the mission is an illusion; rule is a design to exploit</div></div>`},
+  {d:6,q:`Moderates vs Extremists — social / cultural background? (classic trap)`,
+   a:`<div class="cmp"><div class="m"><span class="lbl">Moderates</span>Urban elite; <b>Brahmo Samaj</b></div><div class="e"><span class="lbl">Extremists</span>Urban middle class; <b>Arya Samaj</b> &amp; revivalism</div></div>`},
+  {d:6,q:`Moderates vs Extremists — mass base?`,
+   a:`<div class="cmp"><div class="m"><span class="lbl">Moderates</span>Narrow (professionals, zamindars); lacked faith in the masses</div><div class="e"><span class="lbl">Extremists</span>Wider (youth &amp; masses); used festivals to mobilise</div></div>`},
+  {d:6,q:`Moderates vs Extremists — inspiration?`,
+   a:`<div class="cmp"><div class="m"><span class="lbl">Moderates</span>Western liberal thought (French &amp; American revolutions)</div><div class="e"><span class="lbl">Extremists</span>India's own past, culture &amp; traditions</div></div>`},
+  {d:6,q:`Moderates vs Extremists — view on poverty?`,
+   a:`<div class="cmp"><div class="m"><span class="lbl">Moderates</span>Caused by India's social &amp; economic structure</div><div class="e"><span class="lbl">Extremists</span>Caused by the British presence itself</div></div>`},
+  {d:6,q:`Moderates vs Extremists — British response to them?`,
+   a:`<div class="cmp"><div class="m"><span class="lbl">Moderates</span>Appeasement / concessions ("carrots")</div><div class="e"><span class="lbl">Extremists</span>Repression / isolation ("sticks")</div></div>`},
+
+  // ---- Councils Act 1861 ----
+  {d:7,q:`Context of the Indian Councils Act, 1861?`,
+   a:`After the <b>Revolt of 1857</b> and Crown rule (1858), Britain sought to <b>associate Indians with law-making</b> and to <b>reverse the over-centralisation</b> of the Charter Act 1833.`},
+  {d:7,q:`Portfolio system under the ICA 1861?`,
+   a:`Given <b>statutory recognition</b> (introduced by <b>Canning, 1859</b>). Departments in 1862: <b>Military, Revenue, Finance, Home, Law</b>; <b>Public Works added in 1874</b>.`},
+  {d:7,q:`Additional members under the ICA 1861?`,
+   a:`<b>6 to 12</b> additional (non-official) members for legislation, <b>nominated</b>, with a <b>2-year</b> term.`},
+  {d:7,q:`Who were the first Indians associated with law-making (nominated by Canning, 1862)?`,
+   a:`The <b>Raja of Banaras</b>, the <b>Maharaja of Patiala</b>, and <b>Sir Dinkar Rao</b>.`},
+  {d:7,q:`How did the ICA 1861 begin decentralisation?`,
+   a:`Legislative powers were <b>restored to the Bombay and Madras presidencies</b>; new legislative councils came later — <b>Bengal (1862)</b>, <b>N.W. Provinces (1886)</b>, <b>Punjab (1897)</b>.`},
+  {d:7,q:`Ordinance power under the ICA 1861?`,
+   a:`The Viceroy could issue <b>ordinances valid for 6 months</b>.`},
+  {d:7,q:`Limitations of the ICA 1861?`,
+   a:`Purely <b>advisory</b> — it <b>could not discuss the budget</b>, <b>could not ask questions</b>, and had <b>no control over the executive</b>; members were <b>nominated, not elected</b>.`},
+  {d:7,q:`One-line significance of the ICA 1861?`,
+   a:`Beginning of <b>representative institutions</b> (Indians associated with legislation) + beginning of <b>legislative decentralisation</b> → <b>"Portfolio + Decentralisation"</b>.`},
+
+  // ---- Councils Act 1892 ----
+  {d:8,q:`Context of the Indian Councils Act, 1892?`,
+   a:`Sustained <b>Moderate pressure</b> (petitions, the Bombay Presidency Association, the British Committee) pushed Britain to <b>enlarge the councils</b>.`},
+  {d:8,q:`Membership changes under the ICA 1892?`,
+   a:`Additional (non-official) members in the <b>Central Legislative Council</b> raised to <b>not less than 10, not more than 16</b> (provincial councils also enlarged). <b>Executive Council: no change.</b>`},
+  {d:8,q:`The "principle of representation" introduced by the ICA 1892?`,
+   a:`The <b>first (indirect) "election"</b> — some members were nominated <b>on the recommendation of</b> provincial councils, municipalities, universities and chambers of commerce. ⚠️ The word <b>"election" was deliberately avoided</b> ("nomination on recommendation").`},
+  {d:8,q:`Enlarged functions of members under the ICA 1892?`,
+   a:`<b>Can discuss the budget — but NOT vote</b> on it; <b>can ask questions — but NO supplementary questions</b> (and no adjournment motions).`},
+  {d:8,q:`Limitations of the ICA 1892?`,
+   a:`The <b>official majority continued</b>; members had <b>no real power</b> over the executive or finances; the "election" was <b>indirect and limited</b>.`},
+  {d:8,q:`One-line significance of the ICA 1892?`,
+   a:`The <b>first step towards a representative form of government</b> in India → <b>"Representation + Budget discussion"</b>.`},
+  {d:8,q:`Quick contrast — ICA 1861 vs 1892 (budget · questions · members · core idea)?`,
+   a:`<ul><li><b>Budget:</b> 1861 can't discuss · 1892 can discuss (no vote)</li><li><b>Questions:</b> 1861 can't ask · 1892 can ask (no supplementary)</li><li><b>Members:</b> 1861 nomination · 1892 nomination on recommendation (indirect "election")</li><li><b>Core idea:</b> 1861 Portfolio + Decentralisation · 1892 Principle of Representation</li></ul>`}
+];
+CARDS.forEach((c,i)=>c.id="c"+i);
+
+/* ============================================================
+   SPACED REPETITION (Leitner boxes) + persistence
+   ============================================================ */
+const KEY="mh01-flashcards-v1";
+const DAY=86400000;
+const INTERVALS=[0,1,2,4,8,16,32,64]; // days by box index; box>=5 (16d) = "mastered"
+const MASTER_BOX=5;
+let store=load();
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return{}}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
+function st(id){return store[id]||(store[id]={box:0,due:0,seen:0,lapses:0,star:0})}
+function isNew(id){return !store[id]||store[id].seen===0}
+function isDue(id){const s=store[id];return !s||s.seen===0||s.due<=Date.now()}
+function isMastered(id){const s=store[id];return s&&s.box>=MASTER_BOX}
+function isWeak(id){const s=store[id];return s&&s.lapses>0&&s.box<MASTER_BOX}
+
+/* ============================================================
+   STATE
+   ============================================================ */
+let scope=-1;          // -1 = all decks, else deck index
+let queue=[], pos=0, flipped=false;
+let sess={again:0,good:0,easy:0}, mode="review";
+
+const $=id=>document.getElementById(id);
+const home=$("home"), study=$("study"), done=$("done");
+
+/* ---- Theme ---- */
+$("theme").onclick=()=>{
+  const r=document.documentElement;
+  const cur=r.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
+  const next=cur==="dark"?"light":"dark";
+  r.setAttribute("data-theme",next);
+  try{localStorage.setItem("mh01-theme",next)}catch(e){}
+};
+(function(){try{const t=localStorage.getItem("mh01-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}})();
+
+/* ============================================================
+   HOME RENDER
+   ============================================================ */
+function inScope(c){return scope===-1||c.d===scope}
+function scopeCards(){return CARDS.filter(inScope)}
+
+function renderHome(){
+  const all=scopeCards();
+  const mastered=all.filter(c=>isMastered(c.id)).length;
+  const due=all.filter(c=>isDue(c.id)).length;
+  const weak=all.filter(c=>isWeak(c.id)).length;
+  const star=all.filter(c=>st(c.id).star).length;
+  const pct=all.length?Math.round(mastered/all.length*100):0;
+
+  $("ring").style.setProperty("--p",pct);
+  $("ringpct").textContent=pct+"%";
+  $("masteredN").textContent=`${mastered} of ${all.length} cards mastered`;
+  $("dueMsg").textContent=due?`${due} card${due>1?"s":""} due for review now`:"Nothing due — you're all caught up! 🎉";
+  $("dueBadge").textContent=due;
+  $("weakBadge").textContent=weak;
+  $("starBadge").textContent=star;
+  $("scopeName").textContent=scope===-1?"All decks":DECKS[scope];
+  $("m-review").classList.toggle("disabled",due===0);
+  $("m-weak").classList.toggle("disabled",weak===0);
+  $("m-star").classList.toggle("disabled",star===0);
+
+  // deck list
+  const dl=$("deckList"); dl.innerHTML="";
+  const mkDeck=(idx,name)=>{
+    const cs=CARDS.filter(c=>idx===-1||c.d===idx);
+    const m=cs.filter(c=>isMastered(c.id)).length;
+    const d=cs.filter(c=>isDue(c.id)).length;
+    const n=cs.filter(c=>isNew(c.id)).length;
+    const p=cs.length?Math.round(m/cs.length*100):0;
+    const b=document.createElement("button");
+    b.className="deck"+(scope===idx?" active":"");
+    b.innerHTML=`<span class="num">${idx===-1?"∑":idx+1}</span>
+      <span class="nm">${name}<br><span style="font-size:.72rem;color:var(--muted);font-weight:500">${cs.length} cards</span></span>
+      <span class="meta">
+        ${d?`<span class="pill due">${d} due</span>`:`<span class="pill done">✓</span>`}
+        ${n?`<span class="pill new">${n} new</span>`:""}
+        <span class="bar"><i style="width:${p}%"></i></span>
+      </span>`;
+    b.onclick=()=>{scope=idx;renderHome();window.scrollTo({top:0,behavior:"smooth"})};
+    dl.appendChild(b);
+  };
+  mkDeck(-1,"All decks");
+  DECKS.forEach((n,i)=>mkDeck(i,n));
+}
+
+/* ============================================================
+   SESSION
+   ============================================================ */
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a}
+
+function start(m){
+  mode=m;
+  let cards=scopeCards();
+  if(m==="review")      cards=cards.filter(c=>isDue(c.id));
+  else if(m==="weak")   cards=cards.filter(c=>isWeak(c.id));
+  else if(m==="star")   cards=cards.filter(c=>st(c.id).star);
+  // "learn" = all in scope
+  if(!cards.length)return;
+  queue=shuffle(cards.map(c=>c.id));
+  pos=0; sess={again:0,good:0,easy:0};
+  home.style.display="none"; done.style.display="none"; study.style.display="block";
+  window.scrollTo({top:0});
+  showCard();
+}
+
+function showCard(){
+  if(pos>=queue.length){finish();return;}
+  flipped=false;
+  const c=CARDS.find(x=>x.id===queue[pos]);
+  $("card").classList.remove("flipped");
+  $("qText").innerHTML=c.q;
+  $("aText").innerHTML=c.a;
+  $("fDeck").textContent=DECKS[c.d];
+  $("bDeck").textContent=DECKS[c.d];
+  const starred=st(c.id).star;
+  [["fStar",starred],["bStar",starred]].forEach(([id,on])=>{
+    $(id).classList.toggle("on",!!on); $(id).textContent=on?"★":"☆";
+  });
+  $("flipCta").classList.remove("hidden");
+  $("rateRow").classList.add("hidden");
+  $("counter").textContent=`${pos+1} / ${queue.length}`;
+  $("prog").style.width=(pos/queue.length*100)+"%";
+}
+
+function flip(){
+  flipped=!flipped;
+  $("card").classList.toggle("flipped",flipped);
+  $("flipCta").classList.toggle("hidden",flipped);
+  $("rateRow").classList.toggle("hidden",!flipped);
+}
+
+function rate(r){
+  if(!flipped)return;
+  const id=queue[pos];
+  const s=st(id); s.seen++;
+  if(r==="again"){s.box=1;s.lapses++;}
+  else if(r==="good"){s.box=Math.min((s.box||0)+1,INTERVALS.length-1);}
+  else if(r==="easy"){s.box=Math.min((s.box||0)+2,INTERVALS.length-1);}
+  s.due=Date.now()+INTERVALS[s.box]*DAY;
+  save();
+  sess[r]++;
+  // "Again" → requeue later in this session so you practise it again
+  if(r==="again"){
+    const insert=Math.min(queue.length,pos+4);
+    queue.splice(insert,0,id);
+  }
+  pos++;
+  showCard();
+}
+
+function finish(){
+  $("prog").style.width="100%";
+  study.style.display="none"; done.style.display="block";
+  $("tAgain").textContent=sess.again;
+  $("tGood").textContent=sess.good;
+  $("tEasy").textContent=sess.easy;
+  const total=sess.good+sess.easy+sess.again;
+  const acc=total?Math.round((sess.good+sess.easy)/total*100):0;
+  if(acc>=85){$("doneEmoji").textContent="🏆";$("doneTitle").textContent="Excellent recall!";}
+  else if(acc>=60){$("doneEmoji").textContent="👍";$("doneTitle").textContent="Good session";}
+  else{$("doneEmoji").textContent="💪";$("doneTitle").textContent="Keep drilling";}
+  $("doneMsg").textContent=`You reviewed ${total} card views with ${acc}% recall. Due cards will resurface on schedule — come back tomorrow to keep the streak.`;
+  renderHome();
+}
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+$("m-review").onclick=()=>start("review");
+$("m-learn").onclick =()=>start("learn");
+$("m-weak").onclick  =()=>start("weak");
+$("m-star").onclick  =()=>start("star");
+$("flipBtn").onclick =flip;
+$("card").onclick    =flip;
+document.querySelectorAll(".rate button").forEach(b=>b.onclick=e=>{e.stopPropagation();rate(b.dataset.r)});
+["fStar","bStar"].forEach(id=>$(id).onclick=e=>{
+  e.stopPropagation();
+  const s=st(queue[pos]); s.star=s.star?0:1; save();
+  const on=s.star;
+  ["fStar","bStar"].forEach(x=>{$(x).classList.toggle("on",!!on);$(x).textContent=on?"★":"☆"});
+});
+$("exit").onclick=()=>{study.style.display="none";done.style.display="none";home.style.display="block";renderHome()};
+$("homeBtn").onclick=$("exit").onclick;
+$("againBtn").onclick=()=>start(mode);
+$("reset").onclick=()=>{
+  if(confirm("Reset all flashcard progress and stars in this browser? This cannot be undone.")){
+    store={};save();scope=-1;renderHome();
+  }
+};
+
+document.addEventListener("keydown",e=>{
+  if(study.style.display!=="block")return;
+  if(e.key===" "||e.key==="Enter"){e.preventDefault();flip();}
+  else if(e.key==="1"&&flipped)rate("again");
+  else if(e.key==="2"&&flipped)rate("good");
+  else if(e.key==="3"&&flipped)rate("easy");
+  else if(e.key.toLowerCase()==="s"){const s=st(queue[pos]);s.star=s.star?0:1;save();
+    const on=s.star;["fStar","bStar"].forEach(x=>{$(x).classList.toggle("on",!!on);$(x).textContent=on?"★":"☆"});}
+  else if(e.key==="Escape")$("exit").onclick();
+});
+
+renderHome();
+</script>
