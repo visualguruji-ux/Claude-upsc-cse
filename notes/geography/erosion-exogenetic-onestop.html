@@ -1,0 +1,299 @@
+<meta charset="utf-8">
+<title>Erosion - Exogenetic Forces Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --ground:#f3efe4;--panel:#fbf8f0;--panel-2:#f0ead9;
+    --ink:#1b2452;--ink-soft:#41487a;--muted:#6c6a63;--line:#ded5bf;
+    --ochre:#b5651d;--ochre-soft:#e7d3b3;
+    --green:#2f6b57;--green-bg:#e2efe6;--green-line:#bcd8c6;
+    --red:#9e3b2e;--red-bg:#f6e2db;--red-line:#e3c3b8;
+    --blue:#274b8c;--blue-bg:#e3e9f5;--blue-line:#bcc9e6;
+    --shadow:0 1px 0 rgba(27,36,82,.04), 0 10px 26px -20px rgba(27,36,82,.55);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--ground:#12141d;--panel:#1a1d29;--panel-2:#212533;
+      --ink:#e7e3f2;--ink-soft:#b9b6cf;--muted:#9a978f;--line:#33384c;
+      --ochre:#e0994f;--ochre-soft:#3a3020;
+      --green:#7dc1a6;--green-bg:#18271f;--green-line:#2c4a3b;
+      --red:#e08574;--red-bg:#2c1d1a;--red-line:#4a2e28;
+      --blue:#8fb0e6;--blue-bg:#191f2e;--blue-line:#2c3a55;
+      --shadow:0 10px 30px -22px rgba(0,0,0,.85);}
+  }
+  :root[data-theme="dark"]{--ground:#12141d;--panel:#1a1d29;--panel-2:#212533;
+    --ink:#e7e3f2;--ink-soft:#b9b6cf;--muted:#9a978f;--line:#33384c;
+    --ochre:#e0994f;--ochre-soft:#3a3020;
+    --green:#7dc1a6;--green-bg:#18271f;--green-line:#2c4a3b;
+    --red:#e08574;--red-bg:#2c1d1a;--red-line:#4a2e28;
+    --blue:#8fb0e6;--blue-bg:#191f2e;--blue-line:#2c3a55;
+    --shadow:0 10px 30px -22px rgba(0,0,0,.85);}
+  :root[data-theme="light"]{--ground:#f3efe4;--panel:#fbf8f0;--panel-2:#f0ead9;
+    --ink:#1b2452;--ink-soft:#41487a;--muted:#6c6a63;--line:#ded5bf;
+    --ochre:#b5651d;--ochre-soft:#e7d3b3;
+    --green:#2f6b57;--green-bg:#e2efe6;--green-line:#bcd8c6;
+    --red:#9e3b2e;--red-bg:#f6e2db;--red-line:#e3c3b8;
+    --blue:#274b8c;--blue-bg:#e3e9f5;--blue-line:#bcc9e6;
+    --shadow:0 1px 0 rgba(27,36,82,.04), 0 10px 26px -20px rgba(27,36,82,.55);}
+  *{box-sizing:border-box}
+  html,body{max-width:100%;overflow-x:hidden}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:clamp(18px,4vw,40px) clamp(14px,4vw,28px)}
+  header.masthead{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:24px}
+  .kicker{text-transform:uppercase;letter-spacing:.18em;font-size:.68rem;font-weight:700;
+    color:var(--ochre);margin:0 0 8px}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem,6vw,2.2rem);
+    line-height:1.08;margin:0;text-wrap:balance}
+  .sub{color:var(--ink-soft);font-size:.95rem;margin:10px 0 0}
+  .src{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .part{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:clamp(16px,4vw,22px);margin:0 0 18px;box-shadow:var(--shadow)}
+  .part-num{display:inline-block;font-family:var(--serif);font-weight:700;font-size:.72rem;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--ochre);margin:0 0 4px}
+  .part h2{font-family:var(--serif);font-size:clamp(1.2rem,4.6vw,1.5rem);margin:0 0 12px;
+    line-height:1.14;text-wrap:balance}
+  .part h3{font-family:var(--serif);font-size:1.08rem;color:var(--ink);margin:18px 0 6px}
+  .part p{margin:0 0 10px;font-size:.94rem;color:var(--ink-soft)}
+  .part p b,li b,.kv b{color:var(--ink)}
+  ul.plain{margin:6px 0 10px;padding-left:1.15em}
+  ul.plain li{font-size:.93rem;color:var(--ink-soft);margin:6px 0}
+  ol.num{margin:6px 0 10px;padding-left:1.3em}
+  ol.num li{font-size:.93rem;color:var(--ink-soft);margin:7px 0}
+  /* verbatim / handwritten transcript */
+  .verbatim{background:var(--panel-2);border:1px dashed var(--ochre);border-radius:10px;
+    padding:14px 16px;margin:12px 0}
+  .verbatim .lead{font-family:var(--sans);font-weight:700;text-transform:uppercase;
+    letter-spacing:.05em;font-size:.68rem;color:var(--ochre);display:block;margin-bottom:8px}
+  .verbatim p{font-family:var(--serif);font-size:1rem;color:var(--ink);margin:0 0 8px}
+  .verbatim ul{margin:6px 0 0;padding-left:1.15em}
+  .verbatim li{font-family:var(--serif);font-size:.98rem;color:var(--ink);margin:5px 0}
+  .pg{display:inline-block;font-family:var(--sans);font-size:.66rem;font-weight:700;
+    color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:5px;
+    padding:1px 7px;margin-left:6px;letter-spacing:.03em;vertical-align:middle}
+  /* flow diagram */
+  .flow{margin:10px 0 6px}
+  .node{border-radius:10px;padding:10px 12px;text-align:center;font-family:var(--serif);
+    font-weight:700;font-size:.98rem;border:1.5px solid var(--ink);background:var(--panel-2);
+    color:var(--ink);max-width:340px;margin:0 auto}
+  .node.sub{font-size:.88rem;font-weight:600}
+  .node.ero{border-color:var(--ochre);background:var(--ochre-soft);color:var(--ink)}
+  .node.wea{border-color:var(--green-line);background:var(--green-bg);color:var(--green)}
+  .node.mm{border-color:var(--blue-line);background:var(--blue-bg);color:var(--blue)}
+  .arrow{width:2px;height:16px;background:var(--muted);margin:4px auto;position:relative}
+  .arrow:after{content:"";position:absolute;left:-3px;bottom:-1px;border-left:4px solid transparent;
+    border-right:4px solid transparent;border-top:6px solid var(--muted)}
+  .branch{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:4px 0}
+  .branch .node{margin:0;flex:1 1 150px;min-width:120px}
+  .caption{text-align:center;font-size:.76rem;color:var(--muted);margin:8px 0 0}
+  .ero-detail{border:1.5px solid var(--ochre);background:var(--panel);border-radius:10px;
+    padding:12px 14px;margin:10px auto 0;max-width:420px}
+  .ero-detail .t{font-family:var(--serif);font-weight:700;color:var(--ochre);text-align:center;
+    margin:0 0 8px;font-size:1rem}
+  .ero-detail ul{margin:0;padding-left:1.15em}
+  .ero-detail li{font-size:.9rem;color:var(--ink-soft);margin:5px 0}
+  .agents{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:10px 0 2px}
+  .agents .a{background:var(--blue-bg);border:1px solid var(--blue-line);border-radius:20px;
+    padding:5px 12px;font-size:.84rem;color:var(--blue);font-weight:600}
+  /* highlight box */
+  .hl{background:var(--ochre-soft);border:1px solid var(--ochre);border-radius:10px;
+    padding:13px 16px;margin:14px 0}
+  .hl .lead{font-family:var(--sans);font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+    font-size:.72rem;color:var(--ochre);display:block;margin-bottom:6px}
+  .hl p{margin:4px 0 0;font-size:.9rem;color:var(--ink)}
+  .hl ul{margin:6px 0 0;padding-left:1.1em}.hl li{font-size:.9rem;color:var(--ink);margin:4px 0}
+  /* compare two poles */
+  .cmp{margin:6px 0 12px}
+  .cmp-label{font-weight:700;color:var(--ink);font-size:.82rem;margin:0 0 5px;
+    text-transform:uppercase;letter-spacing:.03em}
+  .cmp-cols{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .cmp-cols>div{padding:9px 11px;border-radius:8px;font-size:.85rem;color:var(--ink-soft)}
+  .cmp-cols .w{background:var(--green-bg);border:1px solid var(--green-line)}
+  .cmp-cols .e{background:var(--red-bg);border:1px solid var(--red-line)}
+  .poles{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0 10px}
+  .poles .ph{padding:8px 10px;border-radius:8px;font-family:var(--serif);font-weight:700;
+    text-align:center;font-size:.98rem}
+  .poles .ph.w{background:var(--green-bg);color:var(--green);border:1px solid var(--green-line)}
+  .poles .ph.e{background:var(--red-bg);color:var(--red);border:1px solid var(--red-line)}
+  .kv{border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:var(--panel-2);margin:6px 0}
+  .kv b{font-size:.9rem}.kv span{font-size:.9rem;color:var(--ink-soft);display:block;margin-top:2px}
+  .pyq{border-left:4px solid var(--ink);background:var(--panel-2);padding:10px 14px;
+    border-radius:0 8px 8px 0;margin:9px 0;font-size:.9rem;color:var(--ink)}
+  .pyq b{color:var(--ochre)}
+  footer{margin-top:8px;padding:14px 4px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+  @media print{body{background:#fff}.part{box-shadow:none}}
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <p class="kicker">Geography - Geomorphology | Adarsh - UPSC CSE</p>
+    <h1>Erosion (Exogenetic / Degradational Force)</h1>
+    <p class="sub">Your handwritten Geo&nbsp;#11 notes reproduced <b>word-for-word</b>, the flow-diagram
+      redrawn in a clean vertical form, plus exam value-addition from NCERT & standard sources.</p>
+    <p class="src">Verbatim portion = your notebook (dated 18/08/2026). Enrichment blocks are clearly
+      tagged. Every card fits the screen - screenshot any block, no side-scroll.</p>
+  </header>
+
+  <!-- PART 1 - VERBATIM -->
+  <div class="part">
+    <span class="part-num">Part 1 - Word-to-word from your notes</span>
+    <h2>Erosion - exactly as you wrote it</h2>
+
+    <div class="verbatim">
+      <span class="lead">From the Exogenetic Forces flowchart <span class="pg">Notes pg 1</span></span>
+      <p><b>Erosion</b></p>
+      <ul>
+        <li>Movement of Material</li>
+        <li>Dynamic process</li>
+        <li>Ex-situ process</li>
+        <li>where sediments are transported away from the place</li>
+        <li>It requires transporting agents such as River, Glacier, winds etc.</li>
+      </ul>
+    </div>
+
+    <div class="verbatim">
+      <span class="lead">From the dedicated "Erosion" box <span class="pg">Notes pg 13</span></span>
+      <p>"Erosion is a <b>Dynamic process</b> where broken material is removed by
+      <b>transporting agents</b> such as wind, glaciers, river etc. It is an <b>'Ex Situ' process</b>."</p>
+    </div>
+
+    <div class="hl">
+      <span class="lead">Where erosion sits in your notes</span>
+      <p>Under <b>Exogenetic Forces &rarr; Degradation</b> you listed three degradational processes:
+      <b>Weathering</b>, <b>Erosion</b>, and <b>Mass Movement</b>. Erosion is the middle one -
+      the <i>dynamic, ex-situ</i> counterpart of static, in-situ weathering.</p>
+    </div>
+  </div>
+
+  <!-- PART 2 - DIAGRAM -->
+  <div class="part">
+    <span class="part-num">Part 2 - Same image, redrawn</span>
+    <h2>The flow diagram (screenshot-friendly)</h2>
+    <p>This is your hand-drawn Exogenetic-Forces flowchart re-set vertically so it never scrolls sideways.</p>
+
+    <div class="flow">
+      <div class="node">Exogenetic Forces</div>
+      <div class="arrow"></div>
+      <div class="branch">
+        <div class="node sub">Aggradation<br><span style="font-weight:400;font-size:.8rem">(Deposition of sediments)</span></div>
+        <div class="node sub">Degradation<br><span style="font-weight:400;font-size:.8rem">(Lowering of relief features)</span></div>
+      </div>
+      <div class="arrow"></div>
+      <div class="branch">
+        <div class="node sub wea">Weathering</div>
+        <div class="node sub ero">Erosion</div>
+        <div class="node sub mm">Mass Movement</div>
+      </div>
+      <div class="arrow"></div>
+      <div class="ero-detail">
+        <p class="t">EROSION</p>
+        <ul>
+          <li><b>Movement of material</b></li>
+          <li><b>Dynamic</b> process</li>
+          <li><b>Ex-situ</b> process - sediments transported <b>away from the place</b></li>
+          <li>Requires <b>transporting agents</b></li>
+        </ul>
+        <div class="agents">
+          <span class="a">River</span><span class="a">Glacier</span><span class="a">Wind</span>
+        </div>
+      </div>
+      <p class="caption">In-situ = at place (local) &nbsp;|&nbsp; Ex-situ = away from the place</p>
+    </div>
+  </div>
+
+  <!-- PART 3 - EXAM VALUE ADDITION -->
+  <div class="part">
+    <span class="part-num">Part 3 - Exam value-addition (from NCERT & standard sources)</span>
+    <h2>Erosion vs Weathering - the classic trap</h2>
+    <p>UPSC repeatedly tests whether you can separate these two. Keep the pairing sharp:</p>
+
+    <div class="poles">
+      <div class="ph w">WEATHERING</div>
+      <div class="ph e">EROSION</div>
+    </div>
+    <div class="cmp">
+      <div class="cmp-label">Nature</div>
+      <div class="cmp-cols">
+        <div class="w"><b>Static</b> process - no movement</div>
+        <div class="e"><b>Dynamic</b> process - involves movement</div>
+      </div>
+    </div>
+    <div class="cmp">
+      <div class="cmp-label">Location</div>
+      <div class="cmp-cols">
+        <div class="w"><b>In-situ</b> (in place)</div>
+        <div class="e"><b>Ex-situ</b> (material carried away)</div>
+      </div>
+    </div>
+    <div class="cmp">
+      <div class="cmp-label">Transporting agent</div>
+      <div class="cmp-cols">
+        <div class="w">Not required</div>
+        <div class="e"><b>Required</b> (river, glacier, wind, waves)</div>
+      </div>
+    </div>
+    <div class="cmp">
+      <div class="cmp-label">Result</div>
+      <div class="cmp-cols">
+        <div class="w">Rock disintegrates / decomposes; forms regolith</div>
+        <div class="e">Landscape is lowered & sculpted into landforms</div>
+      </div>
+    </div>
+    <div class="hl">
+      <span class="lead">One-line link</span>
+      <p>Weathering <b>prepares</b> the loose material (regolith); erosion <b>removes and transports</b> it.
+      Together with mass movement they are the <b>degradational (destructional)</b> geomorphic processes.</p>
+    </div>
+
+    <h3>Agents of erosion & their zones</h3>
+    <div class="kv"><b>Running water (rivers)</b><span>Most important agent overall; dominant in humid regions - valleys, gorges, waterfalls, badlands/ravines.</span></div>
+    <div class="kv"><b>Glaciers (moving ice)</b><span>High latitudes & high mountains - U-shaped valleys, cirques, horns, aretes.</span></div>
+    <div class="kv"><b>Wind (aeolian)</b><span>Hot deserts & arid/semi-arid lands - mushroom rocks, yardangs, deflation hollows.</span></div>
+    <div class="kv"><b>Sea waves</b><span>Coastlines - sea cliffs, sea caves, arches, stacks, wave-cut platforms.</span></div>
+    <div class="kv"><b>Groundwater</b><span>Limestone (karst) regions - sinkholes, caves, caverns (chemical erosion / solution).</span></div>
+
+    <h3>Processes (how an agent actually erodes)</h3>
+    <ul class="plain">
+      <li><b>Hydraulic action</b> - sheer force of moving water/waves loosening & dislodging rock.</li>
+      <li><b>Abrasion / Corrasion</b> - the load (sand, pebbles) carried by the agent grinds the bed & banks.</li>
+      <li><b>Attrition</b> - transported fragments collide and wear <i>each other</i> down, getting smaller & rounder.</li>
+      <li><b>Corrosion / Solution</b> - chemical dissolving of soluble rocks (e.g. limestone by carbonic acid).</li>
+      <li><b>Deflation</b> - wind lifts & blows away loose fine particles (specific to aeolian erosion).</li>
+    </ul>
+
+    <h3>Erosion in the Indian context (answer fodder)</h3>
+    <ul class="plain">
+      <li><b>Gully & ravine erosion</b> - the <b>Chambal ravines</b> (MP/Rajasthan/UP badlands) - classic example of running-water erosion on soft alluvium.</li>
+      <li><b>Sheet & rill erosion</b> - loss of topsoil on deforested slopes; major cause of land degradation.</li>
+      <li><b>Coastal erosion</b> - retreating shorelines along parts of Kerala, Odisha, Tamil Nadu.</li>
+      <li><b>Wind erosion</b> - Thar desert (Rajasthan) - shifting sand, deflation.</li>
+      <li>Data edge (your strength): India loses large quantities of topsoil annually to erosion - link to <b>soil health, food security & desertification</b> (UNCCD) in Mains.</li>
+    </ul>
+  </div>
+
+  <!-- PART 4 - PYQ -->
+  <div class="part">
+    <span class="part-num">Part 4 - PYQ radar (UPSC + State PSC)</span>
+    <h2>How this is asked</h2>
+    <div class="pyq"><b>Prelims (UPSC):</b> matching agents of erosion with the landforms they create
+      (e.g. cirque &rarr; glacier, yardang &rarr; wind, stack &rarr; sea waves) is a recurring format.</div>
+    <div class="pyq"><b>Prelims trap:</b> statements that swap "weathering" and "erosion" - remember
+      <i>weathering = static/in-situ, erosion = dynamic/ex-situ</i>.</div>
+    <div class="pyq"><b>Mains (GS-I):</b> "Distinguish between weathering and erosion" / "Discuss the role of
+      running water as an agent of erosion in shaping landforms."</div>
+    <div class="pyq"><b>State PSC (UPPSC/BPSC/MPPSC):</b> direct one-liners - "Which is a dynamic exogenetic
+      process?" (Ans: Erosion) and definition-based short notes on agents of erosion.</div>
+    <div class="hl">
+      <span class="lead">Keywords to drop in an answer</span>
+      <p>degradational / exogenetic force &middot; dynamic &middot; ex-situ &middot; transporting agents
+      &middot; hydraulic action, abrasion, attrition, corrosion &middot; regolith removal &middot;
+      landform sculpting.</p>
+    </div>
+  </div>
+
+  <footer>
+    Adarsh - UPSC CSE prep &middot; Geography (Geomorphology) &middot; Source: Adarsh's handwritten Geo #11
+    notes (verbatim) + NCERT <i>Fundamentals of Physical Geography</i> (Geomorphic Processes) and standard geomorphology.
+  </footer>
+</div>
