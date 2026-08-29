@@ -102,13 +102,32 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 7. Current Focus  _(update every few sessions)_
-- **Now:** Setting up the preparation system and memory file. ✅ (in progress)
+- **Now:** Scaling the Prelims Drill pipeline across subjects. Two drills shipped
+  (Modern History 01, Polity 01), both passing `validate_drill.py`.
 - **Next:** Decide/confirm target year & attempt number; build a study plan and
-  subject-wise trackers.
+  subject-wise trackers. More drills — Polity 02 (Parliament/Executive/Judiciary),
+  Modern History 02 (1857 → Governor-Generals), Economy/Environment openers.
 
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-08-29** — **Built `prelims-drills/drills/polity-01-constitutional-framework.html`** — the
+  first Polity drill and the first proof the drill pipeline generalises beyond Modern History.
+  30 questions over a **24-node lexicon** in 5 groups: evolution of the Constitution (Regulating
+  Act 1773 → Independence Act 1947), the Constituent Assembly & borrowed features, Preamble &
+  Articles 1–4, Citizenship & Fundamental Rights, and DPSP/Duties/Art. 368. Enriched from
+  Laxmikanth + NCERT + coaching material; the numeric trap facts (GoI 1935 list sizes 59/54/36,
+  CA strength 389 = 296 + 93, ICA 1909 council 16 → 60, Swaran Singh 8 duties vs 42nd Amdt's 10)
+  were **web-verified** before use. **Passes the validator with ZERO warnings** (drill 01 has 2):
+  format mix A/B/C/D/G/H/J = 23/23/23/13/7/7/3 %, keys spread 20/37/23/20 %, statements mean
+  **26.0 w with 0 % under the 18-word floor**, option density 21.3 w, 100 % of items at layer 3+.
+  Browser-tested headless (Chromium): coverage tracker, filters, scoring, results screen, weak-spot
+  review and "redo weak spots" all work, no JS errors. **Pipeline fix found & documented:** the
+  validator silently skips any statement whose text starts with "Statement"/"Assertion", so
+  drill 01's inline `<span class='stmt'>Statement-I: …</span>` markup hid its statements from the
+  word-floor gate. New convention (now in `prelims-drills/README.md`): put the label *outside* the
+  span as `<b class='slab'>Statement-I:</b>`. **Note:** drill 01 could be re-checked under this
+  convention, and nodes 6 & 7 of its lexicon still carry zero questions.
 - **2026-07-22** — **Reworked Note 01 to be faithful to the handwritten notes only** (Adarsh:
   "don't include extra topics like the safety-valve expansion; include ALL Moderates-vs-Extremists
   rows I wrote — social/cultural background, poverty, political reform; and format so I can

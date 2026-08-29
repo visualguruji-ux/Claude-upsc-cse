@@ -1,0 +1,396 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prelims Drill · Polity · Constitutional Framework (Laxmikanth 1)</title>
+<style>
+:root{
+  --paper:#f3efe4; --paper2:#ece3d0; --card:#fbf8f0; --ink:#1b2452; --ink2:#4a4f73;
+  --line:#d9cfb6; --brand:#b5651d; --brand-d:#8a4c15; --gold:#a9791f;
+  --hard:#7c4a86; --wrong:#9e3b2e; --good:#2f6b57; --deep:#2c3f78;
+  --shadow:0 10px 30px -14px rgba(27,36,82,.34);
+  --mono:ui-monospace,"SFMono-Regular","Menlo",monospace; --disp:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; --body:"Iowan Old Style",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#13151d; --paper2:#232838; --card:#1a1d29; --ink:#e7e3f2; --ink2:#b9b6cf;
+  --line:#343a50; --brand:#e0994f; --brand-d:#e0994f; --gold:#d8ab53;
+  --hard:#c79bd0; --wrong:#e08574; --good:#7dc1a6; --deep:#9db0e6; --shadow:0 12px 34px -20px rgba(0,0,0,.85);}}
+*{box-sizing:border-box} html,body{margin:0;max-width:100%;overflow-x:hidden}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding:24px 16px 80px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font-family:var(--disp);font-weight:700;font-size:30px;line-height:1.1;margin:.3em 0 .18em;text-wrap:balance}
+.sub{color:var(--ink2);font-size:15.5px;margin:0 0 14px}
+.pill{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:var(--brand);color:#fff;padding:4px 10px;border-radius:999px;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow)}
+.masthead{padding:20px;margin-bottom:16px}
+.cov{padding:15px 16px;margin-bottom:16px}
+.cov h3{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);margin:0 0 10px;font-weight:600;display:flex;justify-content:space-between}
+.dots{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.dot{aspect-ratio:1;border-radius:6px;border:1px solid var(--line);background:var(--paper2);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:10px;color:var(--ink2)}
+.dot.ok{background:var(--good);border-color:var(--good);color:#fff}
+.dot.bad{background:var(--wrong);border-color:var(--wrong);color:#fff}
+.controls{padding:15px 16px;margin-bottom:16px;display:flex;flex-direction:column;gap:12px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font-family:var(--mono);font-size:12px;padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:var(--paper2);color:var(--ink2);cursor:pointer}
+.seg button.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.toggle{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12.5px;color:var(--ink2)}
+.switch{width:44px;height:25px;border-radius:999px;background:var(--line);position:relative;cursor:pointer;border:none}
+.switch.on{background:var(--brand)}
+.switch::after{content:"";position:absolute;top:3px;left:3px;width:19px;height:19px;border-radius:50%;background:#fff;transition:.15s}
+.switch.on::after{left:22px}
+.btn{font-family:var(--mono);font-weight:600;font-size:14px;letter-spacing:.02em;padding:12px 20px;border-radius:11px;border:none;background:var(--brand);color:#fff;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn:disabled{opacity:.4;cursor:default}
+.scorebar{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12.5px;color:var(--ink2);margin-bottom:12px}
+.prog{flex:1;height:7px;border-radius:999px;background:var(--paper2);overflow:hidden;border:1px solid var(--line)}
+.prog>i{display:block;height:100%;background:var(--brand);width:0;transition:.25s}
+.q{padding:22px 20px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;padding:4px 9px;border-radius:6px;font-weight:600}
+.tag.topic{background:var(--paper2);color:var(--ink2);border:1px solid var(--line)}
+.tag.type{background:#f0e2c4;color:var(--gold)}
+.tag.hard{background:#efe0f2;color:var(--hard)}
+.tag.layer{background:#dfe6f5;color:var(--deep)}
+@media(prefers-color-scheme:dark){.tag.type{background:#3a3016}.tag.layer{background:#212a44}.tag.hard{background:#33223a}}
+.stem{font-size:20px;line-height:1.42;margin:0 0 18px}
+.stem .stmt{display:block;margin:8px 0;padding:5px 0 5px 14px;border-left:3px solid var(--line);font-size:18px}
+.stem .slab{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin:10px 0 -2px}
+.stem .passage{font-style:italic;border-left:3px solid var(--brand);padding:.45em .9em;margin:.6em 0;background:rgba(0,0,0,.03);border-radius:6px;font-size:18.5px}
+.stem .pairs-wrap{overflow-x:auto;margin:.6em 0}
+.stem .pairs{width:100%;border-collapse:collapse;font-size:16px}
+.stem .pairs th,.stem .pairs td{border:1px solid var(--line);padding:.4em .6em;text-align:left;vertical-align:top}
+.stem .pairs thead th{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;color:var(--ink2)}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;padding:13px 15px;border-radius:11px;border:1px solid var(--line);background:var(--paper2);cursor:pointer;font-family:var(--body);font-size:17px;color:var(--ink);line-height:1.4}
+.opt:hover:not(:disabled){border-color:var(--brand)}
+.opt .key{font-family:var(--mono);font-size:12px;font-weight:600;width:22px;height:22px;flex:none;border-radius:6px;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--ink2)}
+.opt.correct{background:#e2efe6;border-color:var(--good)}
+.opt.correct .key{background:var(--good);color:#fff;border-color:var(--good)}
+.opt.wrong{background:#f6e2db;border-color:var(--wrong)}
+.opt.wrong .key{background:var(--wrong);color:#fff;border-color:var(--wrong)}
+@media(prefers-color-scheme:dark){.opt.correct{background:#18271f}.opt.wrong{background:#2c1d1a}}
+.opt:disabled{cursor:default}
+.mark{margin-left:auto;font-family:var(--mono);font-weight:700}
+.expl{margin-top:16px;padding:14px 16px;border-radius:11px;font-size:16px;line-height:1.5;display:none}
+.expl.show{display:block}
+.expl.g{background:#e2efe6;border:1px solid #bcd8c6}
+.expl.r{background:#f6e2db;border:1px solid #e3c3b8}
+@media(prefers-color-scheme:dark){.expl.g{background:#18271f;border-color:#2c4a3b}.expl.r{background:#2c1d1a;border-color:#4a2e28}}
+.verdict{font-family:var(--mono);font-size:12px;font-weight:600;text-transform:uppercase;display:block;margin-bottom:6px}
+.expl.g .verdict{color:var(--good)} .expl.r .verdict{color:var(--wrong)}
+.nav{display:flex;justify-content:flex-end;margin-top:18px}
+.results{padding:26px 22px;text-align:center}
+.bigscore{font-family:var(--disp);font-weight:700;font-size:56px;line-height:1;margin:6px 0}
+.bigscore small{font-size:24px;color:var(--ink2)}
+.grade{font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--brand-d);font-weight:600;margin-bottom:20px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
+.stat{background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:13px 8px}
+.stat b{display:block;font-family:var(--disp);font-size:24px;font-weight:700}
+.stat span{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2)}
+.weak{text-align:left;margin-top:20px}
+.weak h3{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--wrong)}
+.weakitem{background:var(--paper2);border:1px solid var(--line);border-left:3px solid var(--wrong);border-radius:10px;padding:12px 14px;margin-bottom:9px;font-size:15.5px}
+.weakitem .wq{font-weight:600;margin-bottom:5px}
+.weakitem .wa{font-family:var(--mono);font-size:12px;color:var(--good);margin-bottom:5px}
+.rbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.hidden{display:none!important}
+.foot{font-family:var(--mono);font-size:11px;color:var(--ink2);text-align:center;margin-top:26px;letter-spacing:.03em}
+@media(max-width:520px){h1{font-size:25px}.stem{font-size:18.5px}.dots{grid-template-columns:repeat(8,1fr)}.bigscore{font-size:46px}}
+</style>
+
+<div class="wrap">
+  <div class="card masthead">
+    <div class="eyebrow">Prelims Drill · Polity · Note 01</div>
+    <h1>Constitutional Framework: Evolution, Making, Preamble, Rights &amp; Duties</h1>
+    <p class="sub">Regulating Act to the 1947 Act · the Constituent Assembly and borrowed features · Preamble and Union territory · Citizenship and Fundamental Rights · DPSP, Fundamental Duties and Article 368. Built to Adarsh's Prelims Style Codex.</p>
+    <span class="pill">Difficulty · Prelims Standard</span>
+  </div>
+
+  <div class="card cov"><h3><span>Coverage tracker</span><span id="covCount">0 tested</span></h3><div class="dots" id="dots"></div></div>
+
+  <div class="card controls" id="controls">
+    <div class="seg" id="filters"></div>
+    <div class="row">
+      <div class="toggle"><button class="switch on" id="shuf" aria-label="Shuffle"></button><span>Shuffle questions</span></div>
+      <button class="btn" id="start">Start drill →</button>
+    </div>
+  </div>
+
+  <div id="quizArea" class="hidden">
+    <div class="scorebar"><span id="qpos">Q 1</span><div class="prog"><i id="progbar"></i></div><span id="scoretxt">Score 0 · 0%</span></div>
+    <div class="card q" id="qcard"></div>
+  </div>
+
+  <div id="resultArea" class="hidden"></div>
+  <div class="foot">Active-recall drill · instant explanations · weak-spot review. Facts cross-checked to Laxmikanth / NCERT / DD Basu.</div>
+</div>
+
+<script>
+var topicName={
+ 1:"Regulating Act 1773",2:"Pitt's Act & Charter Acts",3:"GoI Act 1858",4:"Indian Councils Act 1909",
+ 5:"GoI Act 1919",6:"GoI Act 1935 & Indep. Act 1947",7:"Constituent Assembly — composition",
+ 8:"CA — committees",9:"CA — landmarks & enactment",10:"Sources / borrowed features",
+ 11:"Preamble — ingredients",12:"Preamble — status & amendment",13:"Articles 1–4 — Union & territory",
+ 14:"State reorganisation",15:"Citizenship (Arts 5–11)",16:"Arts 12–13 — 'State' & law",
+ 17:"Right to Equality (14–18)",18:"Right to Freedom (19–22)",19:"Arts 23–30",
+ 20:"Art 32 & the writs",21:"DPSP — classification",22:"DPSP — amendments & FR conflict",
+ 23:"Fundamental Duties (51A)",24:"Article 368 & basic structure"
+};
+var groups=[
+ {k:"EVOL",label:"Evolution of the Constitution"},
+ {k:"CA",label:"Making of the Constitution"},
+ {k:"PRE",label:"Preamble & the Union"},
+ {k:"FR",label:"Citizenship & Fundamental Rights"},
+ {k:"DPSP",label:"DPSP, Duties & Amendment"}
+];
+
+var BANK=[
+{t:1,g:"EVOL",fmt:"A",layer:4,axis:"structure",type:"Single-best",hard:false,
+ q:"The Regulating Act of 1773 is best described as:",
+ o:["The first Act to place the government of India directly under the Crown, abolishing the Company and vesting authority in a Secretary of State","The first step taken by the British Government to regulate the Company's affairs, designating the Governor of Bengal as Governor-General of Bengal with an Executive Council of four","The Act that created a Board of Control to supervise the Company's civil, military and revenue affairs, establishing a system of double government","The Act that ended the Company's commercial functions and made it a purely administrative trustee holding Indian territories for the Crown"],a:1,
+ e:"The Regulating Act 1773 was the first British Government intervention into Company affairs: Governor of Bengal became Governor-General of Bengal (Warren Hastings), aided by a four-member Executive Council. (a) is the GoI Act 1858, (c) is Pitt's India Act 1784, (d) is the Charter Act 1833 — a swapped-statute trap."},
+
+{t:2,g:"EVOL",fmt:"B",layer:3,axis:"charter-act-provisions",type:"Statements",hard:false,
+ q:"Consider the following statements:<span class='stmt'>1. Pitt's India Act of 1784 created a Board of Control empowered to supervise the Company's civil, military and revenue affairs in India.</span><span class='stmt'>2. The Charter Act of 1813 ended the Company's monopoly over the trade with India, but expressly retained its monopoly over the trade with China and the trade in tea.</span><span class='stmt'>3. The Charter Act of 1833 ended the Company's commercial activities and made the Governor-General of Bengal the Governor-General of India, the first incumbent being Lord Warren Hastings.</span>Which of the statements given above are correct?",
+ o:["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"],a:0,
+ e:"1 and 2 are correct. Statement 3 plants the falsehood in its qualifier: the first Governor-General of India under the Charter Act 1833 was Lord William Bentinck; Warren Hastings was the first Governor-General of *Bengal* under the Regulating Act 1773 — a named-entity confusion between two similar-sounding offices."},
+
+{t:3,g:"EVOL",fmt:"A",layer:4,axis:"locus-of-authority",type:"Single-best",hard:false,
+ q:"Which one of the following changes was effected by the Government of India Act of 1858?",
+ o:["It introduced dyarchy in the provinces, dividing provincial subjects into reserved and transferred categories administered by different authorities","It provided for a Federal Court at Delhi and divided legislative power between the centre and the provinces through three enumerated lists","It granted separate electorates to Muslims and admitted the first Indian, as law member, to the Viceroy's Executive Council","It vested the government of India in the Crown, creating a Secretary of State for India assisted by a fifteen-member Council of India"],a:3,
+ e:"The GoI Act 1858, passed after the Revolt of 1857, abolished the Company and transferred power to the Crown through a Secretary of State for India assisted by a 15-member Council of India. (a) is the 1919 Act, (b) the 1935 Act, (c) the 1909 Act — a statutory-locus trap that rewards knowing which Act carries which machinery."},
+
+{t:4,g:"EVOL",fmt:"C",layer:3,axis:"1909-provisions",type:"How many",hard:false,
+ q:"Consider the following pairs:<div class='pairs-wrap'><table class='pairs'><thead><tr><th>Provision</th><th>Attributed to</th></tr></thead><tbody><tr><td>1. Separate electorate for Muslims</td><td>Indian Councils Act 1909</td></tr><tr><td>2. Central Legislative Council enlarged from 16 to 60 members</td><td>Indian Councils Act 1909</td></tr><tr><td>3. Introduction of direct elections to the legislative councils</td><td>Indian Councils Act 1909</td></tr><tr><td>4. First Indian appointed to the Viceroy's Executive Council</td><td>Indian Councils Act 1909</td></tr></tbody></table></div>How many of the pairs given above are correctly matched?",
+ o:["Only one","Only two","Only three","All four"],a:2,
+ e:"Pairs 1, 2 and 4 are correct — the Morley-Minto reforms introduced communal electorates, raised the Central Legislative Council from 16 to 60, and brought Satyendra Prasad Sinha in as law member. Pair 3 is the trap: *direct* elections arrived only with the GoI Act 1919; 1909 used an indirect, limited electoral principle. Period/era mismatch."},
+
+{t:5,g:"EVOL",fmt:"B",layer:4,axis:"dyarchy",type:"Statements",hard:true,
+ q:"With reference to the Government of India Act of 1919, consider the following statements:<span class='stmt'>1. It introduced dyarchy in the provinces, transferred subjects being administered by the Governor with ministers responsible to the legislature and reserved subjects by the Governor with his Executive Council.</span><span class='stmt'>2. It introduced bicameralism at the centre and provided for the direct election of members, though the franchise remained restricted by property, tax and educational qualifications.</span><span class='stmt'>3. It established a Public Service Commission in that year itself and made the salary of the Secretary of State for India payable thereafter out of Indian revenues.</span>Which of the statements given above are correct?",
+ o:["1 only","1 and 2 only","2 and 3 only","1, 2 and 3"],a:1,
+ e:"1 and 2 are correct. Statement 3 carries two planted errors in its qualifier: the Act only *provided for* a Public Service Commission, which was actually set up in 1926; and it shifted the Secretary of State's salary from Indian revenues to the British exchequer, not the other way round — a direction-reversal trap."},
+
+{t:6,g:"EVOL",fmt:"D",layer:4,axis:"federation",type:"Statement-I/II",hard:true,
+ q:"Consider the following statements:<b class='slab'>Statement-I:</b><span class='stmt'>The All-India Federation envisaged by the Government of India Act of 1935 came into existence and continued to function until the Indian Independence Act of 1947 replaced it.</span><b class='slab'>Statement-II:</b><span class='stmt'>The Act made the federation conditional upon the accession of a stipulated proportion of the princely states, a condition that was never fulfilled by those states.</span>Which one of the following is correct in respect of the above statements?",
+ o:["Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I","Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I","Statement-I is correct but Statement-II is incorrect","Statement-I is incorrect but Statement-II is correct"],a:3,
+ e:"Statement-I is the misconception: the All-India Federation never came into being. Statement-II states the true reason — the princely states, whose accession was a precondition, declined to join. Keyed (d): the second statement is precisely what refutes the first."},
+
+{t:6,g:"EVOL",fmt:"A",layer:4,axis:"1947-act-provisions",type:"Single-best",hard:true,
+ q:"Which one of the following was a direct consequence of the Indian Independence Act of 1947?",
+ o:["The office of the Secretary of State for India was abolished and his functions transferred to the Secretary of State for Commonwealth Affairs","The Governor-General retained an effective power to veto legislation passed by the Constituent Assembly acting as the dominion legislature","The Council of India, created in 1858 to advise the Secretary of State, was abolished with effect from the date of that Act","Three enumerated legislative lists were introduced for the first time to divide legislative power between the two new dominions"],a:0,
+ e:"The 1947 Act abolished the office of the Secretary of State for India, his work passing to the Secretary of State for Commonwealth Affairs. (b) reverses the position — the Governor-General became a constitutional head bound to act on ministerial advice. (c) is a period trap: the Council of India was abolished by the GoI Act 1935. (d) belongs to the 1935 Act."},
+
+{t:7,g:"CA",fmt:"C",layer:3,axis:"composition",type:"How many",hard:false,
+ q:"With reference to the Constituent Assembly constituted under the Cabinet Mission Plan of 1946, consider the following statements:<span class='stmt'>1. Its total strength was fixed at 389 members.</span><span class='stmt'>2. Of these, 296 seats were allotted to British India.</span><span class='stmt'>3. Of these, 93 seats were allotted to the princely states.</span><span class='stmt'>4. Four seats were allotted to the chief commissioners' provinces of Delhi, Ajmer-Merwara, Coorg and British Baluchistan.</span><span class='stmt'>5. After the partition of the country the effective strength of the Assembly fell to 299.</span>How many of the statements given above are correct?",
+ o:["Only two","Only three","Only four","All five"],a:3,
+ e:"All five are correct: 389 = 296 (British India, of which 292 from the provinces and 4 from chief commissioners' provinces) + 93 (princely states); after partition the Muslim League members from Pakistani territory withdrew, leaving 299. The trap here is the temptation to reject a fully-correct set — a wrong-number expectation trap."},
+
+{t:8,g:"CA",fmt:"C",layer:5,axis:"drafting-committee-membership",type:"How many",hard:true,
+ q:"Consider the following persons:<span class='stmt'>1. Alladi Krishnaswami Ayyar</span><span class='stmt'>2. N. Gopalaswami Ayyangar</span><span class='stmt'>3. K. M. Munshi</span><span class='stmt'>4. Syed Mohammad Saadulla</span><span class='stmt'>5. Jawaharlal Nehru</span><span class='stmt'>6. N. Madhava Rao</span>How many of the persons given above were members of the Drafting Committee of the Constitution?",
+ o:["Only three","Only four","Only five","All six"],a:2,
+ e:"Five. The seven-member Drafting Committee set up on 29 August 1947 under Dr. B. R. Ambedkar comprised Alladi Krishnaswami Ayyar, N. Gopalaswami Ayyangar, K. M. Munshi, Syed Mohammad Saadulla, N. Madhava Rao (replacing B. L. Mitter) and T. T. Krishnamachari (replacing D. P. Khaitan). Nehru chaired the Union Powers and Union Constitution Committees but was never on the Drafting Committee — a cross-committee membership trap."},
+
+{t:9,g:"CA",fmt:"B",layer:3,axis:"enactment-dates",type:"Statements",hard:false,
+ q:"Consider the following statements:<span class='stmt'>1. The Objectives Resolution, which laid down the philosophy underlying the Constitution, was moved by Dr. B. R. Ambedkar in December 1946 and adopted by the Assembly in January 1947.</span><span class='stmt'>2. The Constitution was adopted on 26 November 1949, but the bulk of its provisions came into force only on 26 January 1950, the date it describes as its commencement.</span><span class='stmt'>3. The Constituent Assembly took approximately two years, eleven months and eighteen days to complete the framing and adoption of the Constitution.</span>Which of the statements given above are correct?",
+ o:["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"],a:1,
+ e:"2 and 3 are correct. Statement 1 swaps the mover: the Objectives Resolution was moved by Jawaharlal Nehru on 13 December 1946 and adopted on 22 January 1947. Ambedkar chaired the Drafting Committee — a swapped-author trap that trades on both men's centrality."},
+
+{t:10,g:"CA",fmt:"G",layer:5,axis:"source-country-pairs",type:"Pairs",hard:true,
+ q:"Consider the following pairs:<div class='pairs-wrap'><table class='pairs'><thead><tr><th>Feature of the Constitution</th><th>Borrowed from</th></tr></thead><tbody><tr><td>1. Directive Principles of State Policy</td><td>Ireland</td></tr><tr><td>2. Procedure established by law</td><td>Japan</td></tr><tr><td>3. Suspension of Fundamental Rights during an emergency</td><td>Germany (Weimar)</td></tr><tr><td>4. Concurrent List</td><td>Canada</td></tr></tbody></table></div>Which of the pairs given above are correctly matched?",
+ o:["2 and 4 only","1 and 4 only","1, 2, 3 and 4","1, 2 and 3 only"],a:3,
+ e:"Pairs 1, 2 and 3 are correctly matched. Pair 4 is the trap: the Concurrent List, freedom of trade, commerce and intercourse, and the joint sitting of the two Houses come from Australia. Canada supplied the strong-centre federation, residuary powers with the centre, and the appointment of Governors — a plausible-neighbour confusion between two Commonwealth federations."},
+
+{t:10,g:"CA",fmt:"A",layer:4,axis:"1935-act-legacy",type:"Single-best",hard:false,
+ q:"The single largest source of the provisions of the Indian Constitution is the Government of India Act of 1935. Which one of the following sets of features is drawn principally from that Act?",
+ o:["Fundamental Rights, judicial review, independence of the judiciary, impeachment of the President and the removal of Supreme Court judges","Federal scheme, office of Governor, powers of the judiciary, Public Service Commissions, emergency provisions and administrative details","Parliamentary form of government, the rule of law, single citizenship, the prerogative writs and the cabinet system","Directive Principles of State Policy, the method of election of the President and the nomination of members to the Rajya Sabha"],a:1,
+ e:"The 1935 Act supplied the federal scheme, the office of Governor, judicial powers, Public Service Commissions, emergency provisions and the administrative detail that makes the Constitution so long. (a) is the American contribution, (c) the British, (d) the Irish — a source-attribution trap."},
+
+{t:11,g:"PRE",fmt:"C",layer:3,axis:"preamble-wording",type:"How many",hard:true,
+ q:"Consider the following statements about the Preamble:<span class='stmt'>1. It secures to all citizens liberty of thought, expression, belief, faith and worship, but does not extend that guarantee to liberty of association.</span><span class='stmt'>2. It promises equality of status and of opportunity, and fraternity assuring the dignity of the individual and the unity and integrity of the Nation.</span><span class='stmt'>3. Justice in the Preamble is qualified as social, economic and legal, in that order, an ideal drawn from the Russian Revolution of 1917.</span>How many of the statements given above are correct?",
+ o:["Only one","Only two","All three","None"],a:1,
+ e:"Two. Statements 1 and 2 reproduce the Preamble exactly — and the omission of 'association' from the liberty clause is a favourite Prelims point. Statement 3 plants the error in a single word: Justice is social, economic and *political*, not legal. A definition-swap trap inside an otherwise true sentence."},
+
+{t:12,g:"PRE",fmt:"D",layer:4,axis:"amendability",type:"Statement-I/II",hard:true,
+ q:"Consider the following statements:<b class='slab'>Statement-I:</b><span class='stmt'>The Preamble is a part of the Constitution and can be amended under Article 368, provided the amendment does not damage or destroy its basic features.</span><b class='slab'>Statement-II:</b><span class='stmt'>In the Berubari Union case the Supreme Court held that the Preamble is not a part of the Constitution, and that opinion has never since been revised by the Court.</span>Which one of the following is correct in respect of the above statements?",
+ o:["Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I","Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I","Statement-I is correct but Statement-II is incorrect","Statement-I is incorrect but Statement-II is correct"],a:2,
+ e:"Statement-I is correct — Kesavananda Bharati (1973) held the Preamble to be part of the Constitution and amendable subject to the basic structure; LIC of India (1995) reaffirmed this. Statement-II is half true and therefore false: Berubari (1960) did so hold, but the qualifier 'never since revised' is the planted falsehood, since Kesavananda expressly overruled it."},
+
+{t:12,g:"PRE",fmt:"H",layer:3,axis:"42nd-amendment-additions",type:"Indirection",hard:true,
+ q:"Three words were inserted into the Preamble by a single constitutional amendment enacted during the operation of the internal emergency of 1975–77. Two of them describe the character of the State, while the third qualifies an object that the Preamble seeks to promote. Those three words are:",
+ o:["Socialist and Secular, describing the State, and Integrity, qualifying the fraternity the Preamble seeks to promote","Sovereign and Socialist, describing the State, and Fraternity, qualifying the unity the Preamble seeks to promote","Secular and Democratic, describing the State, and Unity, qualifying the dignity the Preamble seeks to promote","Socialist and Republic, describing the State, and Dignity, qualifying the integrity the Preamble seeks to promote"],a:0,
+ e:"The 42nd Amendment Act, 1976 added 'Socialist' and 'Secular' to the description of the State and 'Integrity' to the fraternity clause. 'Sovereign', 'Democratic' and 'Republic' were in the original Preamble of 1949; 'Unity' and 'Dignity' were already there too. Indirection trap — the amendment is never named."},
+
+{t:13,g:"PRE",fmt:"B",layer:4,axis:"article-3-procedure",type:"Statements",hard:true,
+ q:"With reference to the formation of a new State by separating territory from an existing State, consider the following statements:<span class='stmt'>1. A bill for the purpose may be introduced in either House of Parliament only on the prior recommendation of the President of India.</span><span class='stmt'>2. The President must refer such a bill to the legislature of the State concerned for its views, and Parliament is bound by the views expressed within the period so specified.</span><span class='stmt'>3. Such a law is passed by a simple majority and is expressly deemed not to be an amendment of the Constitution for the purposes of Article 368.</span>Which of the statements given above are correct?",
+ o:["1 and 2 only","1 and 3 only","2 and 3 only","1, 2 and 3"],a:1,
+ e:"1 and 3 are correct. Statement 2's qualifier is the trap: the President must *refer* the bill to the State legislature for its views, but Parliament is in no way bound by them, and may act even if no views are received in time. Article 4 expressly excludes such laws from Article 368 — a 'consultation-equals-consent' direction trap."},
+
+{t:13,g:"PRE",fmt:"A",layer:4,axis:"union-vs-federation",type:"Single-best",hard:false,
+ q:"Article 1 describes India as a 'Union of States' rather than a 'Federation of States'. According to Dr. B. R. Ambedkar, this choice of phrase signifies that:",
+ o:["the Indian federation is the result of an agreement among the States, which accordingly retain a residual right to secede from it","the Indian federation is not the result of an agreement among the States, and no State therefore has a right to secede from it","the States are merely administrative units of the Centre and possess no independent legislative competence of their own","the Union may unilaterally abolish a State by executive order without any recourse to legislation passed by Parliament"],a:1,
+ e:"Ambedkar explained the phrase as carrying two implications: the Indian federation was not the result of an agreement among the units, and no unit may secede. (a) reverses both. (c) and (d) overstate central power — the States do have exclusive legislative competence, and Article 3 requires an Act of Parliament. An absolute-qualifier trap."},
+
+{t:14,g:"PRE",fmt:"G",layer:5,axis:"reorganisation-bodies",type:"Pairs",hard:true,
+ q:"Consider the following pairs:<div class='pairs-wrap'><table class='pairs'><thead><tr><th>Body / enactment</th><th>Composition or outcome</th></tr></thead><tbody><tr><td>1. Dhar Commission (1948)</td><td>Favoured reorganisation on administrative convenience rather than language</td></tr><tr><td>2. JVP Committee (1948)</td><td>Jawaharlal Nehru, Vallabhbhai Patel and Pattabhi Sitaramayya</td></tr><tr><td>3. Fazl Ali Commission (1953)</td><td>Fazl Ali, K. M. Panikkar and H. N. Kunzru</td></tr><tr><td>4. States Reorganisation Act (1956)</td><td>Created 14 States and 6 Union Territories</td></tr></tbody></table></div>Which of the pairs given above are correctly matched?",
+ o:["1 and 2 only","2, 3 and 4 only","1, 3 and 4 only","1, 2, 3 and 4"],a:3,
+ e:"All four are correctly matched. The Dhar Commission rejected language as the basis; the JVP Committee (named for Jawaharlal, Vallabhbhai and Pattabhi) also formally rejected it; the three-member Fazl Ali Commission largely accepted it; and the 1956 Act produced 14 States and 6 Union Territories. The trap is the reflex that at least one pair in a four-pair set must be wrong."},
+
+{t:15,g:"FR",fmt:"B",layer:4,axis:"citizenship-locus",type:"Statements",hard:true,
+ q:"Consider the following statements:<span class='stmt'>1. The Constitution deals only with the persons who became citizens at its commencement and leaves the acquisition and loss of citizenship thereafter to be regulated by Parliament.</span><span class='stmt'>2. The Citizenship Act of 1955 prescribes five modes of acquiring citizenship, namely birth, descent, registration, naturalisation and incorporation of territory.</span><span class='stmt'>3. The Overseas Citizen of India card confers full dual citizenship, including the right to vote and to hold constitutional office in India.</span>Which of the statements given above are correct?",
+ o:["1 and 2 only","1 and 3 only","2 and 3 only","1, 2 and 3"],a:0,
+ e:"1 and 2 are correct — Article 11 empowers Parliament to regulate citizenship, which it did through the Citizenship Act 1955 and its five modes. Statement 3 is false: India permits only single citizenship, and an OCI cardholder can neither vote nor hold a constitutional office. A statutory-locus trap dressed as a current-affairs point."},
+
+{t:16,g:"FR",fmt:"A",layer:4,axis:"definition-of-State",type:"Single-best",hard:true,
+ q:"For the purposes of Part III, the expression 'the State' in Article 12 has been judicially understood to include:",
+ o:["only the Union and State governments and their legislatures, every other body lying beyond the reach of the Fundamental Rights","local authorities together with statutory and non-statutory bodies acting as instrumentalities or agencies of government, besides the governments and legislatures","the judiciary in the exercise of its judicial functions, so that a judicial decision may itself be struck down for violating a Fundamental Right","private companies and private individuals generally, since the Fundamental Rights are enforceable against all persons in the same manner"],a:1,
+ e:"Article 12 covers the governments and legislatures of the Union and the States, all local authorities, and 'other authorities' — read by the courts to include statutory and non-statutory instrumentalities of the State. (a) is too narrow. (c) is the classic error: the judiciary is 'State' in its administrative, not judicial, capacity. (d) confuses Article 12 with the horizontally-enforceable rights under Articles 17, 23 and 24."},
+
+{t:17,g:"FR",fmt:"C",layer:3,axis:"grounds-of-discrimination",type:"How many",hard:true,
+ q:"Consider the following grounds:<span class='stmt'>1. Religion</span><span class='stmt'>2. Race</span><span class='stmt'>3. Caste</span><span class='stmt'>4. Sex</span><span class='stmt'>5. Descent</span><span class='stmt'>6. Place of birth</span>On how many of the grounds given above does Article 15 forbid the State to discriminate against any citizen?",
+ o:["Only three","Only four","Only five","All six"],a:2,
+ e:"Five. Article 15 lists religion, race, caste, sex and place of birth. 'Descent' and 'residence' appear only in Article 16, which forbids discrimination in public employment on seven grounds. Confusing the five grounds of Article 15 with the seven of Article 16 is the single most common Prelims slip here — a boundary/list trap."},
+
+{t:18,g:"FR",fmt:"B",layer:3,axis:"article-19-freedoms",type:"Statements",hard:false,
+ q:"Consider the following statements:<span class='stmt'>1. Article 19 originally guaranteed seven freedoms, of which the right to acquire, hold and dispose of property was deleted by the Forty-fourth Amendment Act of 1978.</span><span class='stmt'>2. The right to form associations or unions was widened by the Ninety-seventh Amendment Act of 2011 so as to include the right to form co-operative societies.</span><span class='stmt'>3. The six freedoms under Article 19 are available to all persons within the territory of India, including foreigners and legal persons such as companies.</span>Which of the statements given above are correct?",
+ o:["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"],a:0,
+ e:"1 and 2 are correct. Statement 3 is false: the Article 19 freedoms are available only to citizens, and the Supreme Court has held that a company, being a legal and not a natural person, cannot claim them. The 'all persons' phrasing is the standard bait — Articles 14, 20, 21, 22, 25 to 28 use 'person', Article 19 uses 'citizen'."},
+
+{t:18,g:"FR",fmt:"J",layer:4,axis:"preventive-detention-scenario",type:"Scenario",hard:true,
+ q:"<blockquote class='passage'>A State government detains a trade union organiser under a preventive detention law on 1 March, and does not place his case before any Advisory Board. On 20 May his counsel argues that the continued detention has by then become unconstitutional. The State replies that the Forty-fourth Amendment Act of 1978 permits detention for a shorter period only, so that no question of a three-month limit now arises, and that in any event the grounds of detention were communicated to the detenu within five days of his arrest.</blockquote>Which one of the following best states the constitutional position?",
+ o:["The detention became unconstitutional after three months, because Article 22 bars detention beyond that period without an Advisory Board's opinion, and the Forty-fourth Amendment's reduction to two months was never brought into force","The detention became unconstitutional after two months, because the shorter maximum period introduced by the Forty-fourth Amendment Act of 1978 has operated automatically since the date of that Act's enactment","The detention remains valid throughout, because Article 22 exempts preventive detention altogether from any requirement of reference to an Advisory Board","The detention remains valid throughout, because communicating the grounds of detention within five days cures the absence of any reference to an Advisory Board"],a:0,
+ e:"Article 22(4) bars preventive detention beyond three months without an Advisory Board's opinion. The 44th Amendment sought to cut this to two months but that provision has never been brought into force, so the three-month limit still governs — the State's argument in the passage is the planted misconception. On 20 May the detention has run past three months and is bad. (c) and (d) are absolute-qualifier traps: communicating grounds is a separate safeguard and cures nothing here."},
+
+{t:19,g:"FR",fmt:"C",layer:3,axis:"article-mapping",type:"How many",hard:false,
+ q:"Consider the following pairs:<div class='pairs-wrap'><table class='pairs'><thead><tr><th>Article</th><th>Right</th></tr></thead><tbody><tr><td>1. Article 23</td><td>Prohibition of traffic in human beings and forced labour</td></tr><tr><td>2. Article 24</td><td>Prohibition of employment of children below fourteen years in factories, mines and hazardous work</td></tr><tr><td>3. Article 25</td><td>Freedom of conscience and free profession, practice and propagation of religion</td></tr><tr><td>4. Article 29</td><td>Right of minorities to establish and administer educational institutions of their choice</td></tr></tbody></table></div>How many of the pairs given above are correctly matched?",
+ o:["Only one","Only two","Only three","All four"],a:2,
+ e:"Pairs 1, 2 and 3 are correct. Pair 4 is the trap: the right of minorities to *establish and administer* educational institutions is Article 30; Article 29 protects the language, script and culture of any section of citizens and bars denial of admission to State-aided institutions on grounds of religion, race, caste or language. Adjacent-article confusion."},
+
+{t:20,g:"FR",fmt:"A",layer:4,axis:"writ-scope",type:"Single-best",hard:true,
+ q:"The writ of quo warranto differs from the other writs principally in that:",
+ o:["it may be issued only by the Supreme Court in exercise of its power under Article 32, and never by a High Court exercising its wider power under Article 226","it lies against private individuals as well as against public authorities, and is the ordinary remedy available against wrongful confinement by any person","it is issued to a subordinate court directing it to transfer a pending case to a superior court for that superior court's own consideration","it may be sought by any interested person though he is not himself aggrieved, and lies only against a substantive public office of a permanent character created by statute or the Constitution"],a:3,
+ e:"Quo warranto is the one writ that any interested person may seek without being personally aggrieved, and it lies only against a substantive public office of a permanent character created by statute or by the Constitution — not against a ministerial or private office. (a) is false for every writ. (b) describes habeas corpus. (c) describes certiorari. A writ-swap trap."},
+
+{t:20,g:"FR",fmt:"D",layer:4,axis:"article-32-status",type:"Statement-I/II",hard:false,
+ q:"Consider the following statements:<b class='slab'>Statement-I:</b><span class='stmt'>The right guaranteed by Article 32 is itself a Fundamental Right and cannot be suspended except as otherwise provided for by the Constitution.</span><b class='slab'>Statement-II:</b><span class='stmt'>Dr. B. R. Ambedkar described Article 32 as the very soul of the Constitution and the very heart of it during the debates of the Constituent Assembly.</span>Which one of the following is correct in respect of the above statements?",
+ o:["Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I","Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I","Statement-I is correct but Statement-II is incorrect","Statement-I is incorrect but Statement-II is correct"],a:1,
+ e:"Both statements are true, but Statement-II does not explain Statement-I. Article 32 is non-suspendable because Article 359 read with Article 32(4) makes it so as a matter of constitutional text — not because Ambedkar praised it. A 'true-but-not-the-explanation' trap, where an evaluative remark is mistaken for a legal reason."},
+
+{t:21,g:"DPSP",fmt:"H",layer:5,axis:"gandhian-principles",type:"Indirection",hard:true,
+ q:"A Directive Principle inserted into the Constitution in 2011, by the very amendment that also made the formation of a certain kind of body a fundamental right under Article 19, is usually classified with the Gandhian principles. That Directive Principle requires the State to promote:",
+ o:["the organisation of village panchayats and their endowment with such powers as may be necessary to function as units of self-government","the participation of workers in the management of undertakings, establishments and other organisations engaged in any industry","the voluntary formation, autonomous functioning, democratic control and professional management of co-operative societies","the protection and improvement of the environment and the safeguarding of the forests and the wild life of the country"],a:2,
+ e:"The 97th Amendment Act, 2011 added the right to form co-operative societies to Article 19(1)(c) and inserted Article 43B directing the State to promote their voluntary formation, autonomous functioning, democratic control and professional management. (a) is Article 40, (b) Article 43A and (d) Article 48A — the last two both inserted by the 42nd Amendment. Indirection trap, keyed on the year and the paired Article 19 change."},
+
+{t:22,g:"DPSP",fmt:"B",layer:4,axis:"FR-DPSP-case-law",type:"Statements",hard:true,
+ q:"Consider the following statements:<span class='stmt'>1. In the Champakam Dorairajan case the Supreme Court held that in the event of a conflict the Fundamental Rights would prevail over the Directive Principles, which led to the First Amendment.</span><span class='stmt'>2. The Twenty-fifth Amendment inserted Article 31C, whose second part barring judicial review was struck down by the Supreme Court in the Kesavananda Bharati case.</span><span class='stmt'>3. The Forty-second Amendment extended the protection of Article 31C to all the Directive Principles, and that extension was upheld by the Supreme Court in the Minerva Mills case.</span>Which of the statements given above are correct?",
+ o:["2 and 3 only","1 and 2 only","1 and 3 only","1, 2 and 3"],a:1,
+ e:"1 and 2 are correct. Statement 3 reverses the outcome: the 42nd Amendment did extend Article 31C to all Directive Principles, but Minerva Mills (1980) struck that extension down, restoring Article 31C to the narrower form covering only Articles 39(b) and 39(c). A direction-reversal trap on a case whose name candidates recognise but whose holding they invert."},
+
+{t:23,g:"DPSP",fmt:"D",layer:3,axis:"fundamental-duties-origin",type:"Statement-I/II",hard:true,
+ q:"Consider the following statements:<b class='slab'>Statement-I:</b><span class='stmt'>The Fundamental Duties were added on the recommendation of the Swaran Singh Committee, which had proposed eight duties together with a provision for penalties for their non-performance.</span><b class='slab'>Statement-II:</b><span class='stmt'>Parliament accepted the Committee's recommendation on penalties, and Article 51A accordingly authorises the imposition of penalties for the non-performance of these duties.</span>Which one of the following is correct in respect of the above statements?",
+ o:["Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I","Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I","Statement-I is correct but Statement-II is incorrect","Statement-I is incorrect but Statement-II is correct"],a:2,
+ e:"Statement-I is correct: the Swaran Singh Committee (1976) recommended eight duties and a penalty provision. Statement-II is false — Parliament rejected the penalty recommendation and the 42nd Amendment inserted ten duties in Article 51A with no penal sanction, an eleventh being added by the 86th Amendment, 2002. The trap is the assumption that a committee's recommendations were accepted whole."},
+
+{t:24,g:"DPSP",fmt:"C",layer:4,axis:"amendment-procedure",type:"How many",hard:true,
+ q:"Consider the following statements about the amendment of the Constitution:<span class='stmt'>1. An amendment bill under Article 368 may be introduced in either House of Parliament, but there is no provision for resolving a deadlock between the Houses by summoning a joint sitting.</span><span class='stmt'>2. Every amendment bill must be ratified by the legislatures of at least half of the States before it is presented to the President for his assent.</span><span class='stmt'>3. The Twenty-fourth Amendment Act of 1971 made it obligatory for the President to give his assent to a constitutional amendment bill duly passed by Parliament.</span>How many of the statements given above are correct?",
+ o:["Only one","Only two","All three","None"],a:1,
+ e:"Two. Statements 1 and 3 are correct — Article 368 provides no joint sitting, and the 24th Amendment removed the President's discretion to withhold assent. Statement 2 over-generalises: ratification by half the States is required only for amendments affecting the federal provisions listed in the proviso to Article 368(2), not for every amendment. An absolute-qualifier trap."}
+];
+
+/* ---------- engine ---------- */
+var NODES=[];(function(){var s={};BANK.forEach(function(q){s[q.t]=1;});NODES=Object.keys(s).map(Number).sort(function(a,b){return a-b;});})();
+var state={filter:"ALL",shuffle:true,order:[],idx:0,score:0,answered:0,results:[]};
+
+var dotsEl=document.getElementById('dots');
+NODES.forEach(function(t){var d=document.createElement('div');d.className='dot';d.id='dot'+t;d.textContent=t;d.title=topicName[t]||('T'+t);dotsEl.appendChild(d);});
+function covText(){var n=0;NODES.forEach(function(t){var d=document.getElementById('dot'+t);if(d&&(d.classList.contains('ok')||d.classList.contains('bad')))n++;});return n+' / '+NODES.length+' nodes';}
+document.getElementById('covCount').textContent=covText();
+
+var filtersEl=document.getElementById('filters');
+function mkFilter(k,label){var b=document.createElement('button');b.textContent=label;b.dataset.k=k;
+  b.onclick=function(){state.filter=k;[].forEach.call(filtersEl.children,function(c){c.classList.toggle('on',c.dataset.k===k);});};return b;}
+filtersEl.appendChild(mkFilter("ALL","All "+BANK.length));
+groups.forEach(function(gp){filtersEl.appendChild(mkFilter(gp.k,gp.label));});
+filtersEl.firstChild.classList.add('on');
+
+var shufBtn=document.getElementById('shuf');
+shufBtn.onclick=function(){state.shuffle=!state.shuffle;shufBtn.classList.toggle('on',state.shuffle);};
+document.getElementById('start').onclick=startDrill;
+
+function pool(){var arr=BANK.map(function(q,i){return i;});if(state.filter!=="ALL")arr=arr.filter(function(i){return BANK[i].g===state.filter;});return arr;}
+function shuffleArr(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+function startDrill(){
+  state.order=pool();if(state.shuffle)shuffleArr(state.order);
+  state.idx=0;state.score=0;state.answered=0;state.results=[];
+  document.getElementById('controls').classList.add('hidden');
+  document.getElementById('resultArea').classList.add('hidden');
+  document.getElementById('quizArea').classList.remove('hidden');
+  render();
+}
+var qcard=document.getElementById('qcard');
+function render(){
+  var qi=state.order[state.idx],q=BANK[qi];
+  document.getElementById('qpos').textContent='Q '+(state.idx+1)+' / '+state.order.length;
+  document.getElementById('progbar').style.width=((state.idx)/state.order.length*100)+'%';
+  document.getElementById('scoretxt').textContent='Score '+state.score+' · '+(state.answered?Math.round(state.score/state.answered*100):0)+'%';
+  var html='<div class="tags"><span class="tag topic">T'+q.t+' · '+(topicName[q.t]||'')+'</span>'+
+    '<span class="tag '+(q.hard?'hard':'type')+'">'+(q.hard?'Hard · ':'')+q.type+'</span>'+
+    '<span class="tag layer">Layer '+q.layer+'</span></div>'+
+    '<div class="stem">'+q.q+'</div><div class="opts" id="opts"></div><div class="expl" id="expl"></div>'+
+    '<div class="nav"><button class="btn" id="next" disabled>'+(state.idx===state.order.length-1?'See results →':'Next →')+'</button></div>';
+  qcard.innerHTML=html;
+  var optsEl=document.getElementById('opts'),keys=['A','B','C','D'];
+  q.o.forEach(function(txt,i){var b=document.createElement('button');b.className='opt';b.dataset.i=i;
+    b.innerHTML='<span class="key">'+keys[i]+'</span><span>'+txt+'</span>';b.onclick=function(){pick(i);};optsEl.appendChild(b);});
+  document.getElementById('next').onclick=nextQ;window.scrollTo(0,0);
+}
+function pick(i){
+  var qi=state.order[state.idx],q=BANK[qi];var opts=document.querySelectorAll('#opts .opt');
+  if(opts[0].disabled)return;var correct=(i===q.a);
+  [].forEach.call(opts,function(b,bi){b.disabled=true;
+    if(bi===q.a){b.classList.add('correct');b.insertAdjacentHTML('beforeend','<span class="mark">✓</span>');}
+    else if(bi===i){b.classList.add('wrong');b.insertAdjacentHTML('beforeend','<span class="mark">✗</span>');}});
+  state.answered++;if(correct)state.score++;state.results.push({qi:qi,correct:correct});
+  var dot=document.getElementById('dot'+q.t);
+  if(dot){if(correct){dot.classList.remove('bad');dot.classList.add('ok');}else if(!dot.classList.contains('ok')){dot.classList.add('bad');}}
+  document.getElementById('covCount').textContent=covText();
+  var ex=document.getElementById('expl');ex.className='expl show '+(correct?'g':'r');
+  ex.innerHTML='<span class="verdict">'+(correct?'Correct':'Not quite — correct answer: '+['A','B','C','D'][q.a])+'</span>'+q.e;
+  document.getElementById('next').disabled=false;
+  document.getElementById('scoretxt').textContent='Score '+state.score+' · '+Math.round(state.score/state.answered*100)+'%';
+}
+function nextQ(){if(state.idx<state.order.length-1){state.idx++;render();}else showResults();}
+function showResults(){
+  document.getElementById('quizArea').classList.add('hidden');
+  var ra=document.getElementById('resultArea');ra.classList.remove('hidden');
+  var total=state.order.length,acc=Math.round(state.score/total*100);
+  var touched={};state.results.forEach(function(r){touched[BANK[r.qi].t]=true;});
+  var weak=state.results.filter(function(r){return !r.correct;});
+  var grade=acc>=90?'Exam-ready · full-marks zone':acc>=75?'Strong':acc>=60?'Getting there':'Needs another pass';
+  var html='<div class="card results"><div class="eyebrow">Result · Note 01</div>'+
+    '<div class="bigscore">'+state.score+'<small>/'+total+'</small></div><div class="grade">'+grade+'</div>'+
+    '<div class="stats"><div class="stat"><b>'+acc+'%</b><span>Accuracy</span></div>'+
+    '<div class="stat"><b>'+Object.keys(touched).length+'</b><span>Nodes touched</span></div>'+
+    '<div class="stat"><b>'+weak.length+'</b><span>Weak spots</span></div></div>';
+  if(weak.length){html+='<div class="weak"><h3>Weak spots — review</h3>';
+    weak.forEach(function(r){var q=BANK[r.qi];html+='<div class="weakitem"><div class="wq">T'+q.t+' · '+(topicName[q.t]||'')+'</div>'+
+      '<div class="wa">✓ '+['A','B','C','D'][q.a]+': '+strip(q.o[q.a])+'</div><div>'+q.e+'</div></div>';});
+    html+='</div>';}
+  else{html+='<p style="font-family:var(--mono);font-size:13px;color:var(--good)">Clean sweep — no weak spots.</p>';}
+  html+='<div class="rbtns">'+(weak.length?'<button class="btn" id="redo">Redo weak spots ('+weak.length+') →</button>':'')+
+    '<button class="btn ghost" id="restart">Restart</button></div></div>';
+  ra.innerHTML=html;
+  if(weak.length)document.getElementById('redo').onclick=function(){state.order=weak.map(function(r){return r.qi;});if(state.shuffle)shuffleArr(state.order);
+    state.idx=0;state.score=0;state.answered=0;state.results=[];ra.classList.add('hidden');document.getElementById('quizArea').classList.remove('hidden');render();};
+  document.getElementById('restart').onclick=function(){ra.classList.add('hidden');document.getElementById('controls').classList.remove('hidden');
+    NODES.forEach(function(t){var d=document.getElementById('dot'+t);if(d)d.classList.remove('ok','bad');});
+    document.getElementById('covCount').textContent=covText();window.scrollTo(0,0);};
+  window.scrollTo(0,0);
+}
+function strip(s){return String(s).replace(/<[^>]+>/g,'');}
+document.addEventListener('keydown',function(e){
+  if(document.getElementById('quizArea').classList.contains('hidden'))return;
+  if(e.key>='1'&&e.key<='4'){var o=document.querySelectorAll('#opts .opt'),i=+e.key-1;if(o[i]&&!o[i].disabled)o[i].click();}
+  else if(e.key==='Enter'){var n=document.getElementById('next');if(n&&!n.disabled)n.click();}
+});
+</script>

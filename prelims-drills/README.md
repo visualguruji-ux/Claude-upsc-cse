@@ -22,6 +22,19 @@ python3 validate_drill.py drills/<file>.html --topics 89-110   # enforce full no
 Exit 0 = hard checks pass. Fix hard failures; justify or fix warnings.
 
 ## Current drills
-| Subject | Topic | File |
-|---|---|---|
-| Modern History | Foundation of the INC, Moderates & Extremists, Councils Acts 1861 & 1892 | `drills/modern-history-01-foundation-of-congress.html` |
+| Subject | Topic | Nodes | Qs | File |
+|---|---|---|---|---|
+| Modern History | Foundation of the INC, Moderates & Extremists, Councils Acts 1861 & 1892 | 25 | 30 | `drills/modern-history-01-foundation-of-congress.html` |
+| Polity | Constitutional framework: evolution 1773–1947, Constituent Assembly, Preamble, Union & territory, Citizenship, FRs, DPSP, Duties, Art. 368 | 24 | 30 | `drills/polity-01-constitutional-framework.html` |
+
+## Authoring conventions
+- **Statement labels go *outside* the `.stmt` span** — write
+  `<b class='slab'>Statement-I:</b><span class='stmt'>…</span>`, not
+  `<span class='stmt'>Statement-I: …</span>`. The validator skips any statement whose text
+  begins with "Statement"/"Assertion", so the inline form hides your statements from the
+  word-floor check in §3.5.
+- Every `fmt` C / B / D / G item should carry at least one option matching a fixed signature
+  ("Only two", "1 and 2 only", "correct explanation"…) — that is how the validator knows to
+  exempt it from the free-text option-density gate.
+- Keep one item per `(t, axis)` pair; give roughly a quarter of the nodes a second question on
+  a *different* axis rather than adding new nodes.
