@@ -17,3 +17,8 @@ chronology · Mains skeleton · 5 practice MCQs · verified sources.
 > ⚠️ **§10 flags three factual errors** in the coaching material this note was built from —
 > two misattributed cases (*Mohammad Yasin*, *Ratilal*) and one overruled case
 > (*Santa Bai*) presented as current law.
+
+## Class presentation
+`Article-12-Definition-of-State-UPSC.pptx` — 19-slide deck for classroom delivery,
+exam-relevant content only, with speaker notes on every slide.
+Regenerate with `node _build-article-12-deck.js` (requires `pptxgenjs`).
