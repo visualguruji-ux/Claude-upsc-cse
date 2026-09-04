@@ -22,3 +22,8 @@ chronology · Mains skeleton · 5 practice MCQs · verified sources.
 `Article-12-Definition-of-State-UPSC.pptx` — 19-slide deck for classroom delivery,
 exam-relevant content only, with speaker notes on every slide.
 Regenerate with `node _build-article-12-deck.js` (requires `pptxgenjs`).
+
+## Class handout
+`01-article-12-class-handout.md` · `.html` — 3-page companion to the deck, cross-referenced
+slide-by-slide ([S2], [S3] …). The `.html` is print-optimised (A4, `@media print`) — open and
+Ctrl/Cmd-P to hand out; also reads vertically on mobile.
