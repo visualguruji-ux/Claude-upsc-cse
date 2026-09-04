@@ -29,6 +29,10 @@
   across UPPSC, BPSC, MPPSC, RPSC, and other state commissions, in addition to UPSC PYQs.
 - Reference varied sources: standard coaching material, current affairs, newspapers,
   UPSC CSE PYQs, and State PSC PYQs.
+- **Coaching material Adarsh actually uses:** ForumIAS / Tapasya Centre for Learning
+  (handwritten annotated PDFs), **Sarrthi IAS — Prelims Navigator Program (PNP) 2026**,
+  plus a printed polity book. ⚠️ **Verify every case citation in these against the
+  original judgment** — several errors already found (see Progress Log 2026-09-04).
 
 ---
 
@@ -102,13 +106,34 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 7. Current Focus  _(update every few sessions)_
-- **Now:** Setting up the preparation system and memory file. ✅ (in progress)
-- **Next:** Decide/confirm target year & attempt number; build a study plan and
-  subject-wise trackers.
+- **Now:** **Polity — Part III (Fundamental Rights).** Working through Art. 12 onward,
+  digitising Adarsh's ForumIAS/Tapasya + Sarrthi IAS (PNP-2026) pages into verified notes.
+- **Next:** Article 13 (doctrines of severability, eclipse, waiver) → Arts. 14–18 (Equality).
+- **Standing:** decide/confirm target year; build subject-wise trackers.
 
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-09-04** — **Polity Note 01: Article 12 — Definition of "State"** (`notes/polity/`, `.md` + `.html`).
+  Built from Adarsh's ForumIAS/Tapasya handwritten pages + a printed coaching book (p.33) +
+  **Sarrthi IAS PNP-2026 Polity p.6**, enriched from Laxmikanth/D.D. Basu/M.P. Jain/Vajiram/
+  Insights/Drishti and **web-verified against the original judgments on Indian Kanoon**.
+  Covers: bare text & anatomy, Ambedkar's CAD intent, **local authorities → R.C. Jain LAAFS +
+  the Art. 367(1) bridge**, **other authorities in 4 phases** (Santa Bai → Ujjam Bai/Rajasthan SEB
+  → R.D. Shetty/Ajay Hasia 6 tests → **Pradeep Kumar Biswas 2002, 7-judge, 5:2**), judiciary under
+  Art. 12, State/not-State scorecard, Art. 226 public-function test, **horizontality after
+  *Kaushal Kishor* (2023)**, Art. 13 linkage, prelims traps, chronology, Mains skeleton, 5 MCQs.
+  ⚠️ **Caught 3 errors in the coaching material** (logged so we don't re-import them):
+  (a) *Mohammad Yasin* does **not** give four criteria for "local authority" — it is an
+  **Art. 19(1)(g)** case; the correct case is **R.C. Jain (1981)**;
+  (b) *Univ. of Madras v. Santa Bai* (1954, **Madras HC**) applied ***ejusdem generis***, which was
+  **rejected** in *Ujjam Bai* (1962) & *Rajasthan SEB* (1967) — it is **not good law**, and its
+  "maintained by the State" phrase is **Art. 29(2)** language, not an Art. 12 test;
+  (c) Sarrthi's *"Ratilal v. State of Bombay — judiciary not State"* is **unsupported** —
+  Ratilal (1954) is a **Bombay Public Trusts Act / Arts. 25–26** case; use **Mirajkar (1966)**
+  and **Rupa Ashok Hurra (2002)**.
+  **Lesson to carry forward: always verify coaching-book case citations against the original
+  judgment before putting them in a note.**
 - **2026-07-22** — **Reworked Note 01 to be faithful to the handwritten notes only** (Adarsh:
   "don't include extra topics like the safety-valve expansion; include ALL Moderates-vs-Extremists
   rows I wrote — social/cultural background, poverty, political reform; and format so I can

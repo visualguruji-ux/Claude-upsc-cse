@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Article 12 — Definition of "State" | UPSC Polity Note 01</title>
+<style>
+  :root{
+    --bg:#f7f5f0; --card:#ffffff; --ink:#1a1a1a; --muted:#5c5c5c;
+    --line:#e2ddd3; --accent:#8b1a1a; --accent2:#0b5d3b;
+    --warn-bg:#fff4e6; --warn-br:#e08600;
+    --err-bg:#fdecea; --err-br:#c0392b;
+    --ok-bg:#eaf7ef; --ok-br:#1e8449;
+    --info-bg:#eaf1fb; --info-br:#1f5fa8;
+    --star-bg:#fff9db; --star-br:#c9a227;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;
+    line-height:1.62;font-size:16px;-webkit-text-size-adjust:100%}
+  .wrap{max-width:820px;margin:0 auto;padding:18px 14px 60px}
+  header.top{background:var(--accent);color:#fff;border-radius:12px;padding:20px 18px;margin-bottom:6px}
+  header.top h1{margin:0 0 6px;font-size:1.5rem;line-height:1.25}
+  header.top .sub{font-size:.86rem;opacity:.93;line-height:1.5}
+  .meta{font-size:.78rem;color:var(--muted);margin:10px 2px 18px;line-height:1.55}
+  h2{font-size:1.16rem;margin:30px 0 12px;padding:10px 12px;background:var(--accent);
+     color:#fff;border-radius:8px;line-height:1.35}
+  h3{font-size:1.02rem;margin:22px 0 8px;color:var(--accent);
+     border-bottom:2px solid var(--line);padding-bottom:5px;line-height:1.4}
+  h4{font-size:.95rem;margin:16px 0 6px;color:var(--accent2)}
+  p{margin:9px 0}
+  ul,ol{margin:9px 0;padding-left:22px}
+  li{margin:6px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+        padding:14px 15px;margin:12px 0}
+  .box{border-radius:10px;padding:13px 15px;margin:14px 0;border-left:5px solid}
+  .warn{background:var(--warn-bg);border-color:var(--warn-br)}
+  .err{background:var(--err-bg);border-color:var(--err-br)}
+  .ok{background:var(--ok-bg);border-color:var(--ok-br)}
+  .info{background:var(--info-bg);border-color:var(--info-br)}
+  .star{background:var(--star-bg);border-color:var(--star-br)}
+  .box .t{font-weight:700;display:block;margin-bottom:6px}
+  blockquote{margin:12px 0;padding:11px 14px;background:#f2efe8;
+    border-left:4px solid var(--accent2);border-radius:0 8px 8px 0;font-style:italic}
+  blockquote p{margin:5px 0}
+  .bare{background:#1a1a1a;color:#f5f2ea;border-radius:10px;padding:15px 16px;margin:14px 0;
+    font-size:.96rem;line-height:1.7}
+  .bare b{color:#ffd97d}
+  /* vertical case-card list — replaces tables, screenshot friendly */
+  .item{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+        border-radius:8px;padding:11px 13px;margin:10px 0}
+  .item .h{font-weight:700;color:var(--accent);display:block;margin-bottom:4px;font-size:.98rem}
+  .item .y{font-size:.78rem;color:var(--muted);font-weight:600;display:block;margin-bottom:6px}
+  .item.g{border-left-color:var(--ok-br)}  .item.g .h{color:var(--ok-br)}
+  .item.r{border-left-color:var(--err-br)} .item.r .h{color:var(--err-br)}
+  .mn{background:var(--star-bg);border:1px dashed var(--star-br);border-radius:8px;
+      padding:11px 13px;margin:12px 0;font-weight:600}
+  .letter{display:inline-block;background:var(--accent);color:#fff;font-weight:800;
+     width:26px;height:26px;line-height:26px;text-align:center;border-radius:6px;
+     margin-right:8px;font-size:.9rem;flex:0 0 auto}
+  .laafs{display:flex;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+     border-radius:8px;padding:11px 12px;margin:8px 0}
+  .laafs > div{flex:1;min-width:0}
+  ol.chain{counter-reset:c;list-style:none;padding-left:0}
+  ol.chain > li{counter-increment:c;position:relative;padding-left:38px;margin:12px 0;
+     background:var(--card);border:1px solid var(--line);border-radius:8px;padding:11px 12px 11px 42px}
+  ol.chain > li::before{content:counter(c);position:absolute;left:10px;top:11px;
+     background:var(--accent2);color:#fff;width:23px;height:23px;line-height:23px;
+     text-align:center;border-radius:50%;font-size:.8rem;font-weight:700}
+  .tf{margin:8px 0;padding:9px 12px;border-radius:7px;background:var(--card);border:1px solid var(--line)}
+  .tf.no{background:var(--err-bg);border-color:#f0c0b8}
+  .tf.yes{background:var(--ok-bg);border-color:#bfe3cd}
+  details{background:var(--card);border:1px solid var(--line);border-radius:8px;
+    padding:10px 13px;margin:10px 0}
+  details summary{cursor:pointer;font-weight:700;color:var(--accent2)}
+  details[open] summary{margin-bottom:7px}
+  .q{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:13px 14px;margin:14px 0}
+  .q .qn{font-weight:700;color:var(--accent);display:block;margin-bottom:6px}
+  .opts{margin:8px 0 0;padding-left:0;list-style:none}
+  .opts li{padding:4px 0}
+  .chrono{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:13px}
+  .chrono div{padding:7px 0;border-bottom:1px dashed var(--line);font-size:.93rem}
+  .chrono div:last-child{border-bottom:0}
+  .chrono b{color:var(--accent);display:inline-block;min-width:56px}
+  .src{font-size:.83rem;word-break:break-word}
+  .src li{margin:7px 0}
+  a{color:var(--accent2)}
+  hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+  footer{text-align:center;font-size:.78rem;color:var(--muted);margin-top:34px;line-height:1.6}
+  @media (max-width:520px){
+    body{font-size:15px}
+    .wrap{padding:12px 10px 46px}
+    header.top h1{font-size:1.28rem}
+    h2{font-size:1.06rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>Article 12 — Definition of “State”</h1>
+  <div class="sub">
+    Polity Note 01 · Part III (Fundamental Rights), Arts. 12–35<br>
+    Digitised from: ForumIAS/Tapasya handwritten notes · printed coaching book p.33 · Sarrthi IAS PNP-2026 p.6<br>
+    Enriched from Laxmikanth, D.D. Basu, M.P. Jain, NCERT, Vajiram, Insights, Drishti — every case web-verified against the original judgment.
+  </div>
+</header>
+
+<div class="box err">
+  <span class="t">⚠️ READ §10 FIRST</span>
+  Three of your source pages contain factual errors — <b>two misattributed cases</b> and <b>one overruled case presented as current law</b>. All are corrected in §10.
+</div>
+
+<!-- 1 -->
+<h2>1 · Why Article 12 matters — the “gatekeeper”</h2>
+<div class="card">
+  <ul>
+    <li>Fundamental Rights are, as a rule, available <b>against the State</b> — not against private individuals.</li>
+    <li>Article 12 decides <b>whom you can sue</b> for an FR violation. It is the <b>doorway to Part III</b>.</li>
+    <li>It fixes the reach of <b>Art. 32</b> (SC writ) and, indirectly, <b>Art. 226</b> (HC writ).</li>
+    <li><b>Article 36</b> — in Part IV (DPSP), “State” has the <b>same meaning</b> as in Art. 12. So it governs Parts III <i>and</i> IV.</li>
+    <li><b>Exceptions</b> where FRs bind private persons too: <b>Arts. 15(2), 17, 23, 24</b> — and now partly <b>19 &amp; 21</b> after <i>Kaushal Kishor</i> (2023) → see §8.</li>
+  </ul>
+  <p style="margin-bottom:0"><b>Syllabus hook:</b> GS-II — <i>Indian Constitution: features, significant provisions.</i> Prelims — Polity &amp; Governance.</p>
+</div>
+
+<!-- 2 -->
+<h2>2 · Bare text — learn it verbatim</h2>
+<div class="bare">
+  <b>Article 12.</b> In this Part, unless the context otherwise requires, <b>“the State” includes</b> —<br>
+  (a) the <b>Government and Parliament of India</b>,<br>
+  (b) the <b>Government and the Legislature of each of the States</b>, and<br>
+  (c) all <b>local or other authorities</b><br>
+  — <b>within the territory of India</b> <i>or</i> <b>under the control of the Government of India</b>.
+</div>
+
+<h3>The four limbs</h3>
+<ol class="chain">
+  <li><b>Government &amp; Parliament of India</b> → Union executive + legislature (President, PM, Cabinet, Lok Sabha, Rajya Sabha)</li>
+  <li><b>Government &amp; Legislature of each State</b> → State executive + legislature (Governor, CM, Council of Ministers, Vidhan Sabha/Parishad)</li>
+  <li><b>All local authorities</b> → §4</li>
+  <li><b>Other authorities</b> → §5 (the heart of the topic)</li>
+</ol>
+
+<h3>Three phrases that carry marks</h3>
+<div class="box star">
+  <span class="t">🔹 “includes”</span>
+  The definition is <b>INCLUSIVE, not exhaustive</b>. Courts can and do add to it.<br>
+  <i>Trap: “Article 12 exhaustively defines State” → <b>FALSE</b>.</i>
+</div>
+<div class="box star">
+  <span class="t">🔹 “unless the context otherwise requires”</span>
+  Built-in flexibility — the same body may be “State” for one purpose and not another.
+</div>
+<div class="box star">
+  <span class="t">🔹 “within the territory of India <u>OR</u> under the control of the GoI”</span>
+  Note the <b>disjunctive “or”</b>. An authority <b>outside</b> India’s territory but under GoI control <b>is still “State.”</b><br>
+  <i>Trap: “must be within Indian territory” → <b>FALSE</b>.</i>
+</div>
+
+<!-- 3 -->
+<h2>3 · Framers’ intent — Dr. Ambedkar</h2>
+<div class="card">
+  <p><b>Constituent Assembly, 25 November 1948</b>, on Draft Article 7. Ambedkar said the object was to make FRs binding on —</p>
+  <blockquote><p>“every authority which has got either the power to make laws or the power to have discretion vested in it.”</p></blockquote>
+  <p><b>His worry:</b> the State acts through a vast machinery of local bodies, boards, corporations and licensing authorities. If FRs bound only the Union and the States, the State could <b>evade</b> them by routing action through such bodies.</p>
+  <div class="box info" style="margin-bottom:0">
+    ➡️ <b>This is the intellectual seed of the “instrumentality / agency” doctrine.</b> Open a Mains answer with it — it shows you know the <i>why</i>, not just the case list.
+  </div>
+</div>
+
+<!-- 4 -->
+<h2>4 · Limb 3 — LOCAL AUTHORITIES</h2>
+
+<h3>4.1 The statutory anchor</h3>
+<div class="card">
+  <p>The Constitution <b>does not define</b> “local authority.” Courts borrow <b>Section 3(31), General Clauses Act, 1897</b>:</p>
+  <blockquote><p>“a <b>Municipal Committee, District Board, Body of Port Commissioners</b> or <b>other authority legally entitled to, or entrusted by the Government with, the control or management of a municipal or local fund</b>.”</p></blockquote>
+  <div class="box star" style="margin-bottom:0">
+    <span class="t">⭐ The bridge — worth a mark on its own</span>
+    <b>Article 367(1)</b> makes the General Clauses Act applicable to the interpretation of the Constitution. This single line lifts a Mains answer above coaching-note level.
+  </div>
+</div>
+
+<h3>4.2 THE case — <i>Union of India v. R.C. Jain</i> (1981), SC</h3>
+<div class="card">
+  <p><b>Facts:</b> Was the <b>Delhi Development Authority (DDA)</b> a “local authority” under s. 32(iv), Payment of Bonus Act, 1965?</p>
+  <p><b>Held: YES</b> — DDA is a local authority. The Court laid down <b>five attributes</b>.</p>
+</div>
+
+<div class="mn">🧠 Mnemonic: <b>L · A · A · F · S</b></div>
+
+<div class="laafs"><span class="letter">L</span><div><b>separate Legal existence</b><br>Must be a <b>body corporate</b>, legally independent — <i>not a mere government agency/department</i>.</div></div>
+<div class="laafs"><span class="letter">A</span><div><b>functions in a defined Area</b><br>…and must “<b>ordinarily, wholly or partly, directly or indirectly, be elected by the inhabitants</b>” of that area.</div></div>
+<div class="box warn">
+  <span class="t">⚠️ The nuance your note drops</span>
+  The Court said “<b>ordinarily</b>” → election is a <b>strong indicator, NOT a mandatory condition</b>. That is exactly why the <b>non-elected DDA still qualified</b>.<br>
+  <i>Prelims trap: “An elected body is <b>essential</b> for local-authority status” → <b>FALSE</b>.</i>
+</div>
+<div class="laafs"><span class="letter">A</span><div><b>Autonomy</b><br>An “<b>appreciable measure of autonomy</b>” — freedom to decide policy for its area. Need <b>not</b> be complete.</div></div>
+<div class="laafs"><span class="letter">F</span><div><b>power to raise Funds</b><br>By levying <b>taxes, rates, charges or fees</b>. May be <i>in addition to</i> grants/borrowings.<br><b>Essential:</b> control or management of the fund must <b>vest in the authority itself</b>.</div></div>
+<div class="laafs"><span class="letter">S</span><div><b>entrusted by Statute with municipal-type functions</b><br>Health &amp; education, water &amp; sewerage, town planning &amp; development, roads, markets, transport, social welfare.</div></div>
+
+<h3>4.3 Examples</h3>
+<div class="card" style="margin-bottom:0">
+  Municipalities · Municipal Corporations · <b>Panchayats</b> · District Boards · Improvement Trusts · Port Commissioners · Notified Area / Town Area Committees · <b>Development Authorities (DDA)</b> · Mining Boards
+</div>
+
+<!-- 5 -->
+<h2>5 · Limb 4 — “OTHER AUTHORITIES” (the heart)</h2>
+<p>Nearly all the litigation — and all the exam questions — sit here. Learn it as <b>four phases</b>.</p>
+
+<h3>PHASE 1 — Narrow / restrictive view <span style="color:var(--err-br)">(now REJECTED)</span></h3>
+<div class="item r">
+  <span class="h">University of Madras v. Shantha Bai</span>
+  <span class="y">Madras HIGH COURT · 1 May 1953 · AIR 1954 Mad 67</span>
+  <p><b>Facts:</b> MGM College, Udipi (affiliated to Madras University) was allowed only 10 girl students in Junior Intermediate; the Syndicate directed that <b>no women be admitted in future without special sanction</b>. Shantha Bai was refused admission in 1951 and challenged it.</p>
+  <p><b>Held on Art. 12:</b></p>
+  <blockquote><p>“These words must be construed <b>ejusdem generis</b> with Government or Legislature and so construed can only mean authorities exercising <b>governmental functions</b>. They would not include persons natural or juristic who cannot be regarded as instrumentalities of the Government.”</p></blockquote>
+  <p>University of Madras — a body corporate under Madras Act VII of 1923, <b>aided but not maintained</b> by the State, existing only to promote education → <b>NOT “State.”</b></p>
+  <p><b>Second limb:</b> Art. 29(2) — the specific admissions provision — <b>omits “sex”</b> as a ground; applying <i>generalia specialibus non derogant</i>, 29(2) prevailed over the general Art. 15(1).</p>
+  <p style="margin-bottom:0"><b>Outcome: the University WON.</b> Shantha Bai lost.</p>
+</div>
+<div class="box err">
+  <span class="t">🚨 This reasoning is DEAD</span>
+  See Phase 2. Cite <i>Santa Bai</i> <b>only</b> as the starting point of the restrictive era — never as current law.
+</div>
+
+<h3>PHASE 2 — <i>Ejusdem generis</i> rejected</h3>
+<div class="item g">
+  <span class="h">Ujjam Bai v. State of UP</span><span class="y">1962 · Supreme Court</span>
+  <p style="margin-bottom:0">Ayyangar J.: “other authorities” <b>cannot</b> be read <i>ejusdem generis</i> with either the Government/Legislatures or local authorities; the words are of <b>wide amplitude</b>, covering every authority created under a statute.</p>
+</div>
+<div class="item g">
+  <span class="h">⭐ Rajasthan State Electricity Board v. Mohan Lal — the clincher</span><span class="y">1967 · Supreme Court</span>
+  <ul>
+    <li><i>Ejusdem generis</i> cannot apply because there is <b>NO COMMON GENUS</b> running through the bodies listed in Art. 12.</li>
+    <li>“Other authorities” = <b>all authorities created by the Constitution or by statute on whom powers are conferred by law</b>.</li>
+    <li><b>It is NOT necessary that the body perform governmental or sovereign functions</b> — it may even be engaged in <b>commercial activity</b>.</li>
+    <li><b>RSEB held to be “State.”</b></li>
+  </ul>
+</div>
+
+<h3>PHASE 3 — The AGENCY / INSTRUMENTALITY doctrine</h3>
+<div class="item g">
+  <span class="h">Sukhdev Singh v. Bhagatram</span><span class="y">1975 · SC</span>
+  Statutory corporations <b>ONGC, LIC, IFCI</b> are “State”; their regulations have the force of law. <i>(Mathew J.’s concurrence seeded the instrumentality idea.)</i>
+</div>
+<div class="item g">
+  <span class="h">R.D. Shetty v. International Airport Authority of India</span><span class="y">1979 · SC · Bhagwati J.</span>
+  The original <b>5-point test</b>. Key insight: <b>the corporate veil is irrelevant</b> — the State cannot escape FRs by acting through a corporation.
+</div>
+<div class="item g">
+  <span class="h">Som Prakash Rekhi v. Union of India</span><span class="y">1981 · SC</span>
+  A <b>government company</b> (Bharat Petroleum) is “State”.
+</div>
+<div class="item g">
+  <span class="h">⭐ Ajay Hasia v. Khalid Mujib Sehravardi</span><span class="y">1981 · (1981) 1 SCC 722 · AIR 1981 SC 487</span>
+  Consolidated Shetty’s five into the canonical <b>SIX TESTS</b>. A <b>registered society</b> running REC Srinagar was held to be <b>State</b>.
+</div>
+
+<div class="box star">
+  <span class="t">⭐ The 6 Ajay Hasia tests (verbatim)</span>
+  <ol style="margin:6px 0 0">
+    <li>Whether the <b>share-capital</b> of the corporation is held by the Government</li>
+    <li>Whether the <b>financial assistance</b> of the State meets almost the <b>entire expenditure</b></li>
+    <li>Whether the corporation enjoys a <b>State-conferred or State-protected monopoly</b> status</li>
+    <li>Whether there is <b>deep and pervasive State control</b></li>
+    <li>Whether the <b>functions</b> are of <b>public importance and closely related to governmental functions</b></li>
+    <li>Whether a <b>department of Government has been transferred</b> to the corporation</li>
+  </ol>
+</div>
+<div class="mn">🧠 Mnemonic: <b>S-F-M-C-F-D</b> → <b>S</b>hare capital · <b>F</b>inancial assistance · <b>M</b>onopoly · <b>C</b>ontrol (deep &amp; pervasive) · <b>F</b>unctions of public importance · <b>D</b>epartment transferred</div>
+<div class="box info">
+  <span class="t">Grouping (advanced — good for Mains)</span>
+  Tests <b>1, 2, 4</b> → measure <b>government ownership/control</b>. Tests <b>3, 5, 6</b> → <b>functional</b> tests.<br>
+  ⭐ <b>Ratio:</b> <i>form is irrelevant — <b>substance of control</b> decides.</i> A society, a company, even a private body can be “State”.
+</div>
+
+<h3>PHASE 4 — The FINAL, authoritative position</h3>
+<div class="item g">
+  <span class="h">⭐⭐ Pradeep Kumar Biswas v. Indian Institute of Chemical Biology</span>
+  <span class="y">16 April 2002 · (2002) 5 SCC 111 · SEVEN-judge Constitution Bench · 5:2 · majority by Ruma Pal J.</span>
+  <ul>
+    <li><b>Held: CSIR IS “State”</b> under Article 12.</li>
+    <li><b>OVERRULED <i>Sabhajit Tewary v. Union of India</i> (1975)</b> — a 5-judge bench that had held CSIR <i>not</i> to be State. <i>(That is precisely why a 7-judge bench was constituted.)</i></li>
+    <li><b>The test:</b> the body must be <b>financially, functionally and administratively dominated by, or under the control of, the Government</b> — and that control must be <b>“particular to the body”</b> and <b>“deep and pervasive.”</b></li>
+    <li>⭐ <b>Mere government patronage, regulation or financial assistance is NOT enough.</b> The enquiry is <b>functional, not formal</b> — decided case by case on cumulative facts.</li>
+  </ul>
+  <p style="margin-bottom:0"><b>Why it is “the final judgement”</b> (as your handwritten note correctly says): largest bench, it settled the conflict, and every later case applies its formula.</p>
+</div>
+
+<!-- 6 -->
+<h2>6 · Is the JUDICIARY “State”?</h2>
+<div class="box err">
+  <span class="t">❌ NOT “State” — when exercising JUDICIAL functions</span>
+  (hearing cases, delivering judgments, passing judicial orders)<br><br>
+  <b>Rationale:</b> to preserve <b>judicial independence</b> — a judicial decision cannot itself be attacked as an FR violation, else litigation would never end.
+  <ul style="margin-bottom:0">
+    <li><b>Naresh Shridhar Mirajkar v. State of Maharashtra (1966)</b> — <b>9-judge bench</b>: a <b>judicial order of the High Court cannot be challenged under Art. 32</b>. The remedy is <b>appeal, not a writ</b>.</li>
+    <li><b>Rupa Ashok Hurra v. Ashok Hurra (2002)</b> — <b>reaffirmed</b> that superior courts exercising judicial functions are <b>not</b> “State”/“other authorities”, and judicial orders cannot be challenged for violating FRs. <i>(This is also the case that created the <b>CURATIVE PETITION</b> — high-value add-on.)</i></li>
+  </ul>
+</div>
+<div class="box ok">
+  <span class="t">✅ IS “State” — when exercising ADMINISTRATIVE / RULE-MAKING functions</span>
+  Appointments to court staff, service matters, framing rules under Arts. 145/227, administrative decisions. Here the court acts like any other authority and <b>is</b> bound by Part III.
+</div>
+<div class="mn">🧠 <b>“Judging → NOT State. Managing / Rule-making → State.”</b></div>
+<div class="box warn">
+  <span class="t">⚡ Advanced nuance (Mains / interview — beyond prelims)</span>
+  <b>A.R. Antulay v. R.S. Nayak (1988), 7-judge bench</b> sits uneasily with <i>Mirajkar</i>. There the SC held that <b>its own earlier direction</b> transferring a trial was <b>without jurisdiction and violated Arts. 14 &amp; 21</b>, and recalled it. So the SC has in substance accepted that a <b>judicial order can infringe FRs</b> — even if the <i>remedy</i> is recall/review/curative rather than an Art. 32 writ.<br><br>
+  Coaching material flattens this. <b>Don’t cite Antulay as simply “rule-making = State”</b> — cite it as the <b>exception showing judicial orders are not wholly immune</b>.
+</div>
+
+<!-- 7 -->
+<h2>7 · SCORECARD — who is “State”, who is not</h2>
+
+<h3>✅ Held to BE “State”</h3>
+<div class="card">
+<ul style="margin-bottom:0">
+  <li><b>Rajasthan State Electricity Board</b> — <i>RSEB v. Mohan Lal</i> (1967)</li>
+  <li><b>ONGC, LIC, IFCI</b> — <i>Sukhdev Singh</i> (1975)</li>
+  <li><b>International Airport Authority</b> — <i>R.D. Shetty</i> (1979)</li>
+  <li><b>Society running REC Srinagar</b> — <i>Ajay Hasia</i> (1981)</li>
+  <li><b>Bharat Petroleum (govt. company)</b> — <i>Som Prakash Rekhi</i> (1981)</li>
+  <li><b>Delhi Development Authority</b> <i>(as a local authority)</i> — <i>R.C. Jain</i> (1981)</li>
+  <li><b>CSIR</b> — <i>Pradeep Kumar Biswas</i> (2002) ⭐</li>
+  <li><b>SAIL</b> and other PSUs meeting the tests</li>
+  <li>Municipalities, Panchayats, District Boards, Improvement Trusts, Port Commissioners</li>
+</ul>
+</div>
+
+<h3>❌ Held NOT to be “State”</h3>
+<div class="card">
+<ul style="margin-bottom:0">
+  <li><b>University of Madras</b> — <i>Santa Bai</i> (1954, Mad HC) <i>— reasoning since rejected</i></li>
+  <li><b>CSIR</b> — <i>Sabhajit Tewary</i> (1975) ⚠️ <b>OVERRULED in 2002</b></li>
+  <li><b>NCERT</b> — <i>Chander Mohan Khanna v. NCERT</i> (1991)</li>
+  <li><b>BCCI</b> — <i>Zee Telefilms v. Union of India</i> (2005)</li>
+  <li><b>Judiciary</b>, when performing <b>judicial</b> functions</li>
+</ul>
+</div>
+
+<h3>The two “not State” cases your pages highlight</h3>
+<div class="item r">
+  <span class="h">Chander Mohan Khanna v. NCERT</span><span class="y">17 September 1991 · SC</span>
+  <p>Employee’s termination challenged; NCERT objected that it is not amenable to writ jurisdiction.</p>
+  <p><b>Held: NCERT is NOT “State.”</b> It is <b>“largely an autonomous body”</b>; its activities are <b>not wholly related to governmental functions</b>; government control is <b>confined only to proper utilisation of the grant</b>; its funds include grants <i>plus</i> contributions from other sources <i>plus</i> income from its own assets, which it is free to apply to its own objectives.</p>
+  <blockquote style="margin-bottom:0"><p>⭐ “Article 12 should not be stretched so as to bring in every autonomous body which has some nexus with the Government within the sweep of the expression ‘State’. <b>A wide enlargement of the meaning must be tempered by a wise limitation.</b>”</p></blockquote>
+</div>
+<div class="item r">
+  <span class="h">Zee Telefilms Ltd. v. Union of India</span><span class="y">2005 · (2005) 4 SCC 649 · 5-judge bench · 3:2</span>
+  <p><b>Held: BCCI is NOT “State”</b> under Art. 12 → <b>no Art. 32 remedy</b>.</p>
+  <p><b>Reasons:</b> not created by any statute; <b>no share capital</b> held by government; <b>no substantial financial assistance</b> from government; its monopoly over cricket administration is <b>neither conferred nor protected by the State</b> (it is <i>de facto</i>, not <i>de jure</i>); no deep and pervasive control.</p>
+  <div class="box star" style="margin-bottom:0">
+    <span class="t">⭐ The crucial second half your book omits</span>
+    Because BCCI discharges <b>public functions</b> (selecting the national team, regulating the sport), an aggrieved person <b>CAN move the High Court under Article 226</b>.<br><br>
+    <b>Therefore: Art. 226 is WIDER than Art. 32.</b> Art. 32 lies only against “State”; <b>Art. 226 lies additionally against a private body performing a public duty</b> — <i>Andi Mukta Sadguru Trust v. V.R. Rudani</i> (1989).<br><br>
+    <b>Current-affairs link:</b> <i>BCCI v. Cricket Association of Bihar</i> (2015) → SC affirmed BCCI’s public functions and appointed the <b>Justice R.M. Lodha Committee</b>; reforms later folded into BCCI’s constitution.
+  </div>
+</div>
+
+<!-- 8 -->
+<h2>8 · Private bodies, public functions &amp; HORIZONTAL rights</h2>
+<div class="card">
+  <p><b>General rule:</b> private bodies are <b>not automatically</b> “State”.</p>
+  <p><b>Three routes by which a private entity can still be reached:</b></p>
+  <ol style="margin-bottom:0">
+    <li><b>Instrumentality / agency</b> → it <i>is</i> State (<i>Ajay Hasia</i> / <i>Pradeep Kumar Biswas</i> tests)</li>
+    <li><b>Deep and pervasive State control</b> over functioning, finance and policy</li>
+    <li><b>Public function test</b> → not State, but still amenable to an <b>Art. 226</b> writ (<i>Zee Telefilms</i>; <i>Andi Mukta</i>)</li>
+  </ol>
+</div>
+
+<div class="box star">
+  <span class="t">🔥 THE BIG RECENT SHIFT — <i>Kaushal Kishor v. State of UP</i> (3 Jan 2023)</span>
+  <b>5-judge Constitution Bench · 4:1</b>
+  <ul>
+    <li>Held that <b>Fundamental Rights under Articles 19 and 21 can be enforced even against PRIVATE / NON-STATE ACTORS</b> — i.e. Arts. 19 and 21 are, to that extent, <b>HORIZONTAL</b>.</li>
+    <li>Also held: the grounds in <b>Art. 19(2) are exhaustive</b> — no additional restrictions can be read in.</li>
+    <li><b>Significance here:</b> it <b>dilutes Article 12’s gatekeeping role</b>. The old binary (“State → FRs apply; private → they don’t”) is breaking down.</li>
+  </ul>
+  <b>This is the single best value-addition for a Mains answer or interview on Article 12. Very few aspirants link it.</b>
+</div>
+
+<div class="card">
+  <h4>Pre-existing horizontal FRs (available against private persons too)</h4>
+  <ul style="margin-bottom:6px">
+    <li><b>Art. 15(2)</b> — no denial of access to shops, hotels, public restaurants, wells, tanks, roads</li>
+    <li><b>Art. 17</b> — abolition of untouchability</li>
+    <li><b>Art. 23</b> — traffic in human beings, <i>begar</i>, forced labour</li>
+    <li><b>Art. 24</b> — no child below 14 in factories/mines/hazardous work</li>
+  </ul>
+  <p style="margin-bottom:0"><i>Note: Arts. 17, 23, 24 are exactly the ones in the table at the top of your first page — that table is the <b>horizontal-rights set</b>. Good linkage to make.</i></p>
+</div>
+
+<!-- 9 -->
+<h2>9 · Linkages — the articles around Art. 12</h2>
+<div class="item">
+  <span class="h">Article 13 — where your Sarrthi page goes next</span>
+  <ul>
+    <li><b>13(1):</b> pre-Constitution laws inconsistent with Part III are <b>void to the extent of inconsistency</b></li>
+    <li><b>13(2):</b> the <b>State shall not make</b> any law taking away/abridging FRs</li>
+    <li><b>⭐ 13(3)(a):</b> <b>“law” includes</b> any <i>ordinance, order, bye-law, rule, regulation, notification, custom or usage</i> having the force of law</li>
+    <li><b>13(4):</b> a constitutional amendment under Art. 368 is <b>not</b> “law” <i>(24th Amendment; read with <b>Kesavananda Bharati</b>, 1973 — amendments still testable on the <b>basic structure</b> doctrine)</i></li>
+    <li><b>Doctrines:</b> Severability · Eclipse · Waiver <i>(FRs cannot be waived — <b>Basheshar Nath v. CIT</b>)</i></li>
+  </ul>
+  <div class="box info" style="margin-bottom:0">
+    <b>The bridge:</b> <i>Mohammad Yasin</i> struck down a <b>Town Area Committee’s bye-laws</b> — possible only because the Committee is <b>“State” under Art. 12</b> <i>and</i> its bye-laws are <b>“law” under Art. 13(3)(a)</b>.
+  </div>
+</div>
+<div class="card" style="margin-bottom:0">
+  <ul style="margin-bottom:0">
+    <li><b>Article 32</b> — writ against “State” only (a FR itself; Ambedkar’s <i>“heart and soul of the Constitution”</i>)</li>
+    <li><b>Article 226</b> — <b>wider</b>: any legal right + against private bodies performing public duties</li>
+    <li><b>Article 36</b> — “State” in Part IV = same meaning as Art. 12</li>
+    <li><b>Article 367(1)</b> — General Clauses Act applies to constitutional interpretation</li>
+  </ul>
+</div>
+
+<!-- 10 -->
+<h2>10 · 🚨 CORRECTIONS TO YOUR SOURCE PAGES</h2>
+
+<div class="box err">
+  <span class="t">❌ ERROR 1 — printed book, p.33</span>
+  <i>“In <b>Mohammad Yasin vs Town Area Committee</b>, the Supreme Court gave four criteria for an entity to be classified as a ‘local authority’ under Article 12.”</i><br><br>
+  <b>WRONG.</b> <i>Mohammad Yasin v. Town Area Committee, Jalalabad</i> (AIR 1952 SC 115, 27 Feb 1952) is an <b>Article 19(1)(g) / Article 32</b> case. It lays down <b>no</b> test for “local authority” anywhere in the judgment.
+  <ul>
+    <li><b>Its actual ratio:</b> a Town Area Committee’s bye-laws levying a licence fee (one anna per rupee) on wholesale fruit/vegetable dealers <b>irrespective of use of Committee property</b> were <b>ultra vires</b> the U.P. Municipalities Act; <i>“a licence fee on a business… operates as a restriction on his right to carry on his business”</i> under Art. 19(1)(g), not saved by 19(6). Art. 265 also invoked.</li>
+    <li><b>The correct case is <i>Union of India v. R.C. Jain</i> (1981) — the LAAFS five attributes.</b> Your handwritten ForumIAS note is right.</li>
+    <li><b>Where the book’s “four criteria” actually come from:</b> a garbled import from the <b>“other authorities”</b> line — (a),(b),(c) from <i>Rajasthan SEB v. Mohan Lal</i> (1967), and (d) “substantially financed by government” from the <i>Ajay Hasia</i> / <i>Pradeep Kumar Biswas</i> instrumentality tests. <b>The book has merged the two branches of Article 12.</b></li>
+  </ul>
+</div>
+
+<div class="box err">
+  <span class="t">❌ ERROR 2 — printed book, p.33</span>
+  <i>University of Madras v. Santa Bai</i> (1954) is presented as current law.<br><br>
+  Its <b><i>ejusdem generis</i></b> reasoning was <b>expressly rejected</b> by the Supreme Court in <b>Ujjam Bai (1962)</b> and buried in <b>Rajasthan SEB v. Mohan Lal (1967)</b> (“no common genus”). It is a <b>High Court</b> decision and is <b>no longer good law</b>.
+  <ul>
+    <li>Also: the book’s phrase <i>“unless it is <b>maintained by the State</b>”</i> is <b>not part of the Article 12 test at all</b> — that is the language of <b>Article 29(2)</b> (“maintained by the State or receiving aid out of State funds”), used in the <i>separate</i> discrimination limb. The book has welded a bit of Art. 29(2) onto the Art. 12 holding.</li>
+    <li><b>Irony worth remembering:</b> under <i>Santa Bai</i> a university was not State; under <i>Ajay Hasia</i> / <i>Pradeep Kumar Biswas</i>, universities, societies and even private bodies <b>routinely are</b> — because control and funding matter, not “sovereign functions”.</li>
+  </ul>
+</div>
+
+<div class="box err">
+  <span class="t">❌ ERROR 3 — Sarrthi IAS PNP-2026, p.6</span>
+  <i>“In <b>Rati Lal v. State of Bombay</b> — the judiciary is not state for the purpose of Article 12.”</i><br><br>
+  <b>Unsupported.</b> <i>Ratilal Panachand Gandhi v. State of Bombay</i> (1954) is a case on the <b>Bombay Public Trusts Act, 1950</b> and <b>Articles 25 &amp; 26</b> (freedom of religion, rights of religious denominations). The judgment <b>does not discuss Article 12 or the judiciary’s status at all.</b> This citation is copied through secondary material.<br><br>
+  <b>Use instead: Naresh Shridhar Mirajkar (1966)</b> and <b>Rupa Ashok Hurra (2002)</b>.
+</div>
+
+<div class="box warn">
+  <span class="t">⚠️ MINOR — Sarrthi</span>
+  The case is <b>Naresh Shridhar Mirajkar</b>, not “N.S. Mirajkar” — write the full name in Mains. And see §6 for why <b>A.R. Antulay</b> should not be cited as a simple “rule-making = State” authority.
+</div>
+
+<div class="box ok">
+  <span class="t">✅ WHAT YOUR HANDWRITTEN NOTES GET RIGHT</span>
+  Both the red LAAFS box and the green Ajay Hasia page: the <b>two-branch split</b>, <b>LAAFS</b>, <b>R.D. Shetty → Ajay Hasia 6 parameters → Pradeep Kumar Biswas as final</b>, the <b>judiciary dual position</b>, and <b>NCERT ≠ State / BCCI ≠ State</b>.<br><br>
+  <b>Your own notes are more accurate than the printed book.</b>
+</div>
+
+<!-- 11 -->
+<h2>11 · Prelims rapid-fire</h2>
+
+<h3>✅ TRUE — high-yield</h3>
+<div class="tf yes">Art. 12’s definition is <b>inclusive</b>, not exhaustive</div>
+<div class="tf yes">“State” in Art. 12 governs <b>Part III AND Part IV</b> (via Art. 36)</div>
+<div class="tf yes">A body <b>outside Indian territory</b> but under GoI control <b>is</b> “State”</div>
+<div class="tf yes"><b>Election by inhabitants is not mandatory</b> for local-authority status (“ordinarily”)</div>
+<div class="tf yes">Under <i>Rajasthan SEB</i> (1967), a body <b>need not perform sovereign functions</b>; it may be <b>commercial</b></div>
+<div class="tf yes"><b>CSIR is State</b> (2002, 7-judge, overruling 1975)</div>
+<div class="tf yes"><b>Art. 226 is wider than Art. 32</b> — it reaches private bodies doing public duties</div>
+<div class="tf yes"><b>Arts. 19 &amp; 21 are now partly horizontal</b> (<i>Kaushal Kishor</i>, 2023)</div>
+
+<h3>❌ FALSE — the traps</h3>
+<div class="tf no">“‘Other authorities’ is interpreted <b><i>ejusdem generis</i></b>” → <b>rejected</b> in 1962/1967</div>
+<div class="tf no">“Article 12 exhaustively defines the State”</div>
+<div class="tf no">“All PSUs / government companies are automatically State” → <b>only if the tests are satisfied</b></div>
+<div class="tf no">“The judiciary is never State” → it <b>is</b>, in administrative/rule-making functions</div>
+<div class="tf no">“BCCI is State” → <b>not</b> under Art. 12 (but writ lies under Art. 226)</div>
+<div class="tf no">“NCERT is State”</div>
+<div class="tf no">“Mohammad Yasin laid down the local-authority test”</div>
+<div class="tf no">“Mere government financial assistance makes a body State”</div>
+
+<h3>📅 Chronology (dates get asked)</h3>
+<div class="chrono">
+  <div><b>1952</b> Mohammad Yasin — Art. 19(1)(g), bye-laws struck down</div>
+  <div><b>1954</b> Santa Bai <i>(Mad HC)</i> — <i>ejusdem generis</i>; univ. not State ⚠️ rejected later</div>
+  <div><b>1962</b> Ujjam Bai — <i>ejusdem generis</i> rejected</div>
+  <div><b>1966</b> Naresh Shridhar Mirajkar — judicial orders, 9-judge</div>
+  <div><b>1967</b> Rajasthan SEB v. Mohan Lal — “no common genus” ⭐</div>
+  <div><b>1975</b> Sukhdev Singh (ONGC/LIC/IFCI = State) <b>&amp;</b> Sabhajit Tewary (CSIR ≠ State)</div>
+  <div><b>1979</b> R.D. Shetty — 5 tests</div>
+  <div><b>1981</b> Ajay Hasia (6 tests) · R.C. Jain (LAAFS) · Som Prakash Rekhi ⭐</div>
+  <div><b>1988</b> A.R. Antulay — SC’s own direction violated FRs</div>
+  <div><b>1991</b> Chander Mohan Khanna — NCERT ≠ State</div>
+  <div><b>2002</b> Pradeep Kumar Biswas (CSIR = State, 7-judge) · Rupa Ashok Hurra ⭐</div>
+  <div><b>2005</b> Zee Telefilms — BCCI ≠ State, but Art. 226 lies</div>
+  <div><b>2015</b> BCCI v. Cricket Assn. of Bihar — Lodha Committee</div>
+  <div><b>2023</b> Kaushal Kishor — Arts. 19 &amp; 21 horizontal 🔥</div>
+</div>
+
+<!-- 12 -->
+<h2>12 · Mains angle (GS-II)</h2>
+<div class="card">
+  <h4>Likely framings</h4>
+  <ol>
+    <li>“The expression ‘other authorities’ in Article 12 has been judicially expanded far beyond the framers’ contemplation.” Examine.</li>
+    <li>“Article 12 is the gatekeeper of Part III. In an era of privatisation and PPP, is that gate too narrow?” Critically comment.</li>
+    <li>“Should the judiciary be brought within the definition of ‘State’ under Article 12?” Discuss.</li>
+  </ol>
+</div>
+<div class="card">
+  <h4>Skeleton for Q1 / Q2</h4>
+  <ul>
+    <li><b>Intro:</b> Ambedkar’s intent — FRs must bind <i>“every authority which has… the power to have discretion vested in it”</i> — quote it.</li>
+    <li><b>Body — the arc:</b> restrictive (<i>Santa Bai</i>, <i>ejusdem generis</i>) → rejection (<i>Ujjam Bai</i>, <i>Rajasthan SEB</i>) → instrumentality (<i>Shetty</i>, <i>Ajay Hasia</i>) → consolidation <b>and a deliberate brake</b> (<i>Pradeep Kumar Biswas</i>; <i>NCERT</i> — “a wide enlargement must be tempered by a wise limitation”).</li>
+    <li><b>The contemporary problem:</b> liberalisation, disinvestment, PPP, outsourced public services — private hospitals, private schools, toll roads, platform economy → State functions migrate to private hands, <b>outside</b> Art. 12.</li>
+    <li><b>The judicial answer so far:</b> the <b>public function test</b> under Art. 226 (<i>Zee Telefilms</i>, <i>Andi Mukta</i>) and now <b>horizontality</b> under <i>Kaushal Kishor</i> (2023).</li>
+    <li><b>Balance:</b> over-expansion burdens genuinely autonomous institutions and chills private enterprise (the <i>NCERT</i> caution); under-inclusion lets the State evade FRs by outsourcing.</li>
+    <li><b>Conclusion:</b> the trend is from an <b>institutional/formal</b> test to a <b>functional</b> one — <i>what</i> is being done, not <i>who</i> is doing it. Suggest a function-based reading consistent with Ambedkar’s purpose.</li>
+  </ul>
+</div>
+<div class="box star">
+  <span class="t">💎 Value-addition arsenal</span>
+  <ul style="margin-bottom:0">
+    <li>Ambedkar’s CAD quote (25 Nov 1948)</li>
+    <li><i>NCERT</i>: the “wise limitation” line</li>
+    <li><i>Pradeep Kumar Biswas</i>: “financially, functionally, administratively dominated”</li>
+    <li><i>Kaushal Kishor</i> (2023): horizontality</li>
+    <li><b>Comparative:</b> US <b>“state action” doctrine</b>; <b>South Africa</b> — Art. 8(2) of its Constitution <b>expressly binds private persons</b> to the Bill of Rights</li>
+    <li><b>2nd ARC</b> + Art. 226 public-function jurisprudence on accountability of outsourced public services</li>
+  </ul>
+</div>
+
+<!-- 13 -->
+<h2>13 · PYQ signal</h2>
+<div class="card">
+  <ul>
+    <li><b>UPSC Prelims:</b> Art. 12 is rarely a standalone MCQ; it surfaces <b>indirectly</b> — through <i>against whom FRs are enforceable</i>, <b>Art. 32 vs 226</b>, and which bodies are amenable to writs. Prepare the <b>traps in §11</b> rather than case-year matching.</li>
+    <li><b>UPSC Mains (GS-II):</b> appears through enforceability of rights against <b>non-State actors</b>, judicial review, and accountability of PSUs/autonomous bodies.</li>
+    <li><b>State PSCs (UPPSC, BPSC, MPPSC, RPSC):</b> these <b>do</b> ask direct <b>case-name ↔ holding matching</b> (RSEB, Ajay Hasia, Pradeep Kumar Biswas, Zee Telefilms). The §7 scorecard and §11 chronology are built for exactly that.</li>
+  </ul>
+  <div class="box warn" style="margin-bottom:0">
+    <span class="t">⚠️ Exam-hall caution</span>
+    If a State PSC paper reproduces the coaching-book line (“Mohammad Yasin — four criteria for local authority”), <b>mark what the paper expects and move on</b>. For UPSC Mains and interview, cite <b>R.C. Jain</b>.
+  </div>
+</div>
+
+<!-- 14 -->
+<h2>14 · Practice MCQs <span style="font-weight:400;font-size:.8rem">(self-made — not PYQs)</span></h2>
+
+<div class="q">
+  <span class="qn">Q1.</span> Consider the following statements regarding Article 12:
+  <ol>
+    <li>The definition of “State” given in Article 12 is exhaustive.</li>
+    <li>An authority located outside the territory of India cannot be “State” even if it is under the control of the Government of India.</li>
+    <li>“State” in Article 12 has the same meaning for the Directive Principles.</li>
+  </ol>
+  Which are correct?
+  <ul class="opts"><li>(a) 1 and 2</li><li>(b) 3 only</li><li>(c) 2 and 3</li><li>(d) 1, 2 and 3</li></ul>
+  <details><summary>Answer</summary><b>(b) 3 only.</b> 1 is wrong — “includes” makes it inclusive. 2 is wrong — the “or” is disjunctive. 3 is right — <b>Article 36</b>.</details>
+</div>
+
+<div class="q">
+  <span class="qn">Q2.</span> In which case did the Supreme Court hold that “other authorities” cannot be read <i>ejusdem generis</i> with the preceding expressions in Article 12?
+  <ul class="opts"><li>(a) University of Madras v. Santa Bai</li><li>(b) Rajasthan State Electricity Board v. Mohan Lal</li><li>(c) Mohammad Yasin v. Town Area Committee</li><li>(d) Union of India v. R.C. Jain</li></ul>
+  <details><summary>Answer</summary><b>(b).</b> Because there is <b>no common genus</b> among the bodies listed. Ujjam Bai (1962) said so earlier; RSEB (1967) settled it. <b>(a) held the opposite</b> and is no longer good law.</details>
+</div>
+
+<div class="q">
+  <span class="qn">Q3.</span> Which of the following has been held <b>NOT</b> to be “State” under Article 12?
+  <ol><li>CSIR</li><li>NCERT</li><li>BCCI</li><li>Rajasthan State Electricity Board</li></ol>
+  <ul class="opts"><li>(a) 1 and 2</li><li>(b) 2 and 3</li><li>(c) 1, 2 and 3</li><li>(d) 3 and 4</li></ul>
+  <details><summary>Answer</summary><b>(b) 2 and 3.</b> CSIR <b>is</b> State (<i>Pradeep Kumar Biswas</i>, 2002 — overruling <i>Sabhajit Tewary</i>, 1975 — a favourite trap). RSEB <b>is</b> State (1967).</details>
+</div>
+
+<div class="q">
+  <span class="qn">Q4.</span> Regarding the judiciary and Article 12, which is correct?
+  <ul class="opts">
+    <li>(a) The judiciary is “State” for all purposes</li>
+    <li>(b) The judiciary is never “State”</li>
+    <li>(c) The judiciary is “State” when exercising administrative and rule-making functions, but not when exercising judicial functions</li>
+    <li>(d) Only subordinate courts are “State”</li>
+  </ul>
+  <details><summary>Answer</summary><b>(c).</b> <i>Naresh Shridhar Mirajkar</i> (1966), reaffirmed in <i>Rupa Ashok Hurra</i> (2002).</details>
+</div>
+
+<div class="q">
+  <span class="qn">Q5.</span> Consider:
+  <ol>
+    <li>BCCI is “State” under Article 12 and hence a writ under Article 32 lies against it.</li>
+    <li>A private body performing a public duty may be subject to a writ under Article 226.</li>
+  </ol>
+  Which is/are correct?
+  <ul class="opts"><li>(a) 1 only</li><li>(b) 2 only</li><li>(c) Both</li><li>(d) Neither</li></ul>
+  <details><summary>Answer</summary><b>(b) 2 only.</b> <i>Zee Telefilms</i> (2005): BCCI is <b>not</b> State → no Art. 32; but Art. 226 lies for its <b>public functions</b>. Art. 226 is wider than Art. 32.</details>
+</div>
+
+<!-- 15 -->
+<h2>15 · Sources (web-verified)</h2>
+<div class="card src">
+<ul>
+  <li><i>Union of India v. R.C. Jain</i> (1981) — <a href="https://indiankanoon.org/doc/769281/">indiankanoon.org/doc/769281</a></li>
+  <li><i>Mohammad Yasin v. Town Area Committee, Jalalabad</i> (1952) — <a href="https://indiankanoon.org/doc/154519/">indiankanoon.org/doc/154519</a></li>
+  <li><i>University of Madras v. Shantha Bai</i>, AIR 1954 Mad 67 — <a href="https://indiankanoon.org/doc/233848/">indiankanoon.org/doc/233848</a></li>
+  <li><i>Rajasthan State Electricity Board v. Mohan Lal</i> (1967) — <a href="https://indiankanoon.org/doc/459864/">indiankanoon.org/doc/459864</a></li>
+  <li><i>Ajay Hasia v. Khalid Mujib Sehravardi</i> (1981) — <a href="https://indiankanoon.org/doc/1186368/">indiankanoon.org/doc/1186368</a></li>
+  <li><i>Pradeep Kumar Biswas v. IICB</i> (2002) — <a href="https://indiankanoon.org/doc/129969/">indiankanoon.org/doc/129969</a></li>
+  <li><i>Chander Mohan Khanna v. NCERT</i> (1991) — <a href="https://indiankanoon.org/doc/700858/">indiankanoon.org/doc/700858</a></li>
+  <li><i>Zee Telefilms Ltd. v. Union of India</i> (2005) — <a href="https://indiankanoon.org/doc/404603/">indiankanoon.org/doc/404603</a></li>
+  <li><i>Kaushal Kishor v. State of U.P.</i> (2023) — <a href="https://indiankanoon.org/doc/103640961/">indiankanoon.org/doc/103640961</a></li>
+  <li><i>Ratilal Panachand Gandhi v. State of Bombay</i> (1954) — <a href="https://indiankanoon.org/doc/1307370/">indiankanoon.org/doc/1307370</a></li>
+  <li>Drishti Judiciary — State under Article 12 — <a href="https://www.drishtijudiciary.com/to-the-point/ttp-constitution-of-india/state-under-article-12">link</a></li>
+  <li>Vajiram &amp; Ravi — Article 12 of Indian Constitution — <a href="https://vajiramandravi.com/current-affairs/article-12-of-indian-constitution/">link</a></li>
+  <li>Lawctopus/Academike — Other Authorities under Article 12 — <a href="https://www.lawctopus.com/academike/authorities-article-12-constitution/">link</a></li>
+</ul>
+</div>
+
+<footer>
+  Polity Note 01 · Article 12 — Definition of “State”<br>
+  Prepared 4 September 2026 · Adarsh’s UPSC CSE preparation
+</footer>
+
+</div>
+</body>
+</html>
