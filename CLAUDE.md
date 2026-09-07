@@ -109,6 +109,8 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-09-07** — **Adarsh's feedback: STOP writing long notes.** He wants answers he can grasp in
+  seconds — concept-precise, not book-length. Brevity is now the default; long notes only on request.
 - **2026-09-07** — **Polity note added: Article 18 (Abolition of Titles)** — `notes/polity/01-article-18-abolition-of-titles.md`.
   Triggered by Adarsh's T/F question ("no citizen shall accept any title from any foreign State under any
   circumstances"). **Answer: TRUE** — Art. 18(2) is absolute; the President's-consent route exists only in
@@ -153,6 +155,10 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
   answering or making notes, draw on **standard books + all coaching materials** — e.g. Spectrum,
   Bipan Chandra, Laxmikanth, NCERTs, Shankar IAS, Ramesh Singh, plus coaching notes (Vajiram,
   Insights, ForumIAS, etc.) and web-verify. Never give a thin/from-memory answer for a study topic.
+- **BREVITY IS THE DEFAULT (STANDING INSTRUCTION, 2026-09-07):** Adarsh has limited time and reads on
+  screen. Answer in **seconds-to-read form** — verdict first, then 3–6 crisp lines / bullets, plus the
+  **trap** if it's a Prelims-style question. **Do NOT write long one-stop notes, files, or repo commits
+  unless he explicitly asks for a note/PDF/drill.** Depth on demand only ("expand", "detailed note").
 - **Formatting prefs:** stay faithful to Adarsh's own notes unless he asks to enrich; NEVER use
   wide side-scrolling tables — use vertical/responsive, screenshot-friendly layouts; add a
   `<meta charset="utf-8">` to every HTML.
