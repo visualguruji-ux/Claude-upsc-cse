@@ -102,13 +102,20 @@ Adarsh wants broad PYQ exposure. Track sources here as we build them:
 ---
 
 ## 7. Current Focus  _(update every few sessions)_
-- **Now:** Setting up the preparation system and memory file. ✅ (in progress)
+- **Now:** Modern History notes/drills + **Polity (Part III — Fundamental Rights)** notes started with Art. 18.
 - **Next:** Decide/confirm target year & attempt number; build a study plan and
   subject-wise trackers.
 
 ---
 
 ## 8. Progress Log  _(most recent first)_
+- **2026-09-07** — **Polity note added: Article 18 (Abolition of Titles)** — `notes/polity/01-article-18-abolition-of-titles.md`.
+  Triggered by Adarsh's T/F question ("no citizen shall accept any title from any foreign State under any
+  circumstances"). **Answer: TRUE** — Art. 18(2) is absolute; the President's-consent route exists only in
+  18(3) (non-citizens in office of profit) and 18(4) (present/emolument/office). Note covers all four clauses
+  clause-by-clause, the standard MCQ flips, *Balaji Raghavan v. UoI* (1996) on national awards not being
+  titles + no prefix/suffix rule, the Padma timeline (1954 / 1977–80 / 1992–95 / revived 1996), the
+  no-penalty enforcement gap, and Sociology/Essay linkages. Vertical, screenshot-friendly format.
 - **2026-07-22** — **Reworked Note 01 to be faithful to the handwritten notes only** (Adarsh:
   "don't include extra topics like the safety-valve expansion; include ALL Moderates-vs-Extremists
   rows I wrote — social/cultural background, poverty, political reform; and format so I can
